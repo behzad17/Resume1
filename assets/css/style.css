@@ -147,10 +147,14 @@ header {
 
 #nav {
     margin: 0;
+    
+   
 }
 
 #nav li {
     padding: 0;
+    list-style: none; 
+   
 }
 
 .menuitem {
