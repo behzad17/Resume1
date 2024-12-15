@@ -111,6 +111,7 @@ h4 {
 
 header {
     margin: 0;
+
 }
 
 .heading {
@@ -147,7 +148,9 @@ header {
 
 #nav {
     margin: 0;
-    
+    padding: 0;
+
+   
    
 }
 
@@ -156,6 +159,7 @@ header {
     list-style: none; 
    
 }
+
 
 .menuitem {
     height: 120px;
@@ -187,6 +191,9 @@ header {
     font-size: 14px;
     font-weight: 300;
     letter-spacing: 2px;
+}
+.list-inline-item {
+    margin: 0;
 }
 
 
