@@ -89,7 +89,9 @@ h4 {
 }
 
 .row-table {
-  display: table;
+  display: block;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 
 .history-heading,
