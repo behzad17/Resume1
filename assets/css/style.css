@@ -89,9 +89,9 @@ h4 {
 }
 
 .row-table {
-  display: block;
-  max-height: 100vh;
-  overflow-y: auto;
+  display: table;
+  width: 100%;
+  table-layout: fixed;
 }
 
 .history-heading,
@@ -407,10 +407,8 @@ div#map {
   @supports (-webkit-appearance:none) {
     @media (min-width: 992px) {
       .bg-color-work-history {
-        background-color: #9b59b6;
         max-height: 100vh;
         overflow-y: auto;
-        display: table-cell !important; /* اصلاح این خط */
       }
     }
   }
