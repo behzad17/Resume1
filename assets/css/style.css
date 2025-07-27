@@ -11,7 +11,7 @@
 }
 
 .bg-color-personal-info {
-  background-color: #e1883a;;
+  background-color: #e1883a;
 }
 
 .bg-color-skills {
@@ -281,7 +281,6 @@ footer .cv-pdf i:hover {
 
 .personal-info-item .key p {
   font-weight: 700;
-  
 }
 
 .personal-info-item .value {
@@ -401,13 +400,13 @@ div#map {
     max-width: 50%;
   }
 }
-@media not all and (min-resolution:.001dpcm) {
-  @supports (-webkit-appearance:none) {
-    @media (min-width: 992px) {
-      .bg-color-work-history {
-        max-height: 100vh;
-        overflow-y: auto;
-      }
+
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .row.row-table {
+      max-height: 100vh;
+      overflow-y: auto;
+      display: block !important; /* چون display: table ممکنه مشکل‌ساز بشه */
     }
   }
 }
