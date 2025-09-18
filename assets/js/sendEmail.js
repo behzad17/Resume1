@@ -4,7 +4,7 @@
 
 function sendMail(contactForm) {
   emailjs
-    .send("service_awvo3xf", "template_0w3tgaf", {
+    .send("service_jqbdyq3", "template_0w3tgaf", {
       from_name: contactForm.name.value,
       from_email: contactForm.emailaddress.value,
       project_request: contactForm.projectsummary.value,
@@ -21,4 +21,3 @@ function sendMail(contactForm) {
     );
   return false; // جلوگیری از reload فرم
 }
-
