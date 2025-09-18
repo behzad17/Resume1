@@ -523,6 +523,94 @@ div#map {
   .social-links {
     padding-left: 10%;
   }
+
+  /* Mobile fixes for resume page */
+  .row-table {
+    display: block !important;
+  }
+
+  .bg-color-work-history,
+  .bg-color-three-reasons {
+    width: 100% !important;
+    display: block !important;
+  }
+
+  .timeline-item {
+    padding: 2em 1em 1em 1em;
+    margin-bottom: 1em;
+  }
+
+  .timeline-item::before {
+    position: static;
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+  }
+
+  .timeline-item::after {
+    display: none;
+  }
+
+  .progress-section {
+    margin: 20px 0;
+  }
+
+  .progress {
+    margin-bottom: 15px;
+  }
+
+  .progress-type {
+    font-size: 12px;
+    padding: 2px 10px 2px 5px;
+  }
+
+  .history-heading {
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .history-items {
+    min-height: auto;
+  }
+
+  /* Mobile header fixes */
+  .heading {
+    margin-left: 20px;
+  }
+
+  .name {
+    font-size: 36px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .logo {
+    min-height: 200px;
+  }
+}
+
+/*--------------------------------------------Tablet Responsive*/
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .row-table {
+    display: block !important;
+  }
+
+  .bg-color-work-history,
+  .bg-color-three-reasons {
+    width: 100% !important;
+    display: block !important;
+  }
+
+  .timeline-item {
+    padding: 2.5em 1.5em 1em 1.5em;
+  }
+
+  .progress-section {
+    margin: 30px 0;
+  }
 }
 
 /*--------------------------------------------Desktop Footer Padding*/
