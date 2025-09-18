@@ -113,6 +113,13 @@ h4 {
   margin-bottom: 40px;
 }
 
+/* Emphasize Personal Info heading on the home page left column */
+.bg-color-personal-info .section-heading {
+  font-size: 32px;
+  font-weight: 600;
+  margin-left: 20px;
+}
+
 /*--------------------------------------------Heading*/
 
 header {
