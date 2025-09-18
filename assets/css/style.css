@@ -274,6 +274,15 @@ footer .cv-pdf i:hover {
   font-size: 20px;
 }
 
+/* Prepend a checkmark icon to service headings for improved UI/UX */
+.three-reasons-heading:before {
+  font-family: "FontAwesome";
+  content: "\f00c";
+  display: inline-block;
+  margin-right: 8px;
+  color: #2ecc71;
+}
+
 .three-reasons-heading + p {
   padding: 0 20px;
 }
