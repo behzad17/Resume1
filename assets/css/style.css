@@ -438,6 +438,62 @@ div#map {
   min-height: 360px;
 }
 
+/*--------------------------------------------Methodology Steps*/
+.methodology-container {
+  padding: 20px 0;
+}
+
+.methodology-step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.methodology-step:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(5px);
+}
+
+.step-number {
+  background: #e67e22;
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 15px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-title {
+  color: #fafafa;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.step-description {
+  color: #e8e8e8;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
 /*--------------------------------------------Section Columns*/
 
 .section-column {
@@ -588,6 +644,27 @@ div#map {
 
   .logo {
     min-height: 200px;
+  }
+
+  /* Mobile methodology steps */
+  .methodology-step {
+    padding: 12px;
+    margin-bottom: 20px;
+  }
+
+  .step-number {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    margin-right: 12px;
+  }
+
+  .step-title {
+    font-size: 16px;
+  }
+
+  .step-description {
+    font-size: 13px;
   }
 }
 
