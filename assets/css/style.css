@@ -646,6 +646,9 @@ div#map {
 
   .logo {
     min-height: 200px;
+    background-size: contain;
+    background-position: center center;
+    width: 100%;
   }
 
   /* Mobile methodology steps */
