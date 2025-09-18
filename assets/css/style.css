@@ -307,6 +307,12 @@ footer .cv-pdf i:hover {
   color: black;
 }
 
+/* Increase Personal Info text size on home page (labels and values) */
+.bg-color-personal-info .personal-info-item .key p,
+.bg-color-personal-info .personal-info-item .value p {
+  font-size: 19px;
+}
+
 .personal-info-item .key {
   display: inline-block;
   width: 30%;
