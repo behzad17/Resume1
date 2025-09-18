@@ -448,14 +448,16 @@ div#map {
   align-items: flex-start;
   margin-bottom: 25px;
   padding: 15px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 8px;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .methodology-step:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.95);
   transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .step-number {
@@ -479,7 +481,7 @@ div#map {
 }
 
 .step-title {
-  color: #fafafa;
+  color: #2c3e50;
   font-size: 18px;
   font-weight: 600;
   margin: 0 0 8px 0;
@@ -488,7 +490,7 @@ div#map {
 }
 
 .step-description {
-  color: #e8e8e8;
+  color: #34495e;
   font-size: 14px;
   line-height: 1.5;
   margin: 0;
