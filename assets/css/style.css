@@ -78,6 +78,7 @@ html {
 #main-content {
   scroll-margin-top: 20px;
   transition: opacity 0.3s ease-in-out;
+  opacity: 0.95;
 }
 
 /* Fade-in effect for main content */
@@ -85,9 +86,9 @@ html {
   opacity: 1;
 }
 
-/* Initial state for smooth appearance */
-#main-content {
-  opacity: 0.95;
+/* Ensure smooth scrolling works properly */
+* {
+  scroll-behavior: smooth;
 }
 
 .container-fluid {
