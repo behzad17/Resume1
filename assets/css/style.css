@@ -66,6 +66,28 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Smooth scroll enhancement */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Main content section styling for smooth scroll */
+#main-content {
+  scroll-margin-top: 20px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Fade-in effect for main content */
+#main-content.fade-in {
+  opacity: 1;
+}
+
+/* Initial state for smooth appearance */
+#main-content {
+  opacity: 0.95;
 }
 
 .container-fluid {
