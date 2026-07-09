@@ -1,237 +1,11 @@
-/* ==========================================================================
-   GitHub Page — Modern Presentation
-   ========================================================================== */
-
-#gh-username {
-  display: block;
-  width: 100%;
-  padding: 0.875rem 1rem;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 1rem;
-  color: #0f172a;
-  max-width: 100%;
-  margin-bottom: 1.5rem;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  background: #ffffff;
-  transition: border-color 250ms ease, box-shadow 250ms ease;
-}
-
-#gh-username:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
-  outline: none;
-}
-
-#gh-username::placeholder {
-  color: #94a3b8;
-}
-
-#gh-user-data,
-#gh-repo-data {
-  text-align: left;
-}
-
-#gh-user-data h2,
-#gh-repo-data h2 {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 1.375rem;
-  font-weight: 600;
-  color: #0f172a;
-  margin-bottom: 1rem;
-  letter-spacing: -0.02em;
-}
-
-#gh-user-data h4 {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #64748b;
-  line-height: 1.6;
-}
-
-.small-name {
-  font-size: 0.875rem;
-  color: #64748b;
-  font-style: normal;
-  font-weight: 400;
-}
-
-.small-name a {
-  color: #2563eb;
-  text-decoration: none;
-}
-
-.small-name a:hover {
-  color: #1d4ed8;
-}
-
-.gh-content {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  padding: 1.5rem;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 16px;
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
-  margin-bottom: 1.5rem;
-}
-
-.gh-avatar img {
-  border-radius: 50%;
-  border: 3px solid #f1f5f9;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
-}
-
-.gh-content p {
-  margin: 0;
-  font-size: 0.9375rem;
-  color: #64748b;
-  line-height: 1.6;
-}
-
-.avi {
-  float: none;
-  margin-right: 0;
-  margin-bottom: 0;
-}
-
-.avi img {
-  border: none;
-  padding: 0;
-  border-radius: 50%;
-}
-
-.repo-list {
-  display: block;
-  clear: both;
-  width: 100%;
-  padding: 1.5rem;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 16px;
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
-}
-
-.repo-list p {
-  margin-bottom: 1rem;
-}
-
-.repo-list p strong {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: #64748b;
-}
-
-.repo-list ul {
-  font-size: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.625rem;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.repo-list ul li {
-  display: inline-block;
-  float: none;
-}
-
-.repo-list ul li a {
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  display: inline-flex;
-  align-items: center;
-  margin: 0;
-  text-decoration: none;
-  border: 1px solid #e2e8f0;
-  border-radius: 999px;
-  color: #0f172a;
-  background: #f8fafc;
-  background-image: none;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 0.875rem;
-  transition: background-color 250ms ease, border-color 250ms ease, color 250ms ease, box-shadow 250ms ease;
-}
-
-.repo-list ul li a:hover {
-  background: #eff6ff;
-  border-color: #bfdbfe;
-  color: #2563eb;
-  background-image: none;
-}
-
-.repo-list ul li a:active {
-  box-shadow: none;
-  transform: translateY(1px);
-}
-
-.repo-list ul li a span {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 0.875rem;
-}
-
-#loader {
-  display: block;
-  width: 48px;
-  height: 48px;
-  margin: 2rem auto;
-}
-
-#search-area {
-  display: block;
-  max-width: 100%;
-  margin: 0;
-  background: transparent;
-  padding: 0;
-  box-shadow: none;
-  border-radius: 0;
-}
-
-#gh-api-data {
-  display: block;
-  padding: 0;
-}
-
-#gh-submit {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.75rem 1.5rem;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 0.9375rem;
-  font-weight: 600;
-  color: #ffffff;
-  text-decoration: none;
-  text-shadow: none;
-  background: #2563eb;
-  background-image: none;
-  border-radius: 12px;
-  border: none;
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
-  transition: background-color 250ms ease, box-shadow 250ms ease;
-}
-
-#gh-submit:hover {
-  background: #1d4ed8;
-  background-image: none;
-  border-color: transparent;
-}
-
-#gh-submit:active {
-  background: #1d4ed8;
-  background-image: none;
-  box-shadow: none;
-}
+@import url('http://fonts.googleapis.com/css?family=Roboto');
 
 br {
   display: block;
   line-height: 1.6em;
 }
+
+
 
 ol,
 ul {
@@ -243,6 +17,8 @@ textarea {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   outline: none;
 }
@@ -256,13 +32,13 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 
 strong,
 b {
-  font-weight: 600;
+  font-weight: bold;
 }
 
 table {
@@ -273,4 +49,163 @@ table {
 img {
   border: 0;
   max-width: 100%;
+}
+
+
+
+/* page structure */
+
+#search-area {
+  display: block;
+  max-width: 70%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 15px 25px;
+  -webkit-box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.4);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+#gh-api-data {
+  display: block;
+  padding: 25px 0;
+}
+
+#loader {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+
+/* page content styles */
+
+.small-name {
+  font-size: 0.75em;
+  color: #a9a9a9;
+  font-style: italic;
+}
+
+.avi {
+  float: left;
+  margin-right: 7px;
+  margin-bottom: 7px;
+}
+
+.avi img {
+  border: 1px solid #ccc;
+  padding: 3px;
+}
+
+.repo-list {
+  display: block;
+  clear: both;
+  width: 100%;
+}
+
+.repo-list ul {
+  font-size: 1.2em;
+}
+
+.repo-list ul li {
+  display: block;
+}
+
+.repo-list ul li a {
+  font-weight: bold;
+  padding: 6px 9px;
+  display: block;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  border: 1px solid #356492;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #3673af;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5597d8), to(#3673af));
+  background-image: -webkit-linear-gradient(top, #5597d8, #3673af);
+  background-image: -moz-linear-gradient(top, #5597d8, #3673af);
+  background-image: -ms-linear-gradient(top, #5597d8, #3673af);
+  background-image: -o-linear-gradient(top, #5597d8, #3673af);
+  background-image: linear-gradient(top, #5597d8, #3673af);
+}
+
+.repo-list ul li a:hover {
+  background-color: #396895;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#4b87c2), to(#396895));
+  background-image: -webkit-linear-gradient(top, #4b87c2, #396895);
+  background-image: -moz-linear-gradient(top, #4b87c2, #396895);
+  background-image: -ms-linear-gradient(top, #4b87c2, #396895);
+  background-image: -o-linear-gradient(top, #4b87c2, #396895);
+  background-image: linear-gradient(top, #4b87c2, #396895);
+}
+
+.repo-list ul li a:active {
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
+}
+
+.repo-list ul li a span {
+  font-family: "Courier New", Courier, "Lucida Typewriter", monospace;
+  font-size: 0.9em;
+}
+
+/* input field */
+
+#gh-username {
+  display: block;
+  padding: 5px 8px;
+  font-size: 1.4em;
+  color: #666;
+  max-width: 550px;
+  margin-bottom: 15px;
+}
+
+#gh-submit {
+  display: inline-block;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  background-color: #eaeaea;
+  background-image: -webkit-linear-gradient(#fafafa, #eaeaea);
+  background-image: -moz-linear-gradient(#fafafa, #eaeaea);
+  background-image: -ms-linear-gradient(top, #fafafa, #eaeaea);
+  background-image: -o-linear-gradient(top, #fafafa, #eaeaea);
+  background-image: linear-gradient(#fafafa, #eaeaea);
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  border-bottom-color: #c5c5c5;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+#gh-submit:hover {
+  background-color: #dadada;
+  background-image: -webkit-linear-gradient(#eaeaea, #dadada);
+  background-image: -moz-linear-gradient(#eaeaea, #dadada);
+  background-image: -ms-linear-gradient(top, #eaeaea, #dadada);
+  background-image: -o-linear-gradient(top, #eaeaea, #dadada);
+  background-image: linear-gradient(#eaeaea, #dadada);
+  border-color: #ccc #ccc #b5b5b5;
+}
+
+#gh-submit:active {
+  background-color: #dadada;
+  background-image: none;
+  border-color: #b5b5b5;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
 }
