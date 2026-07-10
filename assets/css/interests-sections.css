@@ -1,0 +1,388 @@
+/**
+ * Biological Data Analysis page — sidebar & services
+ * Scoped to body.page-interests — matches homepage / resume / contact design.
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+.page-interests #main-content {
+  background: #f8fbfe;
+  padding: 3rem 1.5rem 4rem;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 1;
+}
+
+.page-interests .row-table {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.page-interests .section-column {
+  background: transparent !important;
+  float: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.page-interests .interests-sidebar {
+  padding-right: 12px;
+}
+
+.page-interests .interests-sidebar-inner {
+  position: sticky;
+  top: 1.5rem;
+}
+
+.page-interests .interests-main {
+  padding-left: 12px;
+}
+
+.page-interests .interests-section-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #2563eb;
+  margin: 0 0 8px;
+  display: block;
+}
+
+.page-interests .interests-section-title {
+  font-size: 29px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+  margin: 0 0 20px;
+  line-height: 1.25;
+  text-transform: none;
+}
+
+.page-interests .interests-section-intro {
+  font-size: 16px;
+  color: #64748b;
+  margin: -12px 0 24px;
+  line-height: 1.55;
+  max-width: 640px;
+}
+
+/* Sidebar info cards */
+.page-interests .info-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0;
+}
+
+.page-interests .info-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+  padding: 20px 22px;
+  margin: 0;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.page-interests .info-card:hover {
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+  border-color: #cbd5e1;
+  transform: none;
+}
+
+.page-interests .info-card.highlight-card {
+  background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+  border-color: #bfdbfe;
+}
+
+.page-interests .info-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.page-interests .info-card.highlight-card .info-icon {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.page-interests .info-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 8px;
+  line-height: 1.35;
+}
+
+.page-interests .info-subtitle {
+  font-size: 15px;
+  font-weight: 500;
+  color: #2563eb;
+  margin: 0 0 10px;
+  line-height: 1.45;
+}
+
+.page-interests .info-text {
+  font-size: 14px;
+  color: #475569;
+  margin: 0 0 10px;
+  line-height: 1.55;
+}
+
+.page-interests .info-text:last-child {
+  margin-bottom: 0;
+}
+
+.page-interests .info-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+
+.page-interests .info-list li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.page-interests .info-list li:last-child {
+  margin-bottom: 0;
+}
+
+.page-interests .info-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2563eb;
+}
+
+.page-interests .info-list li strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.page-interests .info-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.page-interests .info-cta-link:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+/* Services grid */
+.page-interests .services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  padding: 0;
+}
+
+.page-interests .service-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+  padding: 24px;
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.page-interests .service-card:hover {
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.1);
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+}
+
+.page-interests .service-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  font-size: 20px;
+}
+
+.page-interests .service-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 8px;
+  line-height: 1.35;
+}
+
+.page-interests .service-description {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+
+.page-interests .service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.page-interests .service-features li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 7px;
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.45;
+}
+
+.page-interests .service-features li:last-child {
+  margin-bottom: 0;
+}
+
+.page-interests .service-features li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #93c5fd;
+}
+
+.page-interests .service-features li.service-note {
+  margin-top: 10px;
+  padding-left: 0;
+  font-size: 13px;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.page-interests .service-features li.service-note::before {
+  display: none;
+}
+
+/* Bottom CTA banner */
+.page-interests .interests-cta-banner {
+  margin-top: 28px;
+  padding: 28px 32px;
+  background: linear-gradient(135deg, #1e40af 0%, #2563eb 55%, #0ea5e9 100%);
+  border-radius: 20px;
+  color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: 0 16px 40px rgba(37, 99, 235, 0.25);
+}
+
+.page-interests .interests-cta-banner h4 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.page-interests .interests-cta-banner p {
+  font-size: 15px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 520px;
+  line-height: 1.5;
+}
+
+.page-interests .interests-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: #ffffff;
+  color: #2563eb;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.page-interests .interests-cta-btn:hover {
+  background: #f8fafc;
+  color: #1d4ed8;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 991px) {
+  .page-interests .interests-sidebar-inner {
+    position: static;
+  }
+
+  .page-interests .interests-sidebar,
+  .page-interests .interests-main {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .page-interests .interests-sidebar {
+    margin-bottom: 2rem;
+  }
+
+  .page-interests .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-interests #main-content {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .page-interests .interests-section-title {
+    font-size: 24px;
+  }
+
+  .page-interests .interests-cta-banner {
+    padding: 22px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page-interests .interests-cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
