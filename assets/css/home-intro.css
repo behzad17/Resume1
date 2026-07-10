@@ -1,0 +1,325 @@
+/**
+ * Homepage — Personal Info & About Me sections
+ * Scoped to body.page-home
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+.page-home .home-intro-section {
+  background: #f8fbfe;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.page-home .home-intro-section > .row {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.page-home .home-intro-section .section-column {
+  padding: 0 0.75rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* Personal Info — Company Card                                       */
+/* ------------------------------------------------------------------ */
+
+.page-home .bg-color-personal-info {
+  background-color: transparent !important;
+}
+
+.page-home .home-company-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  padding: 2rem;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.page-home .home-badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  color: #2563eb;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-bottom: 1rem;
+}
+
+.page-home .home-company-name {
+  font-family: inherit;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+  margin: 0 0 1.5rem;
+  line-height: 1.2;
+}
+
+.page-home .home-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.page-home .home-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: #475569;
+}
+
+.page-home .home-contact-icon {
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #f8fbfe;
+  border: 1px solid #e2e8f0;
+  color: #2563eb;
+  font-size: 0.9375rem;
+}
+
+.page-home .home-contact-item a {
+  color: #475569;
+  text-decoration: none;
+  transition: color 250ms ease-out;
+}
+
+.page-home .home-contact-item a:hover {
+  color: #2563eb;
+}
+
+.page-home .home-cta-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.page-home .home-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.125rem;
+  padding: 0 1.75rem;
+  border-radius: 16px;
+  font-family: inherit;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background-color 250ms ease-out,
+    border-color 250ms ease-out,
+    box-shadow 250ms ease-out,
+    transform 250ms ease-out;
+}
+
+.page-home .home-btn-primary {
+  background: #2563eb;
+  color: #ffffff;
+  border: 1px solid #2563eb;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+}
+
+.page-home .home-btn-primary:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+  transform: translateY(-1px);
+}
+
+.page-home .home-btn-secondary {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+}
+
+.page-home .home-btn-secondary:hover {
+  background: #f8fbfe;
+  border-color: #94a3b8;
+  color: #0f172a;
+}
+
+/* ------------------------------------------------------------------ */
+/* About Me                                                           */
+/* ------------------------------------------------------------------ */
+
+.page-home .bg-color-three-reasons {
+  background-color: transparent !important;
+}
+
+.page-home .home-about {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.page-home .home-section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #2563eb;
+  margin: 0 0 1.25rem;
+}
+
+.page-home .home-intro-block {
+  margin-bottom: 2.5rem;
+}
+
+.page-home .home-intro-block h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 0.625rem;
+  letter-spacing: -0.01em;
+}
+
+.page-home .home-intro-block p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #475569;
+  margin: 0;
+  max-width: 640px;
+}
+
+.page-home .home-services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.page-home .home-service-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  transition:
+    transform 250ms ease-out,
+    box-shadow 250ms ease-out,
+    border-color 250ms ease-out;
+}
+
+.page-home .home-service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+  border-color: #cbd5e1;
+}
+
+.page-home .home-service-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.page-home .home-service-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #f8fbfe;
+  border: 1px solid #e2e8f0;
+  color: #2563eb;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+.page-home .home-service-card h4 {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.page-home .home-service-card p {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: #64748b;
+  margin: 0;
+}
+
+.page-home .home-cta-banner {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+.page-home .home-cta-banner p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.page-home .home-cta-banner .home-btn {
+  min-width: 200px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Responsive                                                         */
+/* ------------------------------------------------------------------ */
+
+@media (min-width: 768px) {
+  .page-home .home-intro-section {
+    padding: 4rem 2rem 5rem;
+  }
+
+  .page-home .home-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .page-home .home-company-name {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .page-home .home-intro-section {
+    padding: 5rem 3rem 6rem;
+  }
+
+  .page-home .home-intro-section .section-column {
+    padding: 0 1rem;
+  }
+
+  .page-home .home-company-card {
+    position: sticky;
+    top: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-home .home-intro-section .section-column {
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .page-home .home-intro-section .section-column:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-home .home-service-card:hover,
+  .page-home .home-btn-primary:hover {
+    transform: none;
+  }
+}
