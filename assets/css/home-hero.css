@@ -1,9 +1,11 @@
 /**
- * Hero background — homepage, interests & github pages
- * Scoped to body.page-home, body.page-interests, and body.page-github.
+ * Hero background — all main site pages
+ * Scoped to body.page-* classes. No layout or navigation changes.
  */
 
 .page-home header,
+.page-resume header,
+.page-contact header,
 .page-interests header,
 .page-github header {
   background:
@@ -13,32 +15,40 @@
 }
 
 .page-home header > .row,
+.page-resume header > .row,
+.page-contact header > .row,
 .page-interests header > .row,
 .page-github header > .row {
   background: transparent;
 }
 
-/* Allow gradient to show through the title strip on homepage */
 .page-home .bg-color-name-title,
+.page-resume .bg-color-name-title,
+.page-contact .bg-color-name-title,
 .page-interests .bg-color-name-title,
 .page-github .bg-color-name-title {
   background-color: transparent !important;
 }
 
-/* Readable text on the light hero background (homepage only) */
 .page-home .name,
+.page-resume .name,
+.page-contact .name,
 .page-interests .name,
 .page-github .name {
   color: #0f172a;
 }
 
 .page-home .title,
+.page-resume .title,
+.page-contact .title,
 .page-interests .title,
 .page-github .title {
   color: #475569;
 }
 
 .page-home .logo,
+.page-resume .logo,
+.page-contact .logo,
 .page-interests .logo,
 .page-github .logo {
   background-image:
