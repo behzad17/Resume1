@@ -112,8 +112,17 @@
   font-size: 18px;
 }
 
+.page-interests .info-icon i {
+  color: #2563eb;
+  font-size: 18px;
+}
+
 .page-interests .info-card.highlight-card .info-icon {
   background: #2563eb;
+  color: #ffffff;
+}
+
+.page-interests .info-card.highlight-card .info-icon i {
   color: #ffffff;
 }
 
@@ -232,6 +241,11 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 14px;
+  font-size: 20px;
+}
+
+.page-interests .service-icon i {
+  color: #2563eb;
   font-size: 20px;
 }
 
