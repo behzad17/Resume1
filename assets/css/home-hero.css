@@ -1,13 +1,31 @@
 /**
- * Homepage Hero — background only (v1)
- * Scoped to body.page-home. No layout, typography, or component changes.
+ * Homepage Hero — background only (v2)
+ * Scoped to body.page-home. No layout, navigation, or spacing changes.
  */
 
-.page-home header > .row {
+.page-home header {
   background:
     radial-gradient(circle at 10% 15%, rgba(37, 99, 235, 0.07), transparent 32%),
     radial-gradient(circle at 90% 0%, rgba(14, 165, 233, 0.05), transparent 28%),
     linear-gradient(180deg, #fafcff 0%, #f2f7fc 55%, #eaf2fb 100%);
+}
+
+.page-home header > .row {
+  background: transparent;
+}
+
+/* Allow gradient to show through the title strip on homepage */
+.page-home .bg-color-name-title {
+  background-color: transparent !important;
+}
+
+/* Readable text on the light hero background (homepage only) */
+.page-home .name {
+  color: #0f172a;
+}
+
+.page-home .title {
+  color: #475569;
 }
 
 .page-home .logo {
