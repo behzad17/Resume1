@@ -1,6 +1,7 @@
 /**
  * Homepage — Personal Info & About Me sections
  * Scoped to body.page-home
+ * Note: Bootstrap 3 sets html to 10px — use px for readable typography.
  */
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
@@ -8,6 +9,8 @@
 .page-home .home-intro-section {
   background: #f8fbfe;
   padding: 3rem 1.5rem 4rem;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 .page-home .home-intro-section > .row {
@@ -38,47 +41,47 @@
 
 .page-home .home-badge {
   display: inline-block;
-  padding: 0.4rem 0.875rem;
+  padding: 6px 14px;
   border-radius: 999px;
   background: #eff6ff;
   border: 1px solid #dbeafe;
   color: #2563eb;
-  font-size: 0.875rem;
+  font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.02em;
-  margin-bottom: 1.125rem;
+  margin-bottom: 18px;
 }
 
 .page-home .home-company-name {
   font-family: inherit;
-  font-size: 2rem;
+  font-size: 36px;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: #0f172a;
-  margin: 0 0 1.5rem;
-  line-height: 1.25;
+  margin: 0 0 24px;
+  line-height: 1.2;
 }
 
 .page-home .home-contact-list {
   display: flex;
   flex-direction: column;
-  gap: 1.125rem;
-  margin-bottom: 1.75rem;
+  gap: 18px;
+  margin-bottom: 28px;
 }
 
 .page-home .home-contact-item {
   display: flex;
   align-items: flex-start;
-  gap: 0.875rem;
-  font-size: 1.125rem;
+  gap: 14px;
+  font-size: 20px;
   line-height: 1.6;
   color: #475569;
 }
 
 .page-home .home-contact-icon {
   flex-shrink: 0;
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,7 +89,7 @@
   background: #f8fbfe;
   border: 1px solid #e2e8f0;
   color: #2563eb;
-  font-size: 1.125rem;
+  font-size: 20px;
 }
 
 .page-home .home-contact-item a {
@@ -102,18 +105,18 @@
 .page-home .home-cta-group {
   display: flex;
   flex-direction: column;
-  gap: 0.625rem;
+  gap: 12px;
 }
 
 .page-home .home-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 3.375rem;
-  padding: 0 1.75rem;
+  min-height: 54px;
+  padding: 0 28px;
   border-radius: 16px;
   font-family: inherit;
-  font-size: 1.0625rem;
+  font-size: 18px;
   font-weight: 600;
   text-decoration: none;
   transition:
@@ -163,28 +166,28 @@
 }
 
 .page-home .home-section-label {
-  font-size: 0.875rem;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #2563eb;
-  margin: 0 0 1.25rem;
+  margin: 0 0 20px;
 }
 
 .page-home .home-intro-block {
-  margin-bottom: 2.5rem;
+  margin-bottom: 40px;
 }
 
 .page-home .home-intro-block h4 {
-  font-size: 1.5rem;
+  font-size: 28px;
   font-weight: 600;
   color: #0f172a;
-  margin: 0 0 0.75rem;
+  margin: 0 0 14px;
   letter-spacing: -0.01em;
 }
 
 .page-home .home-intro-block p {
-  font-size: 1.125rem;
+  font-size: 20px;
   line-height: 1.75;
   color: #475569;
   margin: 0;
@@ -194,15 +197,15 @@
 .page-home .home-services-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
-  margin-bottom: 2.5rem;
+  gap: 16px;
+  margin-bottom: 40px;
 }
 
 .page-home .home-service-card {
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 20px;
-  padding: 1.75rem;
+  padding: 28px;
   box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
   transition:
     transform 250ms ease-out,
@@ -223,8 +226,8 @@
 }
 
 .page-home .home-service-icon {
-  width: 3rem;
-  height: 3rem;
+  width: 52px;
+  height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -232,20 +235,20 @@
   background: #f8fbfe;
   border: 1px solid #e2e8f0;
   color: #2563eb;
-  font-size: 1.25rem;
-  margin-bottom: 1.125rem;
+  font-size: 22px;
+  margin-bottom: 18px;
 }
 
 .page-home .home-service-card h4 {
-  font-size: 1.25rem;
+  font-size: 22px;
   font-weight: 600;
   color: #0f172a;
-  margin: 0 0 0.625rem;
+  margin: 0 0 10px;
   letter-spacing: -0.01em;
 }
 
 .page-home .home-service-card p {
-  font-size: 1.0625rem;
+  font-size: 18px;
   line-height: 1.7;
   color: #64748b;
   margin: 0;
@@ -255,21 +258,21 @@
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 20px;
-  padding: 2rem;
+  padding: 32px;
   text-align: center;
   box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
 }
 
 .page-home .home-cta-banner p {
-  font-size: 1.5rem;
+  font-size: 28px;
   font-weight: 600;
   color: #0f172a;
-  margin: 0 0 1.25rem;
+  margin: 0 0 20px;
   letter-spacing: -0.01em;
 }
 
 .page-home .home-cta-banner .home-btn {
-  min-width: 200px;
+  min-width: 220px;
 }
 
 /* ------------------------------------------------------------------ */
@@ -279,15 +282,16 @@
 @media (min-width: 768px) {
   .page-home .home-intro-section {
     padding: 4rem 2rem 5rem;
+    font-size: 18px;
   }
 
   .page-home .home-services-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
+    gap: 20px;
   }
 
   .page-home .home-company-name {
-    font-size: 2.375rem;
+    font-size: 42px;
   }
 }
 
@@ -307,6 +311,38 @@
 }
 
 @media (max-width: 767px) {
+  .page-home .home-intro-section {
+    font-size: 17px;
+  }
+
+  .page-home .home-company-name {
+    font-size: 32px;
+  }
+
+  .page-home .home-contact-item {
+    font-size: 18px;
+  }
+
+  .page-home .home-intro-block h4 {
+    font-size: 24px;
+  }
+
+  .page-home .home-intro-block p {
+    font-size: 18px;
+  }
+
+  .page-home .home-service-card h4 {
+    font-size: 20px;
+  }
+
+  .page-home .home-service-card p {
+    font-size: 17px;
+  }
+
+  .page-home .home-cta-banner p {
+    font-size: 24px;
+  }
+
   .page-home .home-intro-section .section-column {
     padding: 0;
     margin-bottom: 1.5rem;
