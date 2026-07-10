@@ -1,0 +1,423 @@
+/**
+ * Resume page — Work History, Skills & Projects
+ * Scoped to body.page-resume — matches homepage intro design system.
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+.page-resume #main-content {
+  background: #f8fbfe;
+  padding: 3rem 1.5rem 4rem;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 1;
+}
+
+.page-resume #main-content > .row-table {
+  max-width: 1280px;
+  margin: 0 auto 3rem;
+  display: block;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.page-resume #main-content > .row-table > .section-column {
+  padding: 0 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.page-resume .bg-color-work-history,
+.page-resume .bg-color-three-reasons {
+  background-color: transparent !important;
+}
+
+/* ------------------------------------------------------------------ */
+/* Shared                                                             */
+/* ------------------------------------------------------------------ */
+
+.page-resume .resume-section-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #2563eb;
+  margin: 0 0 20px;
+}
+
+.page-resume .resume-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  padding: 28px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Work History                                                       */
+/* ------------------------------------------------------------------ */
+
+.page-resume .resume-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.page-resume .resume-timeline-item {
+  position: relative;
+  padding: 0 0 24px 22px;
+  border-left: 2px solid #e2e8f0;
+  margin-left: 6px;
+}
+
+.page-resume .resume-timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.page-resume .resume-timeline-item::before {
+  content: attr(dates);
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #2563eb;
+  margin-bottom: 6px;
+  letter-spacing: 0.01em;
+}
+
+.page-resume .resume-timeline-item::after {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #2563eb;
+  box-shadow: 0 0 0 3px #eff6ff;
+}
+
+.page-resume .resume-timeline-item h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+}
+
+.page-resume .resume-timeline-item p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+}
+
+/* ------------------------------------------------------------------ */
+/* Skills                                                             */
+/* ------------------------------------------------------------------ */
+
+.page-resume .resume-skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.page-resume .resume-skill-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  transition:
+    transform 250ms ease-out,
+    box-shadow 250ms ease-out,
+    border-color 250ms ease-out;
+}
+
+.page-resume .resume-skill-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+  border-color: #cbd5e1;
+}
+
+.page-resume .resume-skill-icon {
+  width: 41px;
+  height: 41px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #f8fbfe;
+  border: 1px solid #e2e8f0;
+  color: #2563eb;
+  font-size: 18px;
+  margin-bottom: 14px;
+}
+
+.page-resume .resume-skill-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+
+.page-resume .resume-skill-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #64748b;
+  margin: 0;
+}
+
+.page-resume .resume-skill-card .three-reasons-heading:before {
+  display: none;
+}
+
+/* Progress bars */
+.page-resume .resume-progress-wrap {
+  margin-top: 0;
+}
+
+.page-resume .resume-progress-wrap .row {
+  margin: 0;
+}
+
+.page-resume .resume-progress-section {
+  margin: 0;
+}
+
+.page-resume .resume-progress-section .progress {
+  height: 28px;
+  margin-bottom: 14px;
+  background: #f1f5f9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: none;
+  direction: ltr;
+}
+
+.page-resume .resume-progress-section .progress-bar {
+  background: #2563eb;
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.page-resume .resume-progress-section .progress-bar-success {
+  background: #059669;
+}
+
+.page-resume .resume-progress-section .progress-bar-info {
+  background: #0ea5e9;
+}
+
+.page-resume .resume-progress-section .progress-bar-warning {
+  background: #d97706;
+}
+
+.page-resume .resume-progress-section .progress-bar-danger {
+  background: #7c3aed;
+}
+
+.page-resume .resume-progress-section .progress-type {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-weight: 500;
+  color: #0f172a;
+  background: transparent;
+  padding: 0;
+  direction: ltr;
+  z-index: 2;
+}
+
+/* ------------------------------------------------------------------ */
+/* Projects                                                           */
+/* ------------------------------------------------------------------ */
+
+.page-resume .resume-projects-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 0.75rem;
+}
+
+.page-resume .resume-projects-section .section-heading,
+.page-resume .resume-projects-section .section-intro {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  text-transform: none;
+  letter-spacing: -0.01em;
+}
+
+.page-resume .resume-projects-section .section-heading {
+  font-size: 21px;
+  font-weight: 600;
+  color: #0f172a;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.page-resume .resume-projects-section .section-intro {
+  font-size: 16px;
+  color: #64748b;
+  text-align: center;
+  font-style: normal;
+  max-width: 640px;
+  margin: 0 auto 28px;
+  line-height: 1.7;
+}
+
+.page-resume .projects-section {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.page-resume .projects-grid {
+  gap: 18px;
+}
+
+.page-resume .project-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  transition:
+    transform 250ms ease-out,
+    box-shadow 250ms ease-out,
+    border-color 250ms ease-out;
+}
+
+.page-resume .project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+  border-color: #cbd5e1;
+}
+
+.page-resume .project-image {
+  height: 200px;
+  background: #f8fbfe;
+  border-radius: 20px 20px 0 0;
+}
+
+.page-resume .project-image img {
+  border-radius: 20px 20px 0 0;
+}
+
+.page-resume .project-overlay {
+  background: rgba(15, 23, 42, 0.4);
+}
+
+.page-resume .project-link {
+  width: 44px;
+  height: 44px;
+  font-size: 18px;
+  background: #2563eb;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.page-resume .project-link:hover {
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.page-resume .project-content {
+  padding: 22px;
+}
+
+.page-resume .project-title {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.page-resume .project-description {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #64748b;
+  margin-bottom: 16px;
+}
+
+.page-resume .tag {
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #dbeafe;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  box-shadow: none;
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+
+/* Hide legacy uppercase overrides */
+.page-resume .history-heading,
+.page-resume .section-heading.uppercase {
+  border: none;
+}
+
+/* ------------------------------------------------------------------ */
+/* Responsive                                                         */
+/* ------------------------------------------------------------------ */
+
+@media (min-width: 768px) {
+  .page-resume #main-content {
+    padding: 4rem 2rem 5rem;
+  }
+
+  .page-resume .resume-skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .page-resume #main-content > .row-table {
+    display: table;
+    table-layout: fixed;
+  }
+
+  .page-resume #main-content > .row-table > .section-column {
+    display: table-cell;
+    vertical-align: top;
+    margin-bottom: 0;
+  }
+
+  .page-resume .resume-work-card {
+    position: sticky;
+    top: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .page-resume #main-content {
+    padding: 5rem 3rem 6rem;
+  }
+
+  .page-resume #main-content > .row-table > .section-column,
+  .page-resume .resume-projects-section {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-resume #main-content > .row-table > .section-column {
+    padding: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-resume .resume-skill-card:hover,
+  .page-resume .project-card:hover {
+    transform: none;
+  }
+}
