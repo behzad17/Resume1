@@ -17,6 +17,7 @@
       type="text/css"
     />
     <link rel="stylesheet" href="assets/css/style.css?v=3" type="text/css" />
+    <link rel="stylesheet" href="assets/css/contact-sections.css?v=1" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>BJcode Company</title>
 
@@ -29,7 +30,7 @@
     </script>
   </head>
 
-  <body>
+  <body class="page-contact">
     <header class="container-fluid">
       <div class="row">
         <a href="index.html">
@@ -89,46 +90,66 @@
       </div>
     </header>
     <section id="main-content" class="container-fluid">
-      <div class="row bg-color-contact">
-        <div>
-          <h3 class="contact-heading uppercase text-center">
-            Got a project in mind?
-          </h3>
-          <h5 class="uppercase text-center">Let's work together</h5>
+      <div class="row bg-color-contact contact-layout">
+        <div class="contact-layout-col contact-layout-col--info col-xs-12 col-md-4">
+          <div class="contact-card contact-info-card">
+            <span class="contact-section-label">Contact</span>
+            <h2>Got a project in mind?</h2>
+            <p class="contact-subtitle">Let's work together</p>
+            <div class="contact-details">
+              <div class="contact-detail-item">
+                <span class="contact-detail-icon" aria-hidden="true"
+                  ><i class="fa fa-envelope-o"></i
+                ></span>
+                <a href="mailto:info@bjcode.se">info@bjcode.se</a>
+              </div>
+              <div class="contact-detail-item">
+                <span class="contact-detail-icon" aria-hidden="true"
+                  ><i class="fa fa-phone"></i
+                ></span>
+                <a href="tel:+46706840018">+46 706 84 00 18</a>
+              </div>
+              <div class="contact-detail-item">
+                <span class="contact-detail-icon" aria-hidden="true"
+                  ><i class="fa fa-map-marker"></i
+                ></span>
+                <span>Gothenburg, Sweden</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="center-form">
-          <form onsubmit="return sendMail(this);">
-            <input
-              type="text"
-              name="name"
-              class="form-control"
-              id="fullname"
-              placeholder="Name"
-              required
-            />
-            <br />
-            <input
-              type="text"
-              name="emailaddress"
-              class="form-control"
-              id="emailaddress"
-              placeholder="Email"
-              required
-            />
-            <br />
-            <textarea
-              rows="5"
-              name="projectsummary"
-              class="form-control"
-              id="projectsummary"
-              placeholder="Project Description"
-              required
-            ></textarea>
-            <br />
-            <button type="submit" class="btn btn-secondary center-block">
-              Send Project Request
-            </button>
-          </form>
+        <div class="contact-layout-col contact-layout-col--form col-xs-12 col-md-8">
+          <div class="contact-card contact-form-card center-form">
+            <form onsubmit="return sendMail(this);">
+              <input
+                type="text"
+                name="name"
+                class="form-control"
+                id="fullname"
+                placeholder="Name"
+                required
+              />
+              <input
+                type="text"
+                name="emailaddress"
+                class="form-control"
+                id="emailaddress"
+                placeholder="Email"
+                required
+              />
+              <textarea
+                rows="5"
+                name="projectsummary"
+                class="form-control"
+                id="projectsummary"
+                placeholder="Project Description"
+                required
+              ></textarea>
+              <button type="submit" class="btn btn-secondary center-block">
+                Send Project Request
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
