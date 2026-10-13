@@ -6,7 +6,7 @@ Static, English-language company website and developer portfolio.
 - `index.html`: company introduction and website services
 - `resume.html`: Behzad Javadian’s education, skills and selected projects
 - `contact.html`: contact details and EmailJS form
-- `interests.html`: bioinformatics services
+- `interests.html`: web development, redesign, optimization and support services
 - `github.html`: public GitHub profile and repository lookup
 
 ## Local development
