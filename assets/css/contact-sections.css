@@ -108,10 +108,10 @@
 }
 
 /* Form card */
-.page-contact .center-form {
+.page-contact .contact-form-card.center-form {
   max-width: none;
   min-height: auto;
-  padding: 0;
+  padding: 28px;
   margin: 0;
 }
 
@@ -213,6 +213,10 @@
 }
 
 @media (max-width: 767px) {
+  .page-contact .contact-form-card.center-form {
+    padding: 20px;
+  }
+
   .page-contact .contact-layout-col {
     margin-bottom: 1.25rem;
   }
