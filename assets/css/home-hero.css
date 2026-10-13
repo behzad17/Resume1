@@ -52,7 +52,7 @@
 .page-interests .logo,
 .page-github .logo {
   background-image:
-    url("../images/bjcode1.jpg"),
+    url("../images/bjcode-hero.webp"),
     radial-gradient(circle at 55% 42%, rgba(255, 255, 255, 0.025), transparent 62%),
     radial-gradient(circle at 10% 15%, rgba(37, 99, 235, 0.07), transparent 32%),
     radial-gradient(circle at 90% 0%, rgba(14, 165, 233, 0.05), transparent 28%),
