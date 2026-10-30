@@ -1,0 +1,82 @@
+/* Persian presentation layer, loaded after the page styles. */
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap");
+
+html[lang="fa"] body,
+html[lang="fa"] #main-content,
+html[lang="fa"] h1, html[lang="fa"] h2, html[lang="fa"] h3,
+html[lang="fa"] h4, html[lang="fa"] h5, html[lang="fa"] h6,
+html[lang="fa"] input, html[lang="fa"] textarea, html[lang="fa"] button,
+html[lang="fa"] .section-heading, html[lang="fa"] .section-intro,
+html[lang="fa"] .home-btn {
+  font-family: "Vazirmatn", Tahoma, sans-serif !important;
+  letter-spacing: 0;
+}
+html[lang="fa"] body { font-weight: 400; line-height: 1.9; }
+html[lang="fa"] p { line-height: 1.95; }
+html[lang="fa"] h1, html[lang="fa"] h2,
+html[lang="fa"] h3, html[lang="fa"] h4 { line-height: 1.6; }
+html[lang="fa"] [class*="section-label"],
+html[lang="fa"] .menuitem span,
+html[lang="fa"] .footer-title, html[lang="fa"] .footer-tagline,
+html[lang="fa"] .tag { letter-spacing: 0; text-transform: none; }
+html[lang="fa"] .heading { margin: 0; padding: 0 42px; }
+html[lang="fa"] .name { font-size: clamp(30px, 3.4vw, 46px); font-weight: 800; }
+html[lang="fa"] .title { font-size: clamp(17px, 2vw, 24px); font-weight: 400; margin-bottom: 64px; }
+html[lang="fa"] #nav { display: flex; flex-wrap: wrap; }
+html[lang="fa"] #nav::before, html[lang="fa"] #nav::after { display: none; }
+html[lang="fa"] #nav li { float: none; }
+html[lang="fa"] .menuitem span { font-size: 14px; font-weight: 500; line-height: 1.8; padding: 6px 4px; }
+html[lang="fa"] .menuitem a[aria-current="page"] { box-shadow: inset 0 -4px 0 rgba(255,255,255,.85); }
+html[lang="fa"] [dir="ltr"] { unicode-bidi: isolate; }
+html[lang="fa"] a[dir="ltr"], html[lang="fa"] bdi { display: inline-block; }
+html[lang="fa"] .home-contact-item a { overflow-wrap: anywhere; }
+html[lang="fa"] .home-company-name { font-size: clamp(26px, 3vw, 36px); }
+html[lang="fa"] .resume-timeline-item { padding: 0 22px 24px 0; border-left: 0; border-right: 2px solid #e2e8f0; margin: 0 6px 0 0; }
+html[lang="fa"] .resume-timeline-item::after { left: auto; right: -7px; }
+html[lang="fa"] .resume-timeline-item::before { letter-spacing: 0; unicode-bidi: plaintext; }
+html[lang="fa"] .resume-progress-section .progress { direction: rtl; }
+html[lang="fa"] .resume-progress-section .progress-bar { float: right; }
+html[lang="fa"] .resume-progress-section .progress-type { left: auto; right: 12px; }
+html[lang="fa"] .page-interests .interests-sidebar { padding-right: 0; padding-left: 12px; }
+html[lang="fa"] .page-interests .interests-main { padding-left: 0; padding-right: 12px; }
+html[lang="fa"] .service-features,
+html[lang="fa"] .info-card ol { padding-left: 0; padding-right: 22px; }
+html[lang="fa"] .service-features li { padding-left: 0; padding-right: 18px; }
+html[lang="fa"] .service-features li::before { left: auto; right: 0; }
+html[lang="fa"] .info-card .info-text { line-height: 1.95; }
+html[lang="fa"] .info-cta-link, html[lang="fa"] .interests-cta-btn { gap: 9px; }
+html[lang="fa"] .footer-links a::before { content: "←"; left: auto; right: -20px; }
+html[lang="fa"] .footer-links a:hover { transform: translateX(-5px); }
+html[lang="fa"] .footer-links a:hover::before { left: auto; right: -15px; }
+html[lang="fa"] .contact-info i { margin-right: 0; margin-left: 12px; }
+html[lang="fa"] .footer-bottom .text-right { text-align: left; }
+html[lang="fa"] .skip-link { left: auto; right: 16px; }
+html[lang="fa"] .project-title,
+html[lang="fa"] .gh-repo-link { overflow-wrap: anywhere; }
+html[lang="fa"] .gh-repo-link { direction: ltr; }
+html[lang="fa"] .contact-form-card label { margin: 0; font-weight: 500; }
+html[lang="fa"] .contact-form-card .form-control { line-height: 1.8; }
+html[lang="fa"] .contact-form-card #emailaddress::placeholder { text-align: right; }
+html[lang="fa"] #form-status { overflow-wrap: anywhere; line-height: 1.9; }
+@media (min-width: 768px) {
+  html[lang="fa"] footer [class*="col-sm-"] { float: right; }
+}
+@media (min-width: 992px) {
+  html[lang="fa"] header [class*="col-md-"],
+  html[lang="fa"] .page-home #main-content [class*="col-md-"],
+  html[lang="fa"] .contact-layout-col,
+  html[lang="fa"] footer [class*="col-md-"] { float: right; }
+}
+@media (max-width: 991px) {
+  html[lang="fa"] .heading { padding: 0 24px; }
+  html[lang="fa"] .menuitem span { font-size: 13px; }
+}
+@media (max-width: 767px) {
+  html[lang="fa"] .heading { text-align: center; padding: 0 20px; }
+  html[lang="fa"] .name { margin-top: 28px; }
+  html[lang="fa"] .title { margin: 12px 0 32px; }
+  html[lang="fa"] .page-interests .interests-sidebar,
+  html[lang="fa"] .page-interests .interests-main { padding: 0; }
+  html[lang="fa"] .page-github .gh-user-header { text-align: right; }
+  html[lang="fa"] .footer-bottom .text-right { text-align: center; }
+}

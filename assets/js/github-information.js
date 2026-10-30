@@ -8,6 +8,7 @@
     const node = document.createElement(tag);
     node.className = className;
     if (text !== undefined) node.textContent = text;
+    node.dir = 'auto';
     return node;
   }
   function link(text, url, className) {
@@ -21,7 +22,8 @@
   async function getJSON(url, signal) {
     const response = await fetch(url, { signal });
     if (!response.ok) {
-      const error = new Error(response.status === 404 ? 'No GitHub user found.' : response.status === 403 || response.status === 429 ? 'GitHub request limit reached. Please try again later.' : 'GitHub is unavailable. Please try again.');
+      const error = new Error(response.status === 404 ? 'کاربری با این نام پیدا نشد.' : response.status === 403 || response.status === 429 ? 'تعداد درخواست‌ها به سقف مجاز گیت‌هاب رسیده است. کمی بعد دوباره تلاش کنید.' : 'گیت‌هاب در دسترس نیست. دوباره تلاش کنید.');
+      error.isGitHubError = true;
       throw error;
     }
     return response.json();
@@ -33,10 +35,10 @@
     const username = input.value.trim();
     repoContainer.replaceChildren();
     if (!/^[a-z\d](?:[a-z\d-]{0,37}[a-z\d])?$/i.test(username)) {
-      userContainer.textContent = username ? 'Enter a valid GitHub username.' : 'Please enter a GitHub username.';
+      userContainer.textContent = username ? 'یک نام کاربری معتبر گیت‌هاب وارد کنید.' : 'نام کاربری گیت‌هاب را وارد کنید.';
       return;
     }
-    userContainer.textContent = 'Loading GitHub projects…';
+    userContainer.textContent = 'در حال دریافت پروژه‌های گیت‌هاب…';
     const signal = controller.signal;
     const base = 'https://api.github.com/users/' + encodeURIComponent(username);
     try {
@@ -55,7 +57,7 @@
       const avatar = element('img', '', user.login);
       const avatarURL = new URL(user.avatar_url);
       if (avatarURL.protocol === 'https:' && avatarURL.hostname === 'avatars.githubusercontent.com') avatar.src = avatarURL.href;
-      avatar.alt = user.login + ' profile picture';
+      avatar.alt = 'تصویر پروفایل ' + user.login;
       avatar.width = avatar.height = 80;
       avatarLink.append(avatar);
       const meta = element('div', 'gh-user-meta');
@@ -64,12 +66,12 @@
       handle.append(link('@' + user.login, user.html_url, ''));
       heading.append(handle); meta.append(heading); header.append(avatarLink, meta); card.append(header);
       const stats = element('div', 'gh-user-stats');
-      for (const [label, value] of [['Followers', user.followers], ['Following', user.following], ['Repositories', user.public_repos]]) {
-        const stat = element('span', 'gh-stat'); stat.append(element('strong', '', value), document.createTextNode(label)); stats.append(stat);
+      for (const [label, value] of [['دنبال‌کنندگان', user.followers], ['دنبال‌شوندگان', user.following], ['مخزن‌ها', user.public_repos]]) {
+        const stat = element('span', 'gh-stat'); stat.append(element('strong', '', new Intl.NumberFormat('fa-IR').format(value)), document.createTextNode(label)); stats.append(stat);
       }
       card.append(stats); userContainer.replaceChildren(card);
-      const list = element('div', 'repo-list'); list.append(element('h4', 'repo-list-heading', 'Repositories'));
-      if (!repos.length) list.append(element('p', 'repo-empty', 'No public repositories found.'));
+      const list = element('div', 'repo-list'); list.append(element('h4', 'repo-list-heading', 'مخزن‌ها'));
+      if (!repos.length) list.append(element('p', 'repo-empty', 'مخزن عمومی‌ای پیدا نشد.'));
       else {
         const items = element('ul', '');
         for (const repo of repos) { const item = element('li', 'gh-repo-item'); item.append(link(repo.name, repo.html_url, 'gh-repo-link')); items.append(item); }
@@ -77,7 +79,7 @@
       }
       repoContainer.replaceChildren(list);
     } catch (error) {
-      if (error.name !== 'AbortError' && current === generation) userContainer.textContent = error.message || 'Unable to load GitHub projects.';
+      if (error.name !== 'AbortError' && current === generation) userContainer.textContent = error.isGitHubError ? error.message : 'دریافت پروژه‌های گیت‌هاب ممکن نشد. اتصال اینترنت را بررسی کنید.';
     }
   }
   input.addEventListener('input', () => {

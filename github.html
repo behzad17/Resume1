@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <link
@@ -24,13 +24,14 @@
     <script defer src="assets/js/github-information.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>GitHub Projects | BJcode</title>
-    <meta name="description" content="Browse public GitHub projects and developer profiles with BJcode." />
+    <title>پروژه‌های گیت‌هاب | BJcode</title>
+    <meta name="description" content="پروژه‌های عمومی گیت‌هاب و آمار توسعه‌دهندگان را در BJcode ببینید." />
       <link rel="stylesheet" href="assets/css/accessibility.css" />
+    <link rel="stylesheet" href="assets/css/persian.css?v=1" />
   </head>
 
   <body class="page-github">
-    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <a class="skip-link" href="#main-content">رفتن به محتوای اصلی</a>
     <header class="container-fluid">
       <div class="row">
         <a href="index.html">
@@ -39,8 +40,8 @@
         <div class="col-md-8">
           <div class="row bg-color-name-title">
             <div class="heading">
-              <h1 class="name">BJcode Company</h1>
-              <h2 class="title">A Sweden-Based Registered Company</h2>
+              <h1 class="name">شرکت BJcode</h1>
+              <h2 class="title">طراحی و توسعهٔ وب؛ شرکت ثبت‌شده در سوئد</h2>
             </div>
           </div>
           <div class="row">
@@ -48,31 +49,31 @@
               <li class="col-xs-6 col-sm-2 ui-menu-color-home menuitem">
                 <a href="index.html" class="hvr-sweep-to-bottom"
                   ><i class="fa fa-home" aria-hidden="true"></i
-                  ><span>Home</span></a
+                  ><span>خانه</span></a
                 >
               </li>
               <li class="col-xs-6 col-sm-2 ui-menu-color-resume menuitem">
                 <a href="resume.html" class="hvr-sweep-to-bottom"
                   ><i class="fa fa-graduation-cap" aria-hidden="true"></i
-                  ><span>Resume</span></a
+                  ><span>رزومه</span></a
                 >
               </li>
               <li class="col-xs-6 col-sm-2 ui-menu-color-contact menuitem">
                 <a href="contact.html" class="hvr-sweep-to-bottom"
                   ><i class="fa fa-commenting-o" aria-hidden="true "></i
-                  ><span>Contact</span></a
+                  ><span>تماس</span></a
                 >
               </li>
               <li class="col-xs-6 col-sm-2 ui-menu-color-interests menuitem">
                 <a href="interests.html" class="hvr-sweep-to-bottom"
                   ><i class="fa fa-code" aria-hidden="true "></i
-                  ><span>Services</span></a
+                  ><span>خدمات</span></a
                 >
               </li>
               <li class="col-xs-6 col-sm-2 ui-menu-color-github menuitem">
-                <a href="github.html" class="hvr-sweep-to-bottom"
-                   aria-label="BJcode on github"><i class="fa fa-github" aria-hidden="true "></i
-                  ><span>GitHub</span></a
+                <a href="github.html" aria-current="page" class="hvr-sweep-to-bottom"
+                   aria-label="BJcode در گیت‌هاب"><i class="fa fa-github" aria-hidden="true "></i
+                  ><span>گیت‌هاب</span></a
                 >
               </li>
               <li class="col-xs-6 col-sm-2 ui-menu-color-download menuitem">
@@ -81,7 +82,7 @@
                   target="_blank"
                   class="hvr-sweep-to-bottom"
                    rel="noopener noreferrer"><i class="fa fa-download" aria-hidden="true "></i
-                  ><span>Download CV</span></a
+                  ><span>دریافت رزومه</span></a
                 >
               </li>
             </ul>
@@ -92,31 +93,30 @@
     <section id="main-content" class="container-fluid">
       <div class="row bg-color-contact github-layout">
         <div class="github-page-header">
-          <span class="github-section-label">Open Source</span>
-          <h3 class="github-section-title">View My GitHub Projects</h3>
+          <span class="github-section-label">متن‌باز</span>
+          <h3 class="github-section-title">پروژه‌های من در گیت‌هاب</h3>
           <p class="github-section-intro">
-            Search any GitHub username to browse public repositories and profile
-            stats
+            با جست‌وجوی نام کاربری، مخزن‌های عمومی و آمار پروفایل گیت‌هاب را ببینید.
           </p>
         </div>
 
         <div class="center-form">
           <div class="github-search-card">
             <label class="github-search-label" for="gh-username"
-              >GitHub username</label
+              >نام کاربری گیت‌هاب</label
             >
             <div class="github-search-row">
               <i class="fa fa-github" aria-hidden="true"></i>
               <input
                 type="text"
-                id="gh-username"
+                id="gh-username" dir="ltr"
                 value="behzad17"
-                placeholder="Enter a GitHub username"
+                placeholder="نام کاربری گیت‌هاب را وارد کنید"
                 autocomplete="off" maxlength="39"
               />
             </div>
             <p class="github-search-hint">
-              Default profile: behzad17 — you can search other users too
+              پروفایل پیش‌فرض: <bdi dir="ltr">behzad17</bdi>؛ می‌توانید کاربران دیگر را هم جست‌وجو کنید.
             </p>
           </div>
           <div class="github-results">
@@ -132,71 +132,69 @@
           <div class="col-md-4 col-sm-6">
             <div class="footer-section">
               <div class="footer-logo">
-                <h4>BJcode Company</h4>
-                <p class="footer-tagline">Full Stack Development Solutions</p>
+                <h4>شرکت BJcode</h4>
+                <p class="footer-tagline">طراحی و توسعهٔ کامل وب</p>
               </div>
               <p class="footer-description">
-                Professional web development services with expertise in modern
-                technologies. We create digital solutions that drive business
-                growth.
+                با فناوری‌های روز، وب‌سایت‌هایی کاربردی می‌سازیم؛ راهکارهایی متناسب با نیاز شما و مسیر رشد کسب‌وکارتان.
               </p>
             </div>
           </div>
           <div class="col-md-2 col-sm-6">
             <div class="footer-section">
-              <h5 class="footer-title">Quick Links</h5>
+              <h5 class="footer-title">دسترسی سریع</h5>
               <ul class="footer-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="interests.html">Services</a></li>
-                <li><a href="github.html">Projects</a></li>
+                <li><a href="index.html">خانه</a></li>
+                <li><a href="resume.html">رزومه</a></li>
+                <li><a href="contact.html">تماس</a></li>
+                <li><a href="interests.html">خدمات</a></li>
+                <li><a href="github.html">پروژه‌ها</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md-3 col-sm-6">
             <div class="footer-section">
-              <h5 class="footer-title">Contact Info</h5>
+              <h5 class="footer-title">راه‌های ارتباطی</h5>
               <div class="contact-info">
-                <p><i class="fa fa-envelope"></i> info@bjcode.se</p>
-                <p><i class="fa fa-phone"></i> +46 706 84 00 18</p>
-                <p><i class="fa fa-map-marker"></i> Gothenburg, Sweden</p>
+                <p><i class="fa fa-envelope"></i> <bdi dir="ltr">info@bjcode.se</bdi></p>
+                <p><i class="fa fa-phone"></i> <bdi dir="ltr">+46 706 84 00 18</bdi></p>
+                <p><i class="fa fa-map-marker"></i> گوتنبرگ، سوئد</p>
               </div>
             </div>
           </div>
           <div class="col-md-3 col-sm-6">
             <div class="footer-section">
-              <h5 class="footer-title">Download CV</h5>
+              <h5 class="footer-title">دریافت رزومه</h5>
               <p class="cv-description">
-                Download Behzad Javadian’s professional CV
+                رزومهٔ حرفه‌ای بهزاد جوادیان را دریافت کنید.
               </p>
               <a
                 href="assets/cv/BehzadianCV.pdf"
                 target="_blank"
                 class="cv-download-btn"
                rel="noopener noreferrer">
-                <i class="fa fa-download"></i> Download CV
+                <i class="fa fa-download"></i> دریافت رزومه
               </a>
               <div class="social-links">
-                <h6>Follow Us</h6>
+                <h6>ما را دنبال کنید</h6>
                 <ul class="social-icons">
                   <li>
                     <a
                       href="https://www.instagram.com/bjcode.se/"
                       target="_blank"
-                       rel="noopener noreferrer" aria-label="BJcode on instagram"><i class="fa fa-instagram"></i
+                       rel="noopener noreferrer" aria-label="BJcode در اینستاگرام"><i class="fa fa-instagram"></i
                     ></a>
                   </li>
                   <li>
                     <a
                       href="https://www.linkedin.com/in/behzad-javadian-0b6582a0/"
                       target="_blank"
-                       rel="noopener noreferrer" aria-label="BJcode on linkedin"><i class="fa fa-linkedin"></i
+                       rel="noopener noreferrer" aria-label="BJcode در لینکدین"><i class="fa fa-linkedin"></i
                     ></a>
                   </li>
                   <li>
                     <a href="https://github.com/behzad17" target="_blank"
-                       rel="noopener noreferrer" aria-label="BJcode on github"><i class="fa fa-github"></i
+                       rel="noopener noreferrer" aria-label="BJcode در گیت‌هاب"><i class="fa fa-github"></i
                     ></a>
                   </li>
 
@@ -208,10 +206,10 @@
         <div class="footer-bottom">
           <div class="row">
             <div class="col-md-6">
-              <p>&copy; 2026 BJcode Company. All rights reserved.</p>
+              <p>&copy; ۲۰۲۶ شرکت BJcode. همهٔ حقوق محفوظ است.</p>
             </div>
             <div class="col-md-6 text-right">
-              <p>Made with <i class="fa fa-heart"></i> in Sweden</p>
+              <p>ساخته‌شده با <i class="fa fa-heart"></i> در سوئد</p>
             </div>
           </div>
         </div>
