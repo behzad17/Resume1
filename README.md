@@ -1,6 +1,6 @@
 # BJcode website
 
-Static, English-language company website and developer portfolio.
+Static, Persian-language company website and developer portfolio with an RTL layout.
 
 ## Pages
 - `index.html`: company introduction and website services
@@ -17,6 +17,9 @@ The repository has GitHub Pages deployment history. `Procfile` also supports a N
 
 ## Integrations
 EmailJS uses the existing public key, service and template configured in `assets/js/sendEmail.js`. These are browser identifiers, not private credentials. Restrict allowed origins and configure abuse protection in EmailJS. A successful local check does not verify message delivery; test that separately with the account owner. GitHub lookup uses the public API and can reach its request limit.
+
+## Persian interface
+All five pages use `lang="fa"` and `dir="rtl"`. `assets/css/persian.css` is loaded last for typography, RTL layout and isolated Latin contact details. Contact validation and application messages are Persian. GitHub account/repository identifiers retain their original spelling. Existing PDF downloads and project screenshots are unchanged. The Vazirmatn font is loaded from Google Fonts with a Tahoma fallback.
 
 ## Maintenance
 Shared header and footer markup currently lives in each HTML page. Update all five pages when changing shared content. New sample images should use compressed WebP. Confirm work dates, service qualifications and CV content with the owner before editing factual claims.
