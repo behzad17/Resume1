@@ -152,3 +152,6 @@ html[lang="fa"] .page-resume #main-content > .shell > .row-table {
   .page-interests .interior-main .services-grid { grid-template-columns: 1fr; }
   .page-interests .interior-main .service-card:last-child:nth-child(odd) { grid-column: auto; }
 }
+
+.page-resume .interior-main .resume-education p + p { margin-top: 12px; }
+.page-resume .interior-main .credential-link { display: inline-block; line-height: 1.9; text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; }
