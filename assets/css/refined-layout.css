@@ -173,3 +173,11 @@ html[lang="fa"] .page-interests .interests-sidebar,html[lang="fa"] .page-interes
 }
 @media(max-width:480px){.home-service-grid{grid-template-columns:1fr}.home-service{padding:23px}.home-service p{font-size:14px}.home-service h3{font-size:17px}.home-service .service-top{margin-bottom:14px}.page-resume .projects-grid,.page-resume .resume-skills-grid,.page-interests .services-grid{grid-template-columns:1fr}.hero h1{font-size:32px}.hero-note{gap:7px}.tech-strip{gap:4px}.featured-details h3{font-size:17px}.footer-grid{column-gap:20px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+/* Keep the approved headline on exactly two balanced lines. */
+.hero h1.hero-title-two-lines { font-size: clamp(20px, 2.7vw, 38px); }
+.hero h1.hero-title-two-lines > span { display: block; white-space: nowrap; }
+.hero h1.hero-title-two-lines > span:first-child { color: var(--ink); }
+@media (max-width: 359px) {
+  .hero h1.hero-title-two-lines { font-size: 18px; }
+}
