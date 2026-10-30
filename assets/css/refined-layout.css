@@ -181,3 +181,40 @@ html[lang="fa"] .page-interests .interests-sidebar,html[lang="fa"] .page-interes
 @media (max-width: 359px) {
   .hero h1.hero-title-two-lines { font-size: 18px; }
 }
+
+/* Portrait occupies the left edge of the shared footer. */
+.site-footer .footer-grid {
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr) minmax(0, 1fr) 148px;
+  gap: 36px;
+  align-items: start;
+}
+.footer-portrait { margin: 0; justify-self: end; padding-top: 4px; }
+.footer-portrait img {
+  display: block;
+  width: 144px;
+  height: 144px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 34%;
+  border: 3px solid #d8e8fa;
+  box-shadow: 0 0 0 6px #84c9dd18;
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .site-footer .footer-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, .8fr) minmax(0, 1fr) 112px;
+    gap: 22px;
+  }
+  .footer-portrait img { width: 108px; height: 108px; }
+}
+@media (max-width: 767px) {
+  .site-footer .footer-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas: "about portrait" "links contact";
+    gap: 28px 20px;
+  }
+  .site-footer .footer-about { grid-area: about; }
+  .footer-link-column { grid-area: links; }
+  .footer-contact-column { grid-area: contact; }
+  .footer-portrait { grid-area: portrait; }
+  .footer-portrait img { width: 112px; height: 112px; }
+}
