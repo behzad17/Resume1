@@ -1,0 +1,154 @@
+/* Consistent card framing for interior pages; the shared color palette is retained. */
+.interior-main {
+  --panel-radius: 18px;
+  --panel-gap: 22px;
+  --panel-padding: 26px;
+}
+html[lang="fa"] body .interior-main :is(
+  .service-card, .info-card, .resume-card, .resume-skill-card,
+  .project-card, .contact-card, .github-search-card, .gh-user-card, .repo-list
+) {
+  border-radius: var(--panel-radius);
+  border-width: 1px;
+  border-top-width: 3px;
+  box-shadow: 0 4px 14px #1b3f730a;
+  margin: 0;
+}
+html[lang="fa"] body .interior-main :is(
+  .service-card, .info-card, .resume-card, .resume-skill-card,
+  .contact-card, .github-search-card, .gh-user-card, .repo-list
+) { padding: var(--panel-padding); }
+html[lang="fa"] body .interior-main :is(.service-card, .info-card, .resume-skill-card, .project-card):hover {
+  box-shadow: 0 6px 20px #1b3f7312;
+  transform: none;
+}
+.interior-main .page-intro {
+  max-width: none;
+  padding-bottom: 26px;
+  margin-bottom: 30px;
+}
+.interior-main :is(.service-title, .info-title, .project-title) { line-height: 1.8; }
+.interior-main :is(.service-description, .project-description, .info-text) { line-height: 1.95; }
+.interior-main :is(.service-icon, .resume-skill-icon) {
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  font-size: 17px;
+}
+
+/* Full-width service rows avoid a tall empty column beside the supporting cards. */
+html[lang="fa"] .page-interests .interior-main .row-table {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.page-interests .interior-main .services-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: var(--panel-gap);
+}
+.page-interests .interior-main .service-card {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-width: 0;
+}
+.page-interests .interior-main .service-card:nth-child(n+4) { grid-column: span 3; }
+.page-interests .interior-main .service-card:last-child:nth-child(odd) { grid-column: span 3; }
+.page-interests .interior-main .service-description { flex: 1; }
+.page-interests .interior-main .service-features {
+  flex: none;
+  margin-top: 12px;
+  padding-top: 14px;
+  border-top: 1px solid var(--card-edge);
+}
+.page-interests .interior-main .service-features li:last-child { margin-bottom: 0; }
+.page-interests .interior-main .info-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--panel-gap);
+}
+.page-interests .interior-main .info-card { display: flex; flex-direction: column; min-width: 0; }
+.page-interests .interior-main .info-cta-link { margin-top: auto; padding-top: 12px; }
+.page-interests .interior-main .interests-sidebar-inner > :is(.interests-section-label, .interests-section-title) { display: block; }
+.page-interests .interior-main .interests-section-title { font-size: 24px; margin-bottom: 22px; }
+.page-interests .interior-main .interests-cta-banner {
+  margin: 30px 0 0;
+  border-radius: var(--panel-radius);
+  padding: 28px;
+  box-shadow: none;
+}
+
+/* Education belongs with the career summary; skills and projects form separate groups. */
+html[lang="fa"] .page-resume #main-content > .shell > .row-table {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr);
+  gap: var(--panel-gap);
+  align-items: start;
+  margin-bottom: 40px;
+}
+.page-resume .interior-main .bg-color-three-reasons { display: flex; flex-direction: column; gap: 20px; }
+.page-resume .interior-main .bg-color-three-reasons > .resume-section-label { margin: 0; }
+.page-resume .interior-main .resume-skills-grid { margin: 0; gap: var(--panel-gap); }
+.page-resume .interior-main .resume-education { border-top: 1px solid var(--card-edge); margin-top: 22px; padding-top: 22px; }
+.page-resume .interior-main .resume-education h4 { font-size: 16px; margin-bottom: 8px; }
+.page-resume .interior-main .resume-education p { font-size: 14px; margin-bottom: 0; }
+.page-resume .interior-main .resume-timeline-item { padding-bottom: 18px; }
+.page-resume .interior-main .resume-timeline-item:last-child { padding-bottom: 0; }
+.page-resume .interior-main .projects-grid { gap: var(--panel-gap); align-items: stretch; }
+.page-resume .interior-main .project-card { display: flex; flex-direction: column; min-width: 0; }
+.page-resume .interior-main .project-image { height: auto; aspect-ratio: 1.7; flex-shrink: 0; }
+.page-resume .interior-main .project-content { display: flex; flex-direction: column; padding: 22px; flex: 1; }
+.page-resume .interior-main .project-description { flex: 1; margin-bottom: 18px; }
+.page-resume .interior-main .project-tags { margin-top: auto; }
+.page-resume .interior-main .section-heading { text-align: right; margin: 0 0 10px; }
+.page-resume .interior-main .section-intro { text-align: right; max-width: none; margin: 0 0 24px; }
+
+.page-contact .interior-main .contact-layout {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+  gap: var(--panel-gap);
+  align-items: start;
+}
+.page-contact .interior-main .contact-card { height: auto; }
+.page-contact .interior-main .contact-subtitle { margin-bottom: 24px; }
+.page-contact .interior-main .contact-details { gap: 18px; }
+.page-contact .interior-main .contact-form-card form { gap: 12px; }
+.page-contact .interior-main .contact-form-card .form-control { border-radius: 10px; min-height: 48px; padding: 10px 14px; }
+.page-contact .interior-main .contact-form-card textarea.form-control { min-height: 150px; }
+.page-contact .interior-main .contact-form-card button { border-radius: 10px; margin-top: 12px; }
+.page-contact .interior-main #form-status:empty { min-height: 0; }
+
+.page-github .interior-main > .shell { max-width: 1000px; }
+.page-github .interior-main .github-layout { max-width: none; }
+.page-github .interior-main .github-results { gap: var(--panel-gap); }
+.page-github .interior-main .github-search-card { margin-bottom: var(--panel-gap); }
+.page-github .interior-main .github-search-row,
+.page-github .interior-main .gh-stat,
+.page-github .interior-main .gh-repo-link { border-radius: 10px; }
+.page-github .interior-main .repo-list ul { gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.page-github .interior-main .gh-user-header { margin-bottom: 22px; }
+.page-github .interior-main .gh-avatar img { border-radius: 12px; }
+
+@media (max-width: 991px) {
+  .interior-main { --panel-padding: 24px; --panel-gap: 18px; }
+  .page-interests .interior-main .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .page-interests .interior-main .service-card,
+  .page-interests .interior-main .service-card:nth-child(n+4) { grid-column: auto; }
+  .page-interests .interior-main .service-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .page-interests .interior-main .info-cards-container { grid-template-columns: 1fr; }
+}
+@media (max-width: 767px) {
+  .interior-main { --panel-padding: 22px; --panel-gap: 18px; --panel-radius: 16px; }
+  .interior-main .page-intro { margin-bottom: 24px; padding-bottom: 22px; }
+  html[lang="fa"] .page-resume #main-content > .shell > .row-table,
+  .page-contact .interior-main .contact-layout { grid-template-columns: 1fr; }
+  .page-resume .interior-main .resume-skills-grid { grid-template-columns: 1fr; }
+  .page-resume .interior-main .project-content { padding: 20px; }
+  .page-interests .interior-main .interests-section-title { font-size: 22px; }
+  .page-interests .interior-main .interests-cta-banner { padding: 24px; }
+  .page-github .interior-main .repo-list ul { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .page-interests .interior-main .services-grid { grid-template-columns: 1fr; }
+  .page-interests .interior-main .service-card:last-child:nth-child(odd) { grid-column: auto; }
+}
