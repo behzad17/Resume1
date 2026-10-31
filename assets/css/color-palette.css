@@ -1,149 +1,48 @@
-/* Blue leads the palette; turquoise and apricot add warmth and rhythm. */
+/* Approved BJcode palette: blue, violet, turquoise and coral. */
 :root {
-  --muted: #4e6179;
-  --line: #cddbed;
-  --surface: #eaf1fc;
-  --card-fill: #e8f0ff;
-  --card-edge: #bfcef0;
-  --card-accent: #245bd6;
+  --ink: #17243b;
+  --muted: #53617a;
+  --blue: #315be8;
+  --violet: #8b5cf6;
+  --teal: #14b8a6;
+  --coral: #f47764;
+  --line: #dfe5ef;
+  --surface: #f5f3ff;
+  --card-fill: #edf1ff;
+  --card-edge: #cbd5fb;
+  --card-accent: #315be8;
 }
-
-.site-header {
-  background: #f3f7ff;
-  border-bottom-color: #cbdaf2;
+.site-header { background: #fff; border-bottom: 3px solid; border-image: linear-gradient(90deg,var(--teal),var(--blue),var(--violet),var(--coral)) 1; }
+.site-nav a[aria-current="page"] { background: #edf1ff; color: #2545b5; }
+.services-section { background: #faf9ff; border-color: #e6e1f5; }
+.process-section { background: #effaf7; border-color: #cce9e3; }
+.process-list li { border-color: #cce9e3; }
+.process-list li > span { background: #d8f3ed; color: #12645f; border-radius: 10px; min-width: 37px; height: 37px; display: flex; align-items: center; justify-content: center; padding: 0; flex-shrink: 0; }
+.closing-banner { background: linear-gradient(120deg,#edf1ff,#e6f8f3 60%,#fff0ec); border-color: var(--line); }
+html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card,.project-card,.featured-project,.info-card,.resume-card,.contact-card,.github-search-card,.gh-user-card,.repo-list) {
+ background: var(--card-fill); border-color: var(--card-edge); border-top: 3px solid var(--card-accent); box-shadow: 0 8px 24px #17243b08;
 }
-.site-nav a[aria-current="page"] {
-  background: #dce8ff;
-  color: #1646af;
-}
-.hero {
-  background: radial-gradient(ellipse at 8% 48%, #e4f5f333, transparent 65%);
-}
-.hero-visual::before {
-  background: linear-gradient(135deg, #dce9ff, #d9f3ee 70%, #ffead6);
-}
-.services-section {
-  background: #eaf1fc;
-  border-color: #ccdcf2;
-}
-.process-section {
-  background: #e6f4f1;
-  border-color: #c0dfd7;
-}
-.process-list li { border-color: #bedbd4; }
-.process-list li > span {
-  background: #d0eae3;
-  color: #12675d;
-  border-radius: 10px;
-  min-width: 37px;
-  height: 37px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  flex-shrink: 0;
-}
-.closing-banner {
-  background: linear-gradient(120deg, #e2edff, #dcefeb 65%, #ffead8);
-  border-color: #b9d4e6;
-}
-.closing-banner p { color: #405774; }
-
-/* The same three tones recur across services, projects and supporting cards. */
-html[lang="fa"] body :is(
-  .home-service, .service-card, .resume-skill-card, .project-card,
-  .featured-project, .info-card, .resume-card, .contact-card,
-  .github-search-card, .gh-user-card, .repo-list
-) {
-  background: var(--card-fill);
-  border-color: var(--card-edge);
-  border-top: 4px solid var(--card-accent);
-  box-shadow: 0 8px 24px #1b3f7310;
-}
-html[lang="fa"] body :is(
-  .home-service, .service-card, .resume-skill-card, .project-card,
-  .featured-project, .info-card
-):nth-child(3n + 2) {
-  --card-fill: #e0f3ed;
-  --card-edge: #afd8cb;
-  --card-accent: #147d70;
-}
-html[lang="fa"] body :is(
-  .home-service, .service-card, .resume-skill-card, .project-card,
-  .featured-project, .info-card
-):nth-child(3n) {
-  --card-fill: #fff0df;
-  --card-edge: #e8c9a6;
-  --card-accent: #b65c20;
-}
-html[lang="fa"] body :is(
-  .home-service, .service-card, .resume-skill-card, .project-card,
-  .featured-project, .info-card
-):hover {
-  border-color: var(--card-accent);
-  box-shadow: 0 10px 28px #1b3f731c;
-}
-html[lang="fa"] body :is(.icon-box, .service-icon, .resume-skill-icon) {
-  background: var(--card-accent);
-  border-color: transparent;
-  color: #fff;
-  box-shadow: 0 4px 12px #193d6914;
-}
+html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card,.project-card,.featured-project,.info-card):nth-child(3n + 2) { --card-fill: #f2edff; --card-edge: #d9caf7; --card-accent: #7545c4; }
+html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card,.project-card,.featured-project,.info-card):nth-child(3n) { --card-fill: #e7f8f3; --card-edge: #b5dfd4; --card-accent: #127d70; }
+html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card,.project-card,.featured-project,.info-card):hover { border-color: var(--card-accent); box-shadow: 0 12px 28px #17243b12; }
+html[lang="fa"] body :is(.icon-box,.service-icon,.resume-skill-icon) { background: var(--card-accent); border-color: transparent; color: #fff; }
 html[lang="fa"] body .service-icon i { color: #fff; }
-.service-number { color: #566c88; }
-html[lang="fa"] body :is(
-  .home-service p, .service-description, .service-features li,
-  .resume-skill-card p, .project-description, .info-text
-) { color: #475d75; }
-.mini-label { color: #4e6179; }
+.service-number,.mini-label { color: var(--muted); }
+html[lang="fa"] body :is(.home-service p,.service-description,.service-features li,.resume-skill-card p,.project-description,.info-text) { color: #47566e; }
 .featured-image { background: var(--card-fill); }
-.round-arrow {
-  background: var(--card-accent);
-  border-color: var(--card-accent);
-  color: #fff;
-}
-.page-resume .tag {
-  background: #fff9;
-  color: #1b4da9;
-  border-color: #bacded;
-}
-html[lang="fa"] body .resume-work-card,
-html[lang="fa"] body .contact-info-card {
-  --card-fill: #e0f3ed;
-  --card-edge: #afd8cb;
-  --card-accent: #147d70;
-}
-html[lang="fa"] body .resume-progress-wrap,
-html[lang="fa"] body .contact-form-card {
-  --card-fill: #fff4e7;
-  --card-edge: #e8d1b4;
-  --card-accent: #b65c20;
-}
-html[lang="fa"] body .contact-detail-icon {
-  background: #c8e8de;
-  border-color: #acd5c7;
-  color: #12675d;
-}
-.page-contact .contact-detail-item,
-.page-contact .contact-detail-item a { color: #354f64; }
-.page-contact .contact-form-card .form-control {
-  background: #fff;
-  border-color: #c5cfda;
-}
+.round-arrow { background: var(--card-accent); border-color: var(--card-accent); color: #fff; }
+.page-resume .tag { background: #fff; color: #354aa1; border-color: #cbd5fb; }
+html[lang="fa"] body :is(.resume-work-card,.contact-info-card,.gh-user-card) { --card-fill: #e7f8f3; --card-edge: #b5dfd4; --card-accent: #127d70; }
+html[lang="fa"] body :is(.resume-progress-wrap,.contact-form-card) { --card-fill: #fff4f0; --card-edge: #f0c8bf; --card-accent: #b94435; }
+html[lang="fa"] body .contact-detail-icon { background: #d3efe8; border-color: #acd5c7; color: #12645f; }
+.page-contact .contact-detail-item,.page-contact .contact-detail-item a { color: #354f64; }
+.page-contact .contact-form-card .form-control { background: #fff; border-color: #9aa8bb; }
 .page-contact .contact-form-card .form-control::placeholder { color: #65778c; }
 .page-github .github-search-row { background: #fff; border-color: #b9ccec; }
 .page-github .github-search-hint { color: #516681; }
-html[lang="fa"] body .gh-user-card {
-  --card-fill: #e0f3ed;
-  --card-edge: #afd8cb;
-  --card-accent: #147d70;
-}
 .page-github .gh-stat { background: #f4fcf9; border-color: #b8d8ce; color: #496479; }
 .page-github .gh-repo-link { background: #f9fbff; border-color: #bdceea; }
-.page-interests .info-card ol { color: #475d75; }
-html[lang="fa"] .interior-main#main-content {
-  background: #edf3fb;
-}
-.page-intro { border-bottom: 1px solid #ccdbee; margin-bottom: 28px; }
-.page-intro p { color: #4e6179; }
-.site-footer { border-top: 4px solid #3b8dba; }
+html[lang="fa"] .interior-main#main-content { background: #faf9ff; }
+.page-intro { border-bottom: 1px solid #e3dcf3; margin-bottom: 28px; }
+.page-intro p { color: var(--muted); }
+.site-footer { background: #17243b; border-top: 4px solid var(--teal); }
