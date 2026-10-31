@@ -1,0 +1,50 @@
+/* Layout and restrained motion adapted from the approved preview. */
+.page-home .hero { display: block; width: 100%; padding: 64px 24px 52px; text-align: center; background: radial-gradient(ellipse at 16% 20%,#14b8a622,transparent 48%),radial-gradient(ellipse at 85% 15%,#8b5cf62b,transparent 50%),linear-gradient(155deg,#fff,#edf1ff); border-bottom: 1px solid var(--line); }
+.page-home .hero-copy { max-width: 880px; margin-inline: auto; }
+.page-home .hero-description { margin-inline: auto; max-width: 650px; }
+.page-home .hero :is(.button-row,.hero-note) { justify-content: center; }
+.page-home .hero h1.hero-title-two-lines { font-size: clamp(22px,3.5vw,46px); }
+.page-home .hero h1.hero-title-two-lines > span { white-space: normal; }
+.page-home .hero h1.hero-title-two-lines > span:last-child { color: #5542b8; }
+.home-service-grid { grid-template-columns: 1.2fr 1fr 1fr; }
+.project-summary { margin: 10px 0; font-size: 14px; }
+.project-tech { color: var(--muted); font-size: 12px; }
+.featured-image { overflow: hidden; }
+.featured-image img { transition: transform 250ms ease; }
+.featured-project:hover .featured-image img { transform: scale(1.025); }
+.home-contact { background: linear-gradient(125deg,#fff0ec,#fff 65%); border-top: 1px solid var(--line); }
+.home-contact-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 48px; align-items: start; }
+.home-contact h2 { font-size: 28px; }
+.home-contact h2::after { content: ''; display: block; width: 54px; height: 5px; background: var(--coral); border-radius: 4px; margin-top: 18px; }
+.home-contact .contact-form-card { padding: 24px; background: #fff; border: 1px solid var(--line); border-radius: 18px; }
+.home-contact form { display: grid; gap: 8px; }
+.home-contact label { font-size: 14px; }
+.home-contact .form-control { width: 100%; padding: 12px; border: 1px solid #9aa8bb; border-radius: 9px; background: #faf9ff; color: var(--ink); font: inherit; min-width: 0; }
+.home-contact textarea { resize: vertical; }
+.home-contact button { justify-self: start; margin-top: 12px; border: 0; cursor: pointer; }
+.home-contact #form-status { margin: 0; font-size: 14px; }
+button:disabled { opacity: .65; cursor: wait; }
+:is(.button,.header-cta) { transition: transform 200ms ease,box-shadow 200ms ease,background 200ms ease; }
+.button.primary:hover { background: #2545b5; transform: translateY(-2px); box-shadow: 0 8px 20px #315be82e; }
+.site-nav a { position: relative; }
+.site-nav a::after { content: ''; position: absolute; bottom: 3px; right: 12px; left: 12px; height: 2px; background: var(--blue); transform: scaleX(0); transform-origin: right; transition: transform 200ms ease; }
+.site-nav a:hover::after,.site-nav a:focus-visible::after { transform: scaleX(1); }
+html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card) { position: relative; isolation: isolate; overflow: hidden; transition: transform 220ms ease,border-color 220ms ease,box-shadow 220ms ease; }
+html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card)::after { content: ''; position: absolute; inset: 0; pointer-events: none; z-index: -1; background: radial-gradient(circle at var(--spot-x,50%) var(--spot-y,0%),#ffffffb3,transparent 65%); opacity: 0; transition: opacity 200ms ease; }
+@media(hover:hover) and (pointer:fine) {
+ html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card):hover { transform: translateY(-3px); }
+ html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card):hover::after { opacity: 1; }
+}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+@media(max-width:767px) {
+ .page-home .hero { padding: 36px 18px 40px; }
+ .home-service-grid,.home-contact-layout { grid-template-columns: 1fr; }
+ .home-contact-layout { gap: 24px; }
+ .home-contact h2 { font-size: 23px; }
+ .home-contact .contact-form-card { padding: 20px; }
+}
+@media(prefers-reduced-motion:reduce) {
+ html { scroll-behavior: auto; }
+ *,*::before,*::after { animation: none !important; transition: none !important; }
+ html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card):hover,.button.primary:hover,.featured-project:hover img { transform: none; }
+}
