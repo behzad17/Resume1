@@ -1,0 +1,65 @@
+/* Isolated homepage enhancement; index-classic.html retains the previous hero. */
+.page-home .hero.hero-devices { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.15fr); align-items: center; gap: 24px; padding: 68px max(28px,calc((100vw - 1280px)/2)) 52px; text-align: right; background: radial-gradient(ellipse at 12% 55%,#ddd8ff8c,transparent 46%),radial-gradient(ellipse at 45% 75%,#d7f3ef80,transparent 38%),#fafbff; }
+.hero-devices .hero-copy { max-width: 600px; margin: 0; position: relative; z-index: 2; }
+.page-home .hero-devices h1.hero-title-two-lines { font-size: clamp(24px,2.9vw,42px); letter-spacing: -.6px; }
+.page-home .hero-devices .hero-description { margin-inline: 0; max-width: 520px; }
+.page-home .hero-devices :is(.button-row,.hero-note) { justify-content: flex-start; }
+.devices-showcase { min-width: 0; position: relative; }
+.devices-stage { width: 100%; height: clamp(330px,38vw,540px); position: relative; isolation: isolate; }
+.devices-stage canvas { display: block; width: 100%; height: 100%; position: absolute; inset: 0; opacity: 0; transition: opacity 500ms ease; }
+.devices-stage.is-ready canvas { opacity: 1; }
+.devices-fallback { width: 100%; height: 100%; object-fit: contain; border-radius: 22px; transition: opacity 300ms ease; }
+.devices-stage.is-ready .devices-fallback { opacity: 0; visibility: hidden; }
+.devices-caption { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; font-size: 12px; color: #53617a; padding-inline: 12px; }
+.device-status::before { content: ''; display: inline-block; width: 7px; height: 7px; background: #127d70; border-radius: 50%; margin-inline-end: 7px; }
+.devices-toggle { font: inherit; font-size: 12px; color: #2545b5; border: 1px solid #cbd5fb; background: #fff; border-radius: 24px; padding: 9px 14px; min-height: 40px; cursor: pointer; }
+.devices-toggle[hidden] { display: none; }
+.devices-toggle:hover { background: #edf1ff; }
+@media(min-width:768px) and (max-width:991px) {
+ .page-home .hero.hero-devices { gap: 10px; padding: 44px 24px 32px; grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+ .page-home .hero-devices h1.hero-title-two-lines { font-size: 25px; }
+ .devices-stage { height: 340px; }
+ .devices-caption { flex-wrap: wrap; }
+}
+@media(max-width:767px) {
+ .page-home .hero.hero-devices { grid-template-columns: 1fr; padding: 32px 18px 26px; gap: 8px; text-align: center; }
+ .hero-devices .hero-copy { max-width: 600px; margin-inline: auto; }
+ .page-home .hero-devices :is(.button-row,.hero-note) { justify-content: center; }
+ .page-home .hero-devices .hero-description { margin-inline: auto; }
+ .devices-stage { height: clamp(280px,82vw,440px); }
+ .devices-caption { font-size: 11px; padding-inline: 0; }
+}
+@media(prefers-reduced-motion:reduce) { .devices-stage canvas,.devices-fallback { transition: none; } }
+/* CSS depth fallback remains interactive when WebGL is unavailable. */
+.css-devices { display: none; position: absolute; width: 540px; height: 410px; left: 50%; top: 50%; transform: translate(-50%,-50%) scale(var(--device-scale,1)); transform-origin: center; direction: ltr; }
+.devices-stage.has-css-devices:not(.is-ready) .css-devices { display: block; }
+.devices-stage.has-css-devices .devices-fallback { opacity: 0; visibility: hidden; }
+.css-laptop { position: absolute; width: 420px; height: 340px; left: 28px; top: 34px; transform: perspective(1000px) rotateY(calc(-15deg + var(--css-y,0deg))) rotateX(calc(5deg + var(--css-x,0deg))); transition: transform 400ms ease; transform-style: preserve-3d; z-index: 2; }
+.css-laptop-lid { width: 420px; height: 270px; padding: 10px 10px 16px; border-radius: 17px 17px 9px 9px; background: linear-gradient(135deg,#d4dfef,#687994 45%,#c3d0e4 60%,#708198); box-shadow: 4px 3px 0 #8394ac,0 24px 36px #292d5520; position: relative; }
+.css-laptop-lid::before { content: ''; position: absolute; top: 5px; left: 50%; width: 4px; height: 4px; border-radius: 50%; background: #121c30; }
+.css-laptop-lid::after { content: 'BJcode'; position: absolute; bottom: 2px; inset-inline: 0; text-align: center; color: #253650; font: 8px sans-serif; }
+.css-screen { height: 100%; overflow: hidden; border-radius: 7px; background: #fff; border: 3px solid #142137; direction: rtl; }
+.css-screen-nav { display: flex; align-items: center; justify-content: space-between; padding: 9px 12px; font-size: 7px; color: #53617a; }
+.css-screen-nav b { color: #315be8; font: 800 15px sans-serif; }
+.css-screen-hero { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px 8px 13px; background: linear-gradient(120deg,#edf2ff,#f1eaff 55%,#e2f6f0); }
+.css-screen-hero small { color: #315be8; font-size: 8px; }
+.css-screen-hero strong { font-size: 18px; color: #17243b; }
+.css-screen-hero em { font-size: 16px; font-style: normal; font-weight: 700; color: #5542b8; }
+.css-screen-cta { background: #315be8; color: #fff; padding: 5px 14px; border-radius: 5px; font-size: 8px; }
+.css-screen-services { display: flex; gap: 7px; padding: 12px; font-size: 9px; color: #354f74; }
+.css-screen-services span { flex: 1; padding: 12px 5px; border-radius: 7px; background: #edf1ff; text-align: center; }
+.css-screen-services span:nth-child(2) { background: #f2edff; }.css-screen-services span:nth-child(3) { background: #e7f8f3; }
+.css-laptop-base { position: absolute; width: 454px; height: 140px; top: 265px; left: -17px; transform: perspective(800px) rotateX(60deg); transform-origin: top; border-radius: 6px 6px 20px 20px; background: linear-gradient(110deg,#c7d2e5,#edf1f8 45%,#a2b1cb); border: 1px solid #8596af; box-shadow: 0 8px 0 #90a0b8,0 12px 0 #bac6d9; padding: 12px 24px; }
+.css-keyboard { height: 60px; border: 4px solid #bdc9db; border-radius: 5px; background: repeating-linear-gradient(0deg,transparent 0 10px,#bdc9db 10px 14px),repeating-linear-gradient(90deg,#27354d 0 22px,#bdc9db 22px 27px); }
+.css-trackpad { width: 120px; height: 42px; margin: 9px auto; background: #bdcbe0; border: 1px solid #9aaec9; border-radius: 5px; }
+.css-phone { position: absolute; left: 404px; top: 134px; width: 110px; height: 227px; padding: 6px; border: 2px solid #9aacc7; background: #17243b; border-radius: 22px; box-shadow: 5px 5px 0 #788ba8,12px 24px 35px #17243b26; transform: perspective(800px) rotateY(-15deg) rotateZ(8deg) translateY(var(--css-float,0px)); transition: transform 500ms ease; z-index: 3; }
+.css-phone-content { height: 100%; border-radius: 15px; background: linear-gradient(145deg,#f1eaff,#ecf6ff 60%,#dcf5ef); display: flex; flex-direction: column; align-items: center; padding: 21px 5px 8px; color: #17243b; gap: 7px; direction: rtl; }
+.css-phone-content b { color: #315be8; font: 800 13px sans-serif; margin-bottom: 10px; }.css-phone-content small { font-size: 10px; }.css-phone-content strong { font-size: 15px; }.css-phone-content span { font-size: 8px; color: #5542b8; }.css-phone-content em { font-size: 7px; background: #315be8; color: white; padding: 4px 10px; border-radius: 4px; font-style: normal; }.css-phone-content div { width: 80%; height: 16px; background: #d4ddff; border-radius: 4px; }.css-phone-content div:nth-last-child(2) { background: #e2d6ff; }.css-phone-content div:last-child { background: #c4e9df; }
+.css-phone-island { position: absolute; top: 11px; left: 38px; width: 32px; height: 6px; background: #17243b; border-radius: 8px; }
+.css-device-shadow { position: absolute; left: 10px; bottom: 20px; width: 490px; height: 60px; background: radial-gradient(ellipse,#6c6b9b40,transparent 70%); filter: blur(10px); z-index: 0; }
+.devices-stage.is-static .css-laptop { transform: perspective(1000px) rotateY(-15deg) rotateX(5deg); }.devices-stage.is-static .css-phone { transform: perspective(800px) rotateY(-15deg) rotateZ(8deg); }
+@media(prefers-reduced-motion:reduce) { .css-laptop,.css-phone { transition: none; } }
+.css-laptop { transform: perspective(1000px) rotateY(calc(-15deg + var(--css-y,0deg) + var(--css-scroll,0deg))) rotateX(calc(5deg + var(--css-x,0deg))); }
+@keyframes device-float { from { translate: 0 -4px; } to { translate: 0 5px; } }
+@media(prefers-reduced-motion:no-preference) { .hero-in-view .devices-stage:not(.is-static) .css-phone { animation: device-float 5s ease-in-out infinite alternate; } }
+.devices-stage.is-static .css-phone { animation: none; }
