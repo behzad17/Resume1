@@ -46,3 +46,22 @@ html[lang="fa"] .interior-main#main-content { background: #faf9ff; }
 .page-intro { border-bottom: 1px solid #e3dcf3; margin-bottom: 28px; }
 .page-intro p { color: var(--muted); }
 .site-footer { background: #17243b; border-top: 4px solid var(--teal); }
+
+/* Keep the contact page in one calm blue family. */
+html[lang="fa"] body.page-contact .contact-info-card {
+  --card-fill: #edf3ff;
+  --card-edge: #cbd8f0;
+  --card-accent: #315be8;
+}
+html[lang="fa"] body.page-contact .contact-form-card {
+  --card-fill: #ffffff;
+  --card-edge: #d6dfed;
+  --card-accent: #315be8;
+}
+html[lang="fa"] body.page-contact .contact-detail-icon {
+  background: #dfe9ff;
+  border-color: #c2d2f3;
+  color: #2545b5;
+}
+.page-contact .contact-detail-item,
+.page-contact .contact-detail-item a { color: #354f74; }
