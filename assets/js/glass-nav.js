@@ -8,8 +8,6 @@
   panel.className = 'glass-nav';
   panel.id = 'glass-navigation';
   panel.setAttribute('aria-label', 'ناوبری BJcode');
-  const brand = header.querySelector('.brand').cloneNode(true);
-  brand.classList.add('glass-brand');
   const toggle = document.createElement('button');
   toggle.type = 'button';
   toggle.className = 'glass-toggle';
@@ -37,7 +35,7 @@
   const note = document.createElement('span');
   note.className = 'glass-note';
   note.textContent = 'از ایده تا اجرا';
-  panel.append(toggle, brand, nav, note);
+  panel.append(toggle, nav, note);
   const backdrop = document.createElement('button');
   backdrop.type = 'button';
   backdrop.className = 'glass-backdrop';
