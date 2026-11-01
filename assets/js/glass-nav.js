@@ -49,7 +49,7 @@
   const update = (animate = false) => {
     const from = getComputedStyle(panel).transform;
     if (slide) { slide.cancel(); slide = null; }
-    if (mobile.matches) header.querySelector('.header-inner').append(toggle);
+    if (mobile.matches) header.querySelector('.header-inner').prepend(toggle);
     else if (toggle.parentElement !== panel) panel.prepend(toggle);
     panel.inert = mobile.matches && !expanded;
     document.body.classList.toggle('glass-expanded', expanded);
@@ -62,7 +62,7 @@
     if (animate && mobile.matches && panel.animate) {
       slide = panel.animate([
         { transform: from, visibility: 'visible' },
-        { transform: expanded ? 'translateX(0)' : 'translateX(-115%)', visibility: 'visible' }
+        { transform: expanded ? 'translateX(0)' : 'translateX(115%)', visibility: 'visible' }
       ], { duration: 1000, easing: 'cubic-bezier(.4,0,.2,1)' });
     }
   };
