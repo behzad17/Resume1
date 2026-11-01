@@ -25,7 +25,7 @@
 .glass-expanded .glass-tooltip { display: none; }
 .glass-backdrop { position: fixed; inset: 0; z-index: 90; border: 0; background: #18233c55; }
 .glass-backdrop[hidden] { display: none; }
-/* The rail stays visible on every screen; only its width changes. */
+/* Desktop rail; mobile uses a header toggle and an off-canvas panel. */
 html[lang="fa"] body.glass-ready { padding-inline-start: 112px; }
 .glass-ready .site-header { background: transparent; border: 0; }
 .glass-ready .header-inner { min-height: 80px; }
@@ -37,19 +37,20 @@ html[lang="fa"] body.glass-ready { padding-inline-start: 112px; }
 .glass-expanded .glass-label { max-width: 190px; opacity: 1; }
 .glass-expanded .glass-links a { gap: 14px; }
 @media (max-width: 767px) {
- html[lang="fa"] body.glass-ready { padding-inline-start: 84px; }
- .glass-ready .header-inner { flex-direction: row; padding-block: 14px; min-height: 20px; }
- .glass-ready .site-header .brand,.glass-ready .header-cta { display: none; }
- .glass-nav { top: 12px; bottom: 12px; max-height: calc(100dvh - 24px); inset-inline-start: 8px; width: 64px; padding: 12px 9px; border-radius: 22px; gap: 16px; overflow-x: hidden; overflow-y: auto; }
- .glass-expanded .glass-nav { width: min(280px,calc(100vw - 24px)); }
+ html[lang="fa"] body.glass-ready { padding-inline-start: 0; }
+ .glass-ready .header-inner { flex-direction: row; padding-block: 14px; min-height: 0; }
+ .glass-ready .site-header .brand { display: inline-flex; visibility: visible; }
+ .glass-ready .header-cta { display: none; }
+ .glass-ready .header-inner > .glass-toggle { margin-inline-start: auto; }
+ .glass-nav { top: 88px; bottom: 16px; max-height: calc(100dvh - 104px); inset-inline-start: 12px; width: min(290px,calc(100vw - 24px)); overflow-y: auto; transform: translateX(115%); visibility: hidden; pointer-events: none; }
+ .glass-expanded .glass-nav { width: min(290px,calc(100vw - 24px)); transform: none; visibility: visible; pointer-events: auto; }
+ .glass-expanded .site-header { position: relative; z-index: 101; }
  .glass-links { gap: 8px; }
- .glass-links a { min-height: 48px; padding-inline: 11px; }
- .glass-label { font-size: 13px; }
+ .glass-links a { min-height: 48px; }
  .glass-tooltip { display: none; }
- .glass-note { padding-inline: 8px; }
 }
 @media (prefers-reduced-motion: no-preference) {
- .glass-nav { transition: width 600ms cubic-bezier(.22,.68,.24,1); }
+ .glass-nav { transition: width 600ms cubic-bezier(.22,.68,.24,1),transform 600ms cubic-bezier(.22,.68,.24,1),visibility 600ms; }
  .glass-label { transition: max-width 600ms cubic-bezier(.22,.68,.24,1),opacity 380ms ease; }
  .glass-links a { transition: gap 600ms ease,background 180ms ease,box-shadow 180ms ease,color 180ms ease; }
 }

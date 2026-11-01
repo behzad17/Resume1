@@ -47,6 +47,9 @@
   document.body.append(backdrop, panel);
   let expanded = false;
   const update = () => {
+    if (mobile.matches) header.querySelector('.header-inner').append(toggle);
+    else if (toggle.parentElement !== panel) panel.prepend(toggle);
+    panel.inert = mobile.matches && !expanded;
     document.body.classList.toggle('glass-expanded', expanded);
     toggle.setAttribute('aria-expanded', String(expanded));
     toggle.setAttribute('aria-label', expanded ? 'جمع کردن منو' : 'باز کردن منو');
