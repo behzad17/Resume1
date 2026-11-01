@@ -56,7 +56,6 @@ html[lang="fa"] body.glass-ready { padding-inline-start: 112px; }
  .glass-nav { top: 104px; }
 }
 @media (max-width: 767px) and (prefers-reduced-motion: no-preference) {
- .glass-nav { transition: transform 1000ms cubic-bezier(.4,0,.2,1),visibility 0s linear 1000ms; }
- .glass-expanded .glass-nav { transition-delay: 0s,0s; }
+ .glass-nav { transition: none; }
  .glass-label { transition: max-width 1000ms ease,opacity 700ms ease; }
 }
