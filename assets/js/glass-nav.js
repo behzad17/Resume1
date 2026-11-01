@@ -37,7 +37,7 @@
   const note = document.createElement('span');
   note.className = 'glass-note';
   note.textContent = 'از ایده تا اجرا';
-  panel.append(brand, nav, note);
+  panel.append(toggle, brand, nav, note);
   const backdrop = document.createElement('button');
   backdrop.type = 'button';
   backdrop.className = 'glass-backdrop';
@@ -45,14 +45,12 @@
   backdrop.tabIndex = -1;
   backdrop.hidden = true;
   document.body.append(backdrop, panel);
-  header.querySelector('.header-inner').append(toggle);
   let expanded = false;
   const update = () => {
     document.body.classList.toggle('glass-expanded', expanded);
     toggle.setAttribute('aria-expanded', String(expanded));
     toggle.setAttribute('aria-label', expanded ? 'جمع کردن منو' : 'باز کردن منو');
     toggle.querySelector('span').textContent = expanded ? '×' : '☰';
-    panel.inert = mobile.matches && !expanded;
     backdrop.hidden = !mobile.matches || !expanded;
   };
   toggle.addEventListener('click', () => { expanded = !expanded; update(); });
