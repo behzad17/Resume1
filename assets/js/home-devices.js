@@ -112,10 +112,12 @@ async function init() {
     if(disposed||lost)return;
     const moving=!reduced.matches&&!stopped;
     const time=t*.001;
-    assembly.rotation.y=THREE.MathUtils.lerp(assembly.rotation.y,moving?px*.12-progress*.12:0,.06);
-    assembly.rotation.x=THREE.MathUtils.lerp(assembly.rotation.x,moving?py*.04:0,.06);
-    phone.position.y=.95+(moving?Math.sin(time*.8)*.055:0);
-    laptop.position.y=-.35+(moving?Math.sin(time*.8+.8)*.018:0);
+    assembly.rotation.y=moving?THREE.MathUtils.lerp(assembly.rotation.y,px*.32-progress*.24+Math.sin(time*.45)*.045,.06):0;
+    assembly.rotation.x=moving?THREE.MathUtils.lerp(assembly.rotation.x,py*.14+Math.sin(time*.35)*.018,.06):0;
+    assembly.position.y=moving?THREE.MathUtils.lerp(assembly.position.y,-progress*.14,.06):0;
+    phone.position.y=.95+(moving?Math.sin(time*.8)*.16:0);
+    laptop.position.y=-.35+(moving?Math.sin(time*.8+.8)*.045:0);
+    phone.rotation.z=.08+(moving?Math.sin(time*.65)*.035:0);
     renderer.render(scene,camera);
   }
   function loop(t){raf=0;if(!visible||document.hidden||stopped||lost||disposed)return;if(t-last>33){render(t);last=t;}if(!reduced.matches)raf=requestAnimationFrame(loop);}
@@ -155,16 +157,16 @@ function initCssDevices() {
   stage.addEventListener('pointermove',(e)=>{
     if(off||reduced.matches||!finePointer.matches)return;
     const r=stage.getBoundingClientRect();
-    stage.style.setProperty('--css-y',((e.clientX-r.left)/r.width-.5)*10+'deg');
-    stage.style.setProperty('--css-x',((e.clientY-r.top)/r.height-.5)*-6+'deg');
-    stage.style.setProperty('--css-float',((e.clientY-r.top)/r.height-.5)*-10+'px');
+    stage.style.setProperty('--css-y',((e.clientX-r.left)/r.width-.5)*20+'deg');
+    stage.style.setProperty('--css-x',((e.clientY-r.top)/r.height-.5)*-12+'deg');
+    stage.style.setProperty('--css-float',((e.clientY-r.top)/r.height-.5)*-20+'px');
   },{passive:true});
-  const reset=()=>{['--css-x','--css-y','--css-float'].forEach(v=>stage.style.removeProperty(v));};
+  const reset=()=>{['--css-x','--css-y','--css-float','--css-scroll'].forEach(v=>stage.style.removeProperty(v));};
   stage.addEventListener('pointerleave',reset);reduced.addEventListener('change',reset);
   window.addEventListener('scroll',()=>{
     if(off||reduced.matches)return;
     const r=stage.getBoundingClientRect();
     if(r.bottom<0||r.top>window.innerHeight)return;
-    stage.style.setProperty('--css-scroll',Math.min(1,Math.max(0,-r.top/r.height))*-5+'deg');
+    stage.style.setProperty('--css-scroll',Math.min(1,Math.max(0,-r.top/r.height) )*-10+'deg');
   },{passive:true});
 }
