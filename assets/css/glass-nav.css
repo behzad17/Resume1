@@ -1,7 +1,7 @@
 /* Frosted navigation, with an opaque fallback when backdrop-filter is absent. */
 .glass-nav { --nav-ink: #24314f; position: fixed; z-index: 100; inset-inline-start: 18px; top: 18px; bottom: 18px; width: 76px; padding: 18px 10px; border: 1px solid #aab8e0; border-radius: 26px; background: linear-gradient(160deg,#ded9fa 0%,#cddbf5 58%,#c1dfeb 100%); box-shadow: 0 14px 48px #26335a30,inset 0 1px 0 #ffffffd9; color: var(--nav-ink); display: flex; flex-direction: column; gap: 20px; box-sizing: border-box; }
 @supports (backdrop-filter: blur(24px)) or (-webkit-backdrop-filter: blur(24px)) {
- .glass-nav { background: linear-gradient(160deg,#ded9faed 0%,#cddbf5e8 58%,#c1dfebe6 100%); backdrop-filter: blur(24px) saturate(140%); -webkit-backdrop-filter: blur(24px) saturate(140%); }
+ .glass-nav { background: linear-gradient(160deg,#eee9ff70 0%,#d7e5ff61 58%,#d0f1f45c 100%); backdrop-filter: blur(16px) saturate(150%); -webkit-backdrop-filter: blur(16px) saturate(150%); }
 }
 .glass-ready .site-header .site-nav { display: none; }
 .glass-ready .header-inner { justify-content: space-between; }
@@ -9,7 +9,7 @@
 .glass-links { display: grid; gap: 12px; }
 .glass-links a { position: relative; display: flex; align-items: center; gap: 14px; min-height: 48px; padding: 10px 16px; color: #34415d; border-radius: 14px; white-space: nowrap; border: 1px solid transparent; text-decoration: none; }
 .glass-links .fa { flex: 0 0 20px; text-align: center; font-size: 19px; }
-.glass-links a:hover,.glass-links a[aria-current="page"] { background: #ffffffc9; color: #4030aa; border-color: #fff; box-shadow: 0 4px 14px #48379912,inset 0 1px 0 #fff; }
+.glass-links a:hover,.glass-links a[aria-current="page"] { background: #ffffff70; color: #4030aa; border-color: #fff; box-shadow: 0 4px 14px #48379912,inset 0 1px 0 #fff; }
 .glass-label,.glass-note { display: none; }
 .glass-tooltip { position: absolute; inset-inline-start: calc(100% + 20px); top: 50%; transform: translateY(-50%) translateX(5px); padding: 7px 14px; background: #26314c; color: #fff; font-size: 13px; border-radius: 10px; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 160ms ease,transform 160ms ease; }
 .glass-links a:is(:hover,:focus-visible) .glass-tooltip { opacity: 1; visibility: visible; transform: translateY(-50%); }
@@ -20,7 +20,7 @@
 .glass-label { font-size: 14px; }
 .glass-note { margin-top: auto; padding: 12px 16px; color: #53617b; font-size: 12px; border-top: 1px solid #b9c4dd; }
 .glass-expanded .glass-tooltip { display: none; }
-.glass-backdrop { position: fixed; inset: 0; z-index: 90; border: 0; background: #18233c55; }
+.glass-backdrop { position: fixed; inset: 0; z-index: 90; border: 0; background: #18233c18; }
 .glass-backdrop[hidden] { display: none; }
 /* Desktop rail; mobile uses a header toggle and an off-canvas panel. */
 html[lang="fa"] body.glass-ready { padding-inline-start: 112px; }
@@ -37,11 +37,14 @@ html[lang="fa"] body.glass-ready { padding-inline-start: 112px; }
  .glass-ready .site-header .brand { display: inline-flex; visibility: visible; }
  .glass-ready .header-cta { display: none; }
  .glass-ready .header-inner > .glass-toggle { margin-inline-start: auto; }
- .glass-nav { top: 88px; bottom: 16px; max-height: calc(100dvh - 104px); inset-inline-start: 12px; width: min(290px,calc(100vw - 24px)); overflow-y: auto; transform: translateX(115%); visibility: hidden; pointer-events: none; }
- .glass-expanded .glass-nav { width: min(290px,calc(100vw - 24px)); transform: none; visibility: visible; pointer-events: auto; }
+ .glass-nav { top: 88px; bottom: 16px; max-height: calc(100dvh - 104px); inset-inline-start: auto; inset-inline-end: 12px; width: min(224px,calc(100vw - 24px)); overflow-y: auto; transform: translateX(-115%); visibility: hidden; pointer-events: none; }
+ .glass-expanded .glass-nav { width: min(224px,calc(100vw - 24px)); transform: none; visibility: visible; pointer-events: auto; }
  .glass-expanded .site-header { position: relative; z-index: 101; }
  .glass-links { gap: 8px; }
- .glass-links a { min-height: 48px; }
+ .glass-links a { min-height: 48px; padding-inline: 10px; }
+ .glass-expanded .glass-links a { gap: 10px; }
+ .glass-label { font-size: 13px; white-space: normal; line-height: 1.8; }
+ .glass-nav { border-color: #ffffffaa; box-shadow: 0 14px 48px #26335a24,inset 0 1px 0 #ffffffcc; }
  .glass-tooltip { display: none; }
 }
 @media (prefers-reduced-motion: no-preference) {

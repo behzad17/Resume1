@@ -61,7 +61,7 @@
     if (animate && mobile.matches && !reducedMotion.matches && panel.animate) {
       slide = panel.animate([
         { transform: from, visibility: 'visible' },
-        { transform: expanded ? 'translateX(0)' : 'translateX(115%)', visibility: 'visible' }
+        { transform: expanded ? 'translateX(0)' : 'translateX(-115%)', visibility: 'visible' }
       ], { duration: 1000, easing: 'cubic-bezier(.4,0,.2,1)' });
     }
   };
