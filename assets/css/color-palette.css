@@ -1,67 +1,88 @@
 /* Approved BJcode palette: blue, violet, turquoise and coral. */
 :root {
-  --ink: #17243b;
-  --muted: #53617a;
-  --blue: #315be8;
-  --violet: #8b5cf6;
-  --teal: #14b8a6;
-  --coral: #f47764;
-  --line: #dfe5ef;
-  --surface: #f5f3ff;
-  --card-fill: #edf1ff;
-  --card-edge: #cbd5fb;
-  --card-accent: #315be8;
+  --ink: #021024;
+  --muted: #052659;
+  --blue: #052659;
+  --violet: #052659;
+  --teal: #5483b3;
+  --coral: #5483b3;
+  --line: #c1e8ff;
+  --surface: #eff8ff;
+  --card-fill: #c1e8ff;
+  --card-edge: #7da0ca;
+  --card-accent: #052659;
 }
-.site-header { background: #fff; border-bottom: 3px solid; border-image: linear-gradient(90deg,var(--teal),var(--blue),var(--violet),var(--coral)) 1; }
-.site-nav a[aria-current="page"] { background: #edf1ff; color: #2545b5; }
-.services-section { background: #faf9ff; border-color: #e6e1f5; }
-.process-section { background: #effaf7; border-color: #cce9e3; }
-.process-list li { border-color: #cce9e3; }
-.process-list li > span { background: #d8f3ed; color: #12645f; border-radius: 10px; min-width: 37px; height: 37px; display: flex; align-items: center; justify-content: center; padding: 0; flex-shrink: 0; }
-.closing-banner { background: linear-gradient(120deg,#edf1ff,#e6f8f3 60%,#fff0ec); border-color: var(--line); }
+.site-header { background: #eff8ff; border-bottom: 3px solid; border-image: linear-gradient(90deg,var(--teal),var(--blue),var(--violet),var(--coral)) 1; }
+.site-nav a[aria-current="page"] { background: #c1e8ff; color: #021024; }
+.services-section { background: #eff8ff; border-color: #c1e8ff; }
+.process-section { background: #eff8ff; border-color: #c1e8ff; }
+.process-list li { border-color: #c1e8ff; }
+.process-list li > span { background: #c1e8ff; color: #021024; border-radius: 10px; min-width: 37px; height: 37px; display: flex; align-items: center; justify-content: center; padding: 0; flex-shrink: 0; }
+.closing-banner { background: linear-gradient(120deg,#c1e8ff,#eff8ff 60%,#c1e8ff); border-color: var(--line); }
 html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card,.project-card,.featured-project,.info-card,.resume-card,.contact-card,.github-search-card,.gh-user-card,.repo-list) {
- background: var(--card-fill); border-color: var(--card-edge); border-top: 3px solid var(--card-accent); box-shadow: 0 8px 24px #17243b08;
+ background: var(--card-fill); border-color: var(--card-edge); border-top: 3px solid var(--card-accent); box-shadow: 0 8px 24px #02102408;
 }
-html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card,.project-card,.featured-project,.info-card):nth-child(3n + 2) { --card-fill: #f2edff; --card-edge: #d9caf7; --card-accent: #7545c4; }
-html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card,.project-card,.featured-project,.info-card):nth-child(3n) { --card-fill: #e7f8f3; --card-edge: #b5dfd4; --card-accent: #127d70; }
-html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card,.project-card,.featured-project,.info-card):hover { border-color: var(--card-accent); box-shadow: 0 12px 28px #17243b12; }
-html[lang="fa"] body :is(.icon-box,.service-icon,.resume-skill-icon) { background: var(--card-accent); border-color: transparent; color: #fff; }
-html[lang="fa"] body .service-icon i { color: #fff; }
+html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card,.project-card,.featured-project,.info-card):nth-child(3n + 2) { --card-fill: #c1e8ff; --card-edge: #7da0ca; --card-accent: #052659; }
+html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card,.project-card,.featured-project,.info-card):nth-child(3n) { --card-fill: #eff8ff; --card-edge: #7da0ca; --card-accent: #052659; }
+html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card,.project-card,.featured-project,.info-card):hover { border-color: var(--card-accent); box-shadow: 0 12px 28px #02102412; }
+html[lang="fa"] body :is(.icon-box,.service-icon,.resume-skill-icon) { background: var(--card-accent); border-color: transparent; color: #c1e8ff; }
+html[lang="fa"] body .service-icon i { color: #c1e8ff; }
 .service-number,.mini-label { color: var(--muted); }
-html[lang="fa"] body :is(.home-service p,.service-description,.service-features li,.resume-skill-card p,.project-description,.info-text) { color: #47566e; }
+html[lang="fa"] body :is(.home-service p,.service-description,.service-features li,.resume-skill-card p,.project-description,.info-text) { color: #021024; }
 .featured-image { background: var(--card-fill); }
-.round-arrow { background: var(--card-accent); border-color: var(--card-accent); color: #fff; }
-.page-resume .tag { background: #fff; color: #354aa1; border-color: #cbd5fb; }
-html[lang="fa"] body :is(.resume-work-card,.contact-info-card,.gh-user-card) { --card-fill: #e7f8f3; --card-edge: #b5dfd4; --card-accent: #127d70; }
-html[lang="fa"] body :is(.resume-progress-wrap,.contact-form-card) { --card-fill: #fff4f0; --card-edge: #f0c8bf; --card-accent: #b94435; }
-html[lang="fa"] body .contact-detail-icon { background: #d3efe8; border-color: #acd5c7; color: #12645f; }
-.page-contact .contact-detail-item,.page-contact .contact-detail-item a { color: #354f64; }
-.page-contact .contact-form-card .form-control { background: #fff; border-color: #9aa8bb; }
-.page-contact .contact-form-card .form-control::placeholder { color: #65778c; }
-.page-github .github-search-row { background: #fff; border-color: #b9ccec; }
-.page-github .github-search-hint { color: #516681; }
-.page-github .gh-stat { background: #f4fcf9; border-color: #b8d8ce; color: #496479; }
-.page-github .gh-repo-link { background: #f9fbff; border-color: #bdceea; }
-html[lang="fa"] .interior-main#main-content { background: #faf9ff; }
-.page-intro { border-bottom: 1px solid #e3dcf3; margin-bottom: 28px; }
+.round-arrow { background: var(--card-accent); border-color: var(--card-accent); color: #c1e8ff; }
+.page-resume .tag { background: #eff8ff; color: #021024; border-color: #7da0ca; }
+html[lang="fa"] body :is(.resume-work-card,.contact-info-card,.gh-user-card) { --card-fill: #eff8ff; --card-edge: #7da0ca; --card-accent: #052659; }
+html[lang="fa"] body :is(.resume-progress-wrap,.contact-form-card) { --card-fill: #eff8ff; --card-edge: #7da0ca; --card-accent: #052659; }
+html[lang="fa"] body .contact-detail-icon { background: #c1e8ff; border-color: #7da0ca; color: #021024; }
+.page-contact .contact-detail-item,.page-contact .contact-detail-item a { color: #021024; }
+.page-contact .contact-form-card .form-control { background: #eff8ff; border-color: #5483b3; }
+.page-contact .contact-form-card .form-control::placeholder { color: #021024; }
+.page-github .github-search-row { background: #eff8ff; border-color: #7da0ca; }
+.page-github .github-search-hint { color: #021024; }
+.page-github .gh-stat { background: #eff8ff; border-color: #7da0ca; color: #021024; }
+.page-github .gh-repo-link { background: #eff8ff; border-color: #7da0ca; }
+html[lang="fa"] .interior-main#main-content { background: #eff8ff; }
+.page-intro { border-bottom: 1px solid #c1e8ff; margin-bottom: 28px; }
 .page-intro p { color: var(--muted); }
-.site-footer { background: #17243b; border-top: 4px solid var(--teal); }
+.site-footer { background: #021024; border-top: 4px solid var(--teal); }
 
 /* Keep the contact page in one calm blue family. */
 html[lang="fa"] body.page-contact .contact-info-card {
-  --card-fill: #edf3ff;
-  --card-edge: #cbd8f0;
-  --card-accent: #315be8;
+  --card-fill: #c1e8ff;
+  --card-edge: #7da0ca;
+  --card-accent: #052659;
 }
 html[lang="fa"] body.page-contact .contact-form-card {
-  --card-fill: #ffffff;
-  --card-edge: #d6dfed;
-  --card-accent: #315be8;
+  --card-fill: #eff8ff;
+  --card-edge: #c1e8ff;
+  --card-accent: #052659;
 }
 html[lang="fa"] body.page-contact .contact-detail-icon {
-  background: #dfe9ff;
-  border-color: #c2d2f3;
-  color: #2545b5;
+  background: #c1e8ff;
+  border-color: #7da0ca;
+  color: #021024;
 }
 .page-contact .contact-detail-item,
-.page-contact .contact-detail-item a { color: #354f74; }
+.page-contact .contact-detail-item a { color: #021024; }
+
+/* BJcode blue palette from the supplied reference.
+   Pale surfaces are tints of C1E8FF; type remains dark for contrast. */
+:root {
+ --ink: #021024; --muted: #052659; --blue: #052659;
+ --violet: #5483b3; --teal: #5483b3; --coral: #052659;
+ --line: #7da0ca; --surface: #eff8ff;
+ --card-fill: #c1e8ff; --card-edge: #7da0ca; --card-accent: #052659;
+}
+html[lang="fa"] body { background: #eff8ff; color: #021024; }
+html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card,.project-card,.featured-project,.info-card):nth-child(3n + 2) { --card-fill: #e0f2ff; --card-edge: #7da0ca; --card-accent: #052659; }
+html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card,.project-card,.featured-project,.info-card):nth-child(3n) { --card-fill: #c1e8ff; --card-edge: #5483b3; --card-accent: #052659; }
+html[lang="fa"] body :is(.icon-box,.service-icon,.resume-skill-icon,.round-arrow) { background: #052659; color: #c1e8ff; }
+html[lang="fa"] body .service-icon i { color: #c1e8ff; }
+.site-footer { background: #021024; border-top-color: #5483b3; }
+.site-footer :is(p,a,h2,.footer-location,.footer-end) { color: #c1e8ff; }
+.site-footer .brand-symbol { background: #c1e8ff; color: #021024; }
+.button.primary { background: #052659; color: #c1e8ff; }
+.button.primary:hover { background: #021024; color: #c1e8ff; }
+.button.secondary { background: #c1e8ff; color: #052659; border-color: #5483b3; }
+::selection { background: #052659; color: #c1e8ff; }

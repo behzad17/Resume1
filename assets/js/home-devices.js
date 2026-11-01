@@ -36,18 +36,18 @@ async function init() {
   const camera = new THREE.PerspectiveCamera(34,1,.1,70);
   camera.position.set(6.3,4.4,10.5);
   camera.lookAt(.3,.45,0);
-  scene.add(new THREE.HemisphereLight(0xe8efff,0x8b92a7,3));
+  scene.add(new THREE.HemisphereLight(0xc1e8ff,0x5483b3,3));
   function light(color,intensity,x,y,z) {
     const l=new THREE.DirectionalLight(color,intensity);l.position.set(x,y,z);scene.add(l);return l;
   }
-  const key=light(0xffffff,4,3,8,5);
+  const key=light(0xeff8ff,4,3,8,5);
   key.castShadow=!compact;key.shadow.mapSize.set(1024,1024);
   Object.assign(key.shadow.camera,{left:-7,right:7,top:7,bottom:-7});key.shadow.bias=-.001;
-  light(0x9c9bff,2,-5,3,-2);light(0x9ae7ed,1.8,4,1,-4);
+  light(0x5483b3,2,-5,3,-2);light(0xc1e8ff,1.8,4,1,-4);
   const assembly=new THREE.Group();scene.add(assembly);
-  const metal=new THREE.MeshStandardMaterial({color:0x507ee8,metalness:.62,roughness:.3});
-  const edge=new THREE.MeshStandardMaterial({color:0x6250ad,metalness:.65,roughness:.3});
-  const black=new THREE.MeshStandardMaterial({color:0x0d1421,roughness:.4,metalness:.15});
+  const metal=new THREE.MeshStandardMaterial({color:0x5483b3,metalness:.62,roughness:.3});
+  const edge=new THREE.MeshStandardMaterial({color:0x052659,metalness:.65,roughness:.3});
+  const black=new THREE.MeshStandardMaterial({color:0x021024,roughness:.4,metalness:.15});
   function rounded(w,h,d,r,material) {
     const shape=new THREE.Shape();const x=-w/2,y=-h/2;
     shape.moveTo(x+r,y);shape.lineTo(x+w-r,y);shape.quadraticCurveTo(x+w,y,x+w,y+r);
@@ -61,14 +61,14 @@ async function init() {
   }
   const laptop=new THREE.Group();assembly.add(laptop);laptop.position.set(-.45,-.35,0);laptop.rotation.y=-.09;
   const base=rounded(4.65,2.9,.13,.15,metal);base.rotation.x=-Math.PI/2;laptop.add(base);
-  const deck=rounded(4.42,2.65,.018,.12,new THREE.MeshStandardMaterial({color:0xb9ceff,metalness:.5,roughness:.35}));deck.rotation.x=-Math.PI/2;deck.position.y=.079;laptop.add(deck);
+  const deck=rounded(4.42,2.65,.018,.12,new THREE.MeshStandardMaterial({color:0x7da0ca,metalness:.5,roughness:.35}));deck.rotation.x=-Math.PI/2;deck.position.y=.079;laptop.add(deck);
   const keyboard=new THREE.Group();laptop.add(keyboard);
   const keygeo=new THREE.BoxGeometry(.255,.025,.205);
   for(let row=0;row<5;row++)for(let col=0;col<14;col++){
     const k=new THREE.Mesh(keygeo,black);k.position.set((col-6.5)*.285,.105,-1.05+row*.245);keyboard.add(k);
   }
   const space=new THREE.Mesh(new THREE.BoxGeometry(1.55,.025,.16),black);space.position.set(0,.105,.13);keyboard.add(space);
-  const track=rounded(1.48,.72,.01,.07,new THREE.MeshStandardMaterial({color:0x91adef,metalness:.55,roughness:.4}));track.rotation.x=-Math.PI/2;track.position.set(0,.1,.8);laptop.add(track);
+  const track=rounded(1.48,.72,.01,.07,new THREE.MeshStandardMaterial({color:0x5483b3,metalness:.55,roughness:.4}));track.rotation.x=-Math.PI/2;track.position.set(0,.1,.8);laptop.add(track);
   const front=rounded(.65,.04,.015,.018,edge);front.position.set(0,-.005,1.459);laptop.add(front);
   const lid=new THREE.Group();lid.position.set(0,.09,-1.28);lid.rotation.x=-.17;laptop.add(lid);
   const shell=rounded(4.65,2.92,.1,.14,metal);shell.position.y=1.46;lid.add(shell);
@@ -76,23 +76,23 @@ async function init() {
   function texture(mobile=false) {
     const c=document.createElement('canvas');c.width=mobile?512:1280;c.height=mobile?960:800;
     const ctx=c.getContext('2d'),w=c.width;
-    ctx.fillStyle='#f4f7ff';ctx.fillRect(0,0,w,c.height);
+    ctx.fillStyle='#eff8ff';ctx.fillRect(0,0,w,c.height);
     ctx.fillStyle='#fff';ctx.fillRect(0,0,w,80);
-    ctx.textAlign='left';ctx.direction='ltr';ctx.fillStyle='#315be8';ctx.font='800 32px Vazirmatn';ctx.fillText('</> BJcode',mobile?26:44,51);
-    if(!mobile){ctx.direction='rtl';ctx.textAlign='right';ctx.fillStyle='#52617a';ctx.font='22px Vazirmatn';ctx.fillText('خدمات     نمونه‌کارها     تماس',w-44,51);}
-    const g=ctx.createLinearGradient(0,80,w,550);g.addColorStop(0,'#173f9c');g.addColorStop(.55,'#4248bb');g.addColorStop(1,'#6b36b3');
+    ctx.textAlign='left';ctx.direction='ltr';ctx.fillStyle='#052659';ctx.font='800 32px Vazirmatn';ctx.fillText('</> BJcode',mobile?26:44,51);
+    if(!mobile){ctx.direction='rtl';ctx.textAlign='right';ctx.fillStyle='#052659';ctx.font='22px Vazirmatn';ctx.fillText('خدمات     نمونه‌کارها     تماس',w-44,51);}
+    const g=ctx.createLinearGradient(0,80,w,550);g.addColorStop(0,'#021024');g.addColorStop(.55,'#052659');g.addColorStop(1,'#052659');
     ctx.fillStyle=g;ctx.fillRect(0,80,w,mobile?535:455);
-    ctx.fillStyle='#ffffff12';ctx.beginPath();ctx.arc(w*.92,210,mobile?160:280,0,Math.PI*2);ctx.fill();
-    ctx.fillStyle='#2dd4bf22';ctx.beginPath();ctx.arc(w*.08,480,mobile?100:190,0,Math.PI*2);ctx.fill();
+    ctx.fillStyle='#eff8ff12';ctx.beginPath();ctx.arc(w*.92,210,mobile?160:280,0,Math.PI*2);ctx.fill();
+    ctx.fillStyle='#7da0ca22';ctx.beginPath();ctx.arc(w*.08,480,mobile?100:190,0,Math.PI*2);ctx.fill();
     ctx.direction='rtl';ctx.textAlign='center';
-    ctx.fillStyle='#b5fff1';ctx.font=`500 ${mobile?23:25}px Vazirmatn`;ctx.fillText('طراحی روشن. توسعهٔ خلاقانه.',w/2,mobile?151:150);
+    ctx.fillStyle='#c1e8ff';ctx.font=`500 ${mobile?23:25}px Vazirmatn`;ctx.fillText('طراحی روشن. توسعهٔ خلاقانه.',w/2,mobile?151:150);
     ctx.fillStyle='#fff';ctx.font=`800 ${mobile?47:68}px Vazirmatn`;ctx.fillText('از ایدهٔ شما',w/2,mobile?246:252);
-    ctx.fillStyle='#93f5df';ctx.font=`800 ${mobile?44:65}px Vazirmatn`;ctx.fillText('تا یک وب‌سایت ماندگار',w/2,mobile?322:340);
-    ctx.fillStyle='#e5eaff';ctx.font=`400 ${mobile?23:27}px Vazirmatn`;ctx.fillText('طراحی، توسعه و همراهی',w/2,mobile?385:395);
-    ctx.fillStyle='#a2f5dc';ctx.beginPath();ctx.roundRect(w/2-127,mobile?435:437,254,60,16);ctx.fill();
-    ctx.fillStyle='#103e45';ctx.font='700 25px Vazirmatn';ctx.fillText('شروع همکاری  ←',w/2,mobile?474:477);
-    ctx.fillStyle='#17243b';ctx.font=`700 ${mobile?29:33}px Vazirmatn`;ctx.fillText('برای قدم بعدی شما',w/2,mobile?665:595);
-    const colors=['#dbe7ff','#e9dcff','#c8f4e8'],inks=['#214fba','#6837aa','#126454'],labels=['طراحی وب‌سایت','توسعهٔ اختصاصی','پشتیبانی'];
+    ctx.fillStyle='#c1e8ff';ctx.font=`800 ${mobile?44:65}px Vazirmatn`;ctx.fillText('تا یک وب‌سایت ماندگار',w/2,mobile?322:340);
+    ctx.fillStyle='#c1e8ff';ctx.font=`400 ${mobile?23:27}px Vazirmatn`;ctx.fillText('طراحی، توسعه و همراهی',w/2,mobile?385:395);
+    ctx.fillStyle='#c1e8ff';ctx.beginPath();ctx.roundRect(w/2-127,mobile?435:437,254,60,16);ctx.fill();
+    ctx.fillStyle='#052659';ctx.font='700 25px Vazirmatn';ctx.fillText('شروع همکاری  ←',w/2,mobile?474:477);
+    ctx.fillStyle='#021024';ctx.font=`700 ${mobile?29:33}px Vazirmatn`;ctx.fillText('برای قدم بعدی شما',w/2,mobile?665:595);
+    const colors=['#c1e8ff','#c1e8ff','#c1e8ff'],inks=['#052659','#052659','#052659'],labels=['طراحی وب‌سایت','توسعهٔ اختصاصی','پشتیبانی'];
     for(let i=0;i<3;i++){
       const cw=mobile?440:360,ch=mobile?70:126,x=mobile?36:50+i*410,y=mobile?694+i*82:626;
       ctx.fillStyle=colors[i];ctx.beginPath();ctx.roundRect(x,y,cw,ch,18);ctx.fill();
@@ -101,16 +101,16 @@ async function init() {
     const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=Math.min(4,renderer.capabilities.getMaxAnisotropy());return t;
   }
   const screen=rounded(4.22,2.49,.005,.04,new THREE.MeshBasicMaterial({map:texture()}));screen.position.set(0,1.49,.073);lid.add(screen);
-  const cam=new THREE.Mesh(new THREE.CircleGeometry(.023,12),new THREE.MeshBasicMaterial({color:0x455576}));cam.position.set(0,2.81,.073);lid.add(cam);
+  const cam=new THREE.Mesh(new THREE.CircleGeometry(.023,12),new THREE.MeshBasicMaterial({color:0x052659}));cam.position.set(0,2.81,.073);lid.add(cam);
   const phone=new THREE.Group();phone.position.set(2.25,.95,1.1);phone.rotation.set(-.06,-.24,.08);assembly.add(phone);
-  phone.add(rounded(1.2,2.49,.13,.17,new THREE.MeshStandardMaterial({color:0x18b8ae,metalness:.55,roughness:.28})));
+  phone.add(rounded(1.2,2.49,.13,.17,new THREE.MeshStandardMaterial({color:0x5483b3,metalness:.55,roughness:.28})));
   const rim=rounded(1.12,2.40,.025,.14,black);rim.position.z=.077;phone.add(rim);
   const display=rounded(1.04,2.28,.008,.115,new THREE.MeshBasicMaterial({map:texture(true)}));display.position.z=.096;phone.add(display);
   const island=rounded(.36,.07,.012,.035,black);island.position.set(0,1.08,.108);phone.add(island);
   const homebar=rounded(.30,.025,.008,.01,black);homebar.position.set(0,-1.08,.11);phone.add(homebar);
   const sidebutton=new THREE.Mesh(new THREE.BoxGeometry(.022,.27,.055),metal);sidebutton.position.set(.61,.45,0);phone.add(sidebutton);
-  const floor=new THREE.Mesh(new THREE.PlaneGeometry(35,35),new THREE.ShadowMaterial({color:0x5d5788,opacity:.16}));floor.rotation.x=-Math.PI/2;floor.position.y=-.56;floor.receiveShadow=true;scene.add(floor);
-  const pedestal=new THREE.Mesh(new THREE.CylinderGeometry(3.7,3.8,.12,compact?48:80),new THREE.MeshStandardMaterial({color:0xe4e7f6,metalness:.15,roughness:.7}));pedestal.position.set(.2,-.5,.1);pedestal.receiveShadow=true;scene.add(pedestal);
+  const floor=new THREE.Mesh(new THREE.PlaneGeometry(35,35),new THREE.ShadowMaterial({color:0x052659,opacity:.16}));floor.rotation.x=-Math.PI/2;floor.position.y=-.56;floor.receiveShadow=true;scene.add(floor);
+  const pedestal=new THREE.Mesh(new THREE.CylinderGeometry(3.7,3.8,.12,compact?48:80),new THREE.MeshStandardMaterial({color:0xc1e8ff,metalness:.15,roughness:.7}));pedestal.position.set(.2,-.5,.1);pedestal.receiveShadow=true;scene.add(pedestal);
   let width=0,height=0,visible=true,raf=0,stopped=preference,lost=false,disposed=false;
   let px=0,py=0,progress=0,last=0;
   const bounds=()=>stage.getBoundingClientRect();

@@ -59,11 +59,11 @@ img {
   display: block;
   max-width: 70%;
   margin: 0 auto;
-  background: #fff;
+  background: #eff8ff;
   padding: 15px 25px;
-  -webkit-box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.4);
-  box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 1px 2px 3px -1px rgba(2,16,36, 0.4);
+  -moz-box-shadow: 1px 2px 3px -1px rgba(2,16,36, 0.4);
+  box-shadow: 1px 2px 3px -1px rgba(2,16,36, 0.4);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -86,7 +86,7 @@ img {
 
 .small-name {
   font-size: 0.75em;
-  color: #a9a9a9;
+  color: #052659;
   font-style: italic;
 }
 
@@ -97,7 +97,7 @@ img {
 }
 
 .avi img {
-  border: 1px solid #ccc;
+  border: 1px solid #7da0ca;
   padding: 3px;
 }
 
@@ -123,34 +123,34 @@ img {
   margin-right: 10px;
   margin-bottom: 10px;
   text-decoration: none;
-  border: 1px solid #356492;
+  border: 1px solid #052659;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  color: #fff;
-  background-color: #3673af;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#5597d8), to(#3673af));
-  background-image: -webkit-linear-gradient(top, #5597d8, #3673af);
-  background-image: -moz-linear-gradient(top, #5597d8, #3673af);
-  background-image: -ms-linear-gradient(top, #5597d8, #3673af);
-  background-image: -o-linear-gradient(top, #5597d8, #3673af);
-  background-image: linear-gradient(top, #5597d8, #3673af);
+  color: #c1e8ff;
+  background-color: #052659;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5483b3), to(#052659));
+  background-image: -webkit-linear-gradient(top, #5483b3, #052659);
+  background-image: -moz-linear-gradient(top, #5483b3, #052659);
+  background-image: -ms-linear-gradient(top, #5483b3, #052659);
+  background-image: -o-linear-gradient(top, #5483b3, #052659);
+  background-image: linear-gradient(top, #5483b3, #052659);
 }
 
 .repo-list ul li a:hover {
-  background-color: #396895;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#4b87c2), to(#396895));
-  background-image: -webkit-linear-gradient(top, #4b87c2, #396895);
-  background-image: -moz-linear-gradient(top, #4b87c2, #396895);
-  background-image: -ms-linear-gradient(top, #4b87c2, #396895);
-  background-image: -o-linear-gradient(top, #4b87c2, #396895);
-  background-image: linear-gradient(top, #4b87c2, #396895);
+  background-color: #052659;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5483b3), to(#052659));
+  background-image: -webkit-linear-gradient(top, #5483b3, #052659);
+  background-image: -moz-linear-gradient(top, #5483b3, #052659);
+  background-image: -ms-linear-gradient(top, #5483b3, #052659);
+  background-image: -o-linear-gradient(top, #5483b3, #052659);
+  background-image: linear-gradient(top, #5483b3, #052659);
 }
 
 .repo-list ul li a:active {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: inset 0 3px 5px rgba(2,16,36, 0.25);
+  -moz-box-shadow: inset 0 3px 5px rgba(2,16,36, 0.25);
+  box-shadow: inset 0 3px 5px rgba(2,16,36, 0.25);
 }
 
 .repo-list ul li a span {
@@ -164,7 +164,7 @@ img {
   display: block;
   padding: 5px 8px;
   font-size: 1.4em;
-  color: #666;
+  color: #021024;
   max-width: 550px;
   margin-bottom: 15px;
 }
@@ -174,38 +174,38 @@ img {
   padding: 8px 18px;
   font-size: 14px;
   font-weight: bold;
-  color: #444;
+  color: #021024;
   text-decoration: none;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-  background-color: #eaeaea;
-  background-image: -webkit-linear-gradient(#fafafa, #eaeaea);
-  background-image: -moz-linear-gradient(#fafafa, #eaeaea);
-  background-image: -ms-linear-gradient(top, #fafafa, #eaeaea);
-  background-image: -o-linear-gradient(top, #fafafa, #eaeaea);
-  background-image: linear-gradient(#fafafa, #eaeaea);
+  text-shadow: 0 1px 0 rgba(239,248,255, 0.8);
+  background-color: #c1e8ff;
+  background-image: -webkit-linear-gradient(#eff8ff, #c1e8ff);
+  background-image: -moz-linear-gradient(#eff8ff, #c1e8ff);
+  background-image: -ms-linear-gradient(top, #eff8ff, #c1e8ff);
+  background-image: -o-linear-gradient(top, #eff8ff, #c1e8ff);
+  background-image: linear-gradient(#eff8ff, #c1e8ff);
   border-radius: 3px;
-  border: 1px solid #ddd;
-  border-bottom-color: #c5c5c5;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid #c1e8ff;
+  border-bottom-color: #7da0ca;
+  -webkit-box-shadow: 0 1px 3px rgba(2,16,36, 0.05);
+  -moz-box-shadow: 0 1px 3px rgba(2,16,36, 0.05);
+  box-shadow: 0 1px 3px rgba(2,16,36, 0.05);
 }
 
 #gh-submit:hover {
-  background-color: #dadada;
-  background-image: -webkit-linear-gradient(#eaeaea, #dadada);
-  background-image: -moz-linear-gradient(#eaeaea, #dadada);
-  background-image: -ms-linear-gradient(top, #eaeaea, #dadada);
-  background-image: -o-linear-gradient(top, #eaeaea, #dadada);
-  background-image: linear-gradient(#eaeaea, #dadada);
-  border-color: #ccc #ccc #b5b5b5;
+  background-color: #c1e8ff;
+  background-image: -webkit-linear-gradient(#c1e8ff, #c1e8ff);
+  background-image: -moz-linear-gradient(#c1e8ff, #c1e8ff);
+  background-image: -ms-linear-gradient(top, #c1e8ff, #c1e8ff);
+  background-image: -o-linear-gradient(top, #c1e8ff, #c1e8ff);
+  background-image: linear-gradient(#c1e8ff, #c1e8ff);
+  border-color: #7da0ca #7da0ca #5483b3;
 }
 
 #gh-submit:active {
-  background-color: #dadada;
+  background-color: #c1e8ff;
   background-image: none;
-  border-color: #b5b5b5;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
+  border-color: #5483b3;
+  -webkit-box-shadow: inset 0 3px 5px rgba(2,16,36, 0.25);
+  -moz-box-shadow: inset 0 3px 5px rgba(2,16,36, 0.25);
+  box-shadow: inset 0 3px 5px rgba(2,16,36, 0.25);
 }

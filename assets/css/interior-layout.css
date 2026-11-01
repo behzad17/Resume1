@@ -11,7 +11,7 @@ html[lang="fa"] body .interior-main :is(
   border-radius: var(--panel-radius);
   border-width: 1px;
   border-top-width: 3px;
-  box-shadow: 0 4px 14px #1b3f730a;
+  box-shadow: 0 4px 14px #0526590a;
   margin: 0;
 }
 html[lang="fa"] body .interior-main :is(
@@ -19,7 +19,7 @@ html[lang="fa"] body .interior-main :is(
   .contact-card, .github-search-card, .gh-user-card, .repo-list
 ) { padding: var(--panel-padding); }
 html[lang="fa"] body .interior-main :is(.service-card, .info-card, .resume-skill-card, .project-card):hover {
-  box-shadow: 0 6px 20px #1b3f7312;
+  box-shadow: 0 6px 20px #05265912;
   transform: none;
 }
 .interior-main .page-intro {
@@ -160,15 +160,15 @@ html[lang="fa"] .page-resume #main-content > .shell > .row-table {
 html[lang="fa"] body .interior-main .resume-education-standalone {
   margin: 0 0 36px;
   padding: 28px;
-  --card-fill: #e0f3ed;
-  --card-edge: #afd8cb;
-  --card-accent: #147d70;
+  --card-fill: #c1e8ff;
+  --card-edge: #7da0ca;
+  --card-accent: #052659;
 }
 .page-resume .interior-main .resume-education-standalone h2 {
   margin: 0 0 16px;
   font-size: 20px;
   font-weight: 700;
-  color: #14243b;
+  color: #021024;
 }
 .page-resume .interior-main .resume-education-standalone h4 { margin-bottom: 12px; }
 .page-resume .interior-main .resume-education-standalone p { font-size: 15px; line-height: 2; }
@@ -193,7 +193,7 @@ html[lang="fa"] .page-resume .interior-main .row-table > .section-column {
 .page-resume .interior-main .row-table > .section-column > .resume-section-label {
   font-size: 17px;
   font-weight: 700;
-  color: #14243b;
+  color: #021024;
   line-height: 1.8;
   margin: 0;
 }
