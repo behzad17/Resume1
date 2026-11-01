@@ -57,8 +57,9 @@
     toggle.setAttribute('aria-label', expanded ? 'جمع کردن منو' : 'باز کردن منو');
     toggle.querySelector('span').textContent = expanded ? '×' : '☰';
     backdrop.hidden = !mobile.matches || !expanded;
-    // Explicit frames avoid relying on a hidden panel's CSS transition startup.
-    if (animate && mobile.matches && !reducedMotion.matches && panel.animate) {
+    // Explicit hamburger clicks request this gentle slide, including on reduced-motion devices.
+    // Ambient page motion continues to respect the system preference.
+    if (animate && mobile.matches && panel.animate) {
       slide = panel.animate([
         { transform: from, visibility: 'visible' },
         { transform: expanded ? 'translateX(0)' : 'translateX(-115%)', visibility: 'visible' }
