@@ -60,6 +60,24 @@
 .devices-stage.is-static .css-laptop { transform: perspective(1000px) rotateY(-15deg) rotateX(5deg); }.devices-stage.is-static .css-phone { transform: perspective(800px) rotateY(-15deg) rotateZ(8deg); }
 @media(prefers-reduced-motion:reduce) { .css-laptop,.css-phone { transition: none; } }
 .css-laptop { transform: perspective(1000px) rotateY(calc(-15deg + var(--css-y,0deg) + var(--css-scroll,0deg))) rotateX(calc(5deg + var(--css-x,0deg))); }
-@keyframes device-float { from { translate: 0 -4px; } to { translate: 0 5px; } }
+@keyframes device-float { from { translate: 0 -14px; } to { translate: 0 14px; } }
 @media(prefers-reduced-motion:no-preference) { .hero-in-view .devices-stage:not(.is-static) .css-phone { animation: device-float 5s ease-in-out infinite alternate; } }
 .devices-stage.is-static .css-phone { animation: none; }
+
+/* Idle rotation composes with pointer/scroll transforms rather than replacing them. */
+@keyframes device-idle-turn {
+  from { rotate: 0 1 0 -3deg; translate: 0 -3px; }
+  to { rotate: 0 1 0 3deg; translate: 0 3px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero-in-view .devices-stage:not(.is-static) .css-laptop {
+    animation: device-idle-turn 8s ease-in-out infinite alternate;
+  }
+}
+.devices-stage.is-static .css-laptop,
+.devices-stage.is-static .css-phone { animation: none; }
+@media (prefers-reduced-motion: reduce) {
+  .css-laptop, .css-phone { animation: none !important; rotate: none; translate: none; }
+  .css-laptop { transform: perspective(1000px) rotateY(-15deg) rotateX(5deg); }
+  .css-phone { transform: perspective(800px) rotateY(-15deg) rotateZ(8deg); }
+}
