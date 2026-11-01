@@ -1,36 +1,36 @@
 /* Layout and restrained motion adapted from the approved preview. */
-.page-home .hero { display: block; width: 100%; padding: 64px 24px 52px; text-align: center; background: radial-gradient(ellipse at 16% 20%,#14b8a622,transparent 48%),radial-gradient(ellipse at 85% 15%,#8b5cf62b,transparent 50%),linear-gradient(155deg,#fff,#edf1ff); border-bottom: 1px solid var(--line); }
+.page-home .hero { display: block; width: 100%; padding: 64px 24px 52px; text-align: center; background: radial-gradient(ellipse at 16% 20%,#5483b322,transparent 48%),radial-gradient(ellipse at 85% 15%,#0526592b,transparent 50%),linear-gradient(155deg,#eff8ff,#c1e8ff); border-bottom: 1px solid var(--line); }
 .page-home .hero-copy { max-width: 880px; margin-inline: auto; }
 .page-home .hero-description { margin-inline: auto; max-width: 650px; }
 .page-home .hero :is(.button-row,.hero-note) { justify-content: center; }
 .page-home .hero h1.hero-title-two-lines { font-size: clamp(22px,3.5vw,46px); }
 .page-home .hero h1.hero-title-two-lines > span { white-space: normal; }
-.page-home .hero h1.hero-title-two-lines > span:last-child { color: #5542b8; }
+.page-home .hero h1.hero-title-two-lines > span:last-child { color: #021024; }
 .home-service-grid { grid-template-columns: 1.2fr 1fr 1fr; }
 .project-summary { margin: 10px 0; font-size: 14px; }
 .project-tech { color: var(--muted); font-size: 12px; }
 .featured-image { overflow: hidden; }
 .featured-image img { transition: transform 250ms ease; }
 .featured-project:hover .featured-image img { transform: scale(1.025); }
-.home-contact { background: linear-gradient(125deg,#fff0ec,#fff 65%); border-top: 1px solid var(--line); }
+.home-contact { background: linear-gradient(125deg,#c1e8ff,#eff8ff 65%); border-top: 1px solid var(--line); }
 .home-contact-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 48px; align-items: start; }
 .home-contact h2 { font-size: 28px; }
 .home-contact h2::after { content: ''; display: block; width: 54px; height: 5px; background: var(--coral); border-radius: 4px; margin-top: 18px; }
-.home-contact .contact-form-card { padding: 24px; background: #fff; border: 1px solid var(--line); border-radius: 18px; }
+.home-contact .contact-form-card { padding: 24px; background: #eff8ff; border: 1px solid var(--line); border-radius: 18px; }
 .home-contact form { display: grid; gap: 8px; }
 .home-contact label { font-size: 14px; }
-.home-contact .form-control { width: 100%; padding: 12px; border: 1px solid #9aa8bb; border-radius: 9px; background: #faf9ff; color: var(--ink); font: inherit; min-width: 0; }
+.home-contact .form-control { width: 100%; padding: 12px; border: 1px solid #5483b3; border-radius: 9px; background: #eff8ff; color: var(--ink); font: inherit; min-width: 0; }
 .home-contact textarea { resize: vertical; }
 .home-contact button { justify-self: start; margin-top: 12px; border: 0; cursor: pointer; }
 .home-contact #form-status { margin: 0; font-size: 14px; }
 button:disabled { opacity: .65; cursor: wait; }
 :is(.button,.header-cta) { transition: transform 200ms ease,box-shadow 200ms ease,background 200ms ease; }
-.button.primary:hover { background: #2545b5; transform: translateY(-2px); box-shadow: 0 8px 20px #315be82e; }
+.button.primary:hover { background: #052659; transform: translateY(-2px); box-shadow: 0 8px 20px #0526592e; }
 .site-nav a { position: relative; }
 .site-nav a::after { content: ''; position: absolute; bottom: 3px; right: 12px; left: 12px; height: 2px; background: var(--blue); transform: scaleX(0); transform-origin: right; transition: transform 200ms ease; }
 .site-nav a:hover::after,.site-nav a:focus-visible::after { transform: scaleX(1); }
 html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card) { position: relative; isolation: isolate; overflow: hidden; transition: transform 220ms ease,border-color 220ms ease,box-shadow 220ms ease; }
-html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card)::after { content: ''; position: absolute; inset: 0; pointer-events: none; z-index: -1; background: radial-gradient(circle at var(--spot-x,50%) var(--spot-y,0%),#ffffffb3,transparent 65%); opacity: 0; transition: opacity 200ms ease; }
+html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card)::after { content: ''; position: absolute; inset: 0; pointer-events: none; z-index: -1; background: radial-gradient(circle at var(--spot-x,50%) var(--spot-y,0%),#eff8ffb3,transparent 65%); opacity: 0; transition: opacity 200ms ease; }
 @media(hover:hover) and (pointer:fine) {
  html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card):hover { transform: translateY(-3px); }
  html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card):hover::after { opacity: 1; }
@@ -52,8 +52,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible 
 /* More visible, localized effects without moving text or clickable targets. */
 .page-home .hero { position: relative; isolation: isolate; overflow: hidden; }
 .page-home .hero::before,.page-home .hero::after { content: ''; position: absolute; width: 360px; height: 280px; pointer-events: none; z-index: -1; border-radius: 50%; filter: blur(32px); opacity: .45; }
-.page-home .hero::before { background: radial-gradient(ellipse,#8b5cf65c,transparent 70%); top: -70px; right: 5%; }
-.page-home .hero::after { background: radial-gradient(ellipse,#14b8a666,transparent 70%); bottom: -100px; left: 5%; }
+.page-home .hero::before { background: radial-gradient(ellipse,#0526595c,transparent 70%); top: -70px; right: 5%; }
+.page-home .hero::after { background: radial-gradient(ellipse,#5483b366,transparent 70%); bottom: -100px; left: 5%; }
 @keyframes hero-glow { from { transform: translate3d(-25px,0,0) scale(.95); } to { transform: translate3d(35px,20px,0) scale(1.12); } }
 @media(prefers-reduced-motion:no-preference) {
  .hero.hero-in-view::before,.hero.hero-in-view::after { animation: hero-glow 12s ease-in-out infinite alternate; }
@@ -63,7 +63,7 @@ html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card)::after 
 html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card) > * { position: relative; z-index: 1; }
 .featured-image { position: relative; perspective: 900px; }
 .featured-image img,.page-resume .project-image > img { transition: transform 300ms ease,filter 300ms ease; }
-.project-visit { display: inline-flex; align-items: center; gap: 10px; position: absolute; bottom: 18px; inset-inline-end: 18px; padding: 8px 14px; border-radius: 9px; background: #17243b; color: #fff; font-size: 13px; box-shadow: 0 6px 20px #17243b33; }
+.project-visit { display: inline-flex; align-items: center; gap: 10px; position: absolute; bottom: 18px; inset-inline-end: 18px; padding: 8px 14px; border-radius: 9px; background: #021024; color: #c1e8ff; font-size: 13px; box-shadow: 0 6px 20px #02102433; }
 .button .fa,.header-cta .fa { transition: transform 220ms ease; }
 .button:hover .fa,.header-cta:hover .fa { transform: translateX(-5px); }
 .button:active { transform: translateY(1px); }
@@ -73,7 +73,7 @@ html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card) > * { p
  .featured-project:hover .project-visit,.featured-project:focus-visible .project-visit { opacity: 1; transform: none; }
 }
 @media(hover:none),(pointer:coarse) {
- .page-resume .project-overlay { opacity: 1; background: #17243b33; }
+ .page-resume .project-overlay { opacity: 1; background: #02102433; }
 }
 @media(prefers-reduced-motion:reduce) {
  .page-home .hero::before,.page-home .hero::after { animation: none; }

@@ -6,7 +6,7 @@
 
 
 .page-github #main-content {
-  background: #f8fbfe;
+  background: #eff8ff;
   padding: 3rem 1.5rem 4rem;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 16px;
@@ -32,7 +32,7 @@
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #2563eb;
+  color: #021024;
   margin: 0 0 8px;
   display: block;
 }
@@ -41,7 +41,7 @@
   font-size: 29px;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: #0f172a;
+  color: #021024;
   margin: 0 0 10px;
   line-height: 1.25;
   text-transform: none;
@@ -49,16 +49,16 @@
 
 .page-github .github-section-intro {
   font-size: 16px;
-  color: #64748b;
+  color: #021024;
   margin: 0;
   line-height: 1.55;
 }
 
 .page-github .github-search-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: #eff8ff;
+  border: 1px solid #c1e8ff;
   border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 12px 30px rgba(2,16,36, 0.06);
   padding: 24px 28px;
   margin-bottom: 24px;
 }
@@ -67,7 +67,7 @@
   display: block;
   font-size: 14px;
   font-weight: 600;
-  color: #0f172a;
+  color: #021024;
   margin: 0 0 10px;
 }
 
@@ -76,22 +76,22 @@
   align-items: center;
   gap: 12px;
   padding: 4px 16px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #c1e8ff;
   border-radius: 16px;
-  background: #f8fbfe;
+  background: #eff8ff;
   transition:
     border-color 250ms ease-out,
     box-shadow 250ms ease-out;
 }
 
 .page-github .github-search-row:focus-within {
-  border-color: #2563eb;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
-  background: #ffffff;
+  border-color: #052659;
+  box-shadow: 0 0 0 3px rgba(5,38,89, 0.12);
+  background: #eff8ff;
 }
 
 .page-github .github-search-row .fa-github {
-  color: #64748b;
+  color: #021024;
   font-size: 20px;
   flex-shrink: 0;
 }
@@ -107,7 +107,7 @@
   background: transparent;
   font-family: inherit;
   font-size: 16px;
-  color: #0f172a;
+  color: #021024;
   box-shadow: none;
 }
 
@@ -117,7 +117,7 @@
 
 .page-github .github-search-hint {
   font-size: 13px;
-  color: #94a3b8;
+  color: #052659;
   margin: 10px 0 0;
 }
 
@@ -157,10 +157,10 @@
 
 /* User profile card */
 .page-github .gh-user-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: #eff8ff;
+  border: 1px solid #c1e8ff;
   border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 12px 30px rgba(2,16,36, 0.06);
   padding: 28px;
 }
 
@@ -175,7 +175,7 @@
   width: 80px;
   height: 80px;
   border-radius: 16px;
-  border: 2px solid #e2e8f0;
+  border: 2px solid #c1e8ff;
   padding: 0;
   object-fit: cover;
 }
@@ -184,7 +184,7 @@
 .page-github .gh-user-meta h2 {
   font-size: 22px;
   font-weight: 700;
-  color: #0f172a;
+  color: #021024;
   margin: 0;
   line-height: 1.3;
   letter-spacing: -0.02em;
@@ -194,13 +194,13 @@
   display: block;
   font-size: 15px;
   font-weight: 500;
-  color: #64748b;
+  color: #021024;
   font-style: normal;
   margin-top: 4px;
 }
 
 .page-github .small-name a {
-  color: #2563eb;
+  color: #021024;
   text-decoration: none;
 }
 
@@ -219,32 +219,32 @@
   flex-direction: column;
   min-width: 100px;
   padding: 12px 16px;
-  background: #f8fbfe;
-  border: 1px solid #e2e8f0;
+  background: #eff8ff;
+  border: 1px solid #c1e8ff;
   border-radius: 12px;
   font-size: 13px;
-  color: #64748b;
+  color: #021024;
 }
 
 .page-github .gh-stat strong {
   font-size: 20px;
   font-weight: 700;
-  color: #0f172a;
+  color: #021024;
   line-height: 1.2;
   margin-bottom: 2px;
 }
 
 .page-github #gh-user-data h2:not(.gh-user-meta h2),
 .page-github #gh-user-data h4 {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: #eff8ff;
+  border: 1px solid #c1e8ff;
   border-radius: 16px;
   padding: 20px 24px;
   font-size: 16px;
   font-weight: 500;
-  color: #475569;
+  color: #021024;
   margin: 0;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+  box-shadow: 0 8px 24px rgba(2,16,36, 0.05);
 }
 
 .page-github #gh-user-data h4 {
@@ -253,10 +253,10 @@
 
 /* Repository grid */
 .page-github .repo-list {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: #eff8ff;
+  border: 1px solid #c1e8ff;
   border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 12px 30px rgba(2,16,36, 0.06);
   padding: 28px;
   width: 100%;
 }
@@ -264,14 +264,14 @@
 .page-github .repo-list-heading {
   font-size: 18px;
   font-weight: 600;
-  color: #0f172a;
+  color: #021024;
   margin: 0 0 18px;
   letter-spacing: -0.01em;
 }
 
 .page-github .repo-empty {
   font-size: 15px;
-  color: #64748b;
+  color: #021024;
   margin: 0;
 }
 
@@ -301,10 +301,10 @@
   padding: 14px 16px;
   font-size: 15px;
   font-weight: 600;
-  color: #0f172a;
+  color: #021024;
   text-decoration: none;
-  background: #f8fbfe;
-  border: 1px solid #e2e8f0;
+  background: #eff8ff;
+  border: 1px solid #c1e8ff;
   border-radius: 12px;
   box-shadow: none;
   background-image: none;
@@ -321,23 +321,23 @@
   content: "\f09b";
   font-family: FontAwesome;
   font-size: 16px;
-  color: #2563eb;
+  color: #021024;
   flex-shrink: 0;
 }
 
 .page-github .repo-list ul li a:hover,
 .page-github .gh-repo-link:hover {
-  color: #2563eb;
-  border-color: #bfdbfe;
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.1);
+  color: #021024;
+  border-color: #7da0ca;
+  box-shadow: 0 8px 20px rgba(5,38,89, 0.1);
   transform: translateY(-1px);
-  background: #ffffff;
+  background: #eff8ff;
   background-image: none;
 }
 
 .page-github .repo-list ul li a:active,
 .page-github .gh-repo-link:active {
-  box-shadow: inset 0 2px 4px rgba(15, 23, 42, 0.06);
+  box-shadow: inset 0 2px 4px rgba(2,16,36, 0.06);
   transform: none;
 }
 

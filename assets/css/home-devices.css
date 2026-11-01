@@ -1,5 +1,5 @@
 /* Isolated homepage enhancement; index-classic.html retains the previous hero. */
-.page-home .hero.hero-devices { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.15fr); align-items: center; gap: 24px; padding: 68px max(28px,calc((100vw - 1280px)/2)) 52px; text-align: right; background: radial-gradient(ellipse at 12% 55%,#ddd8ff8c,transparent 46%),radial-gradient(ellipse at 45% 75%,#d7f3ef80,transparent 38%),#fafbff; }
+.page-home .hero.hero-devices { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.15fr); align-items: center; gap: 24px; padding: 68px max(28px,calc((100vw - 1280px)/2)) 52px; text-align: right; background: radial-gradient(ellipse at 12% 55%,#c1e8ff8c,transparent 46%),radial-gradient(ellipse at 45% 75%,#c1e8ff80,transparent 38%),#eff8ff; }
 .hero-devices .hero-copy { max-width: 600px; margin: 0; position: relative; z-index: 2; }
 .page-home .hero-devices h1.hero-title-two-lines { font-size: clamp(24px,2.9vw,42px); letter-spacing: -.6px; }
 .page-home .hero-devices .hero-description { margin-inline: 0; max-width: 520px; }
@@ -10,11 +10,11 @@
 .devices-stage.is-ready canvas { opacity: 1; }
 .devices-fallback { width: 100%; height: 100%; object-fit: contain; border-radius: 22px; transition: opacity 300ms ease; }
 .devices-stage.is-ready .devices-fallback { opacity: 0; visibility: hidden; }
-.devices-caption { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; font-size: 12px; color: #53617a; padding-inline: 12px; }
-.device-status::before { content: ''; display: inline-block; width: 7px; height: 7px; background: #127d70; border-radius: 50%; margin-inline-end: 7px; }
-.devices-toggle { font: inherit; font-size: 12px; color: #2545b5; border: 1px solid #cbd5fb; background: #fff; border-radius: 24px; padding: 9px 14px; min-height: 40px; cursor: pointer; }
+.devices-caption { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; font-size: 12px; color: #021024; padding-inline: 12px; }
+.device-status::before { content: ''; display: inline-block; width: 7px; height: 7px; background: #052659; border-radius: 50%; margin-inline-end: 7px; }
+.devices-toggle { font: inherit; font-size: 12px; color: #021024; border: 1px solid #7da0ca; background: #eff8ff; border-radius: 24px; padding: 9px 14px; min-height: 40px; cursor: pointer; }
 .devices-toggle[hidden] { display: none; }
-.devices-toggle:hover { background: #edf1ff; }
+.devices-toggle:hover { background: #c1e8ff; }
 @media(min-width:768px) and (max-width:991px) {
  .page-home .hero.hero-devices { gap: 10px; padding: 44px 24px 32px; grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
  .page-home .hero-devices h1.hero-title-two-lines { font-size: 25px; }
@@ -35,28 +35,28 @@
 .devices-stage.has-css-devices:not(.is-ready) .css-devices { display: block; }
 .devices-stage.has-css-devices .devices-fallback { opacity: 0; visibility: hidden; }
 .css-laptop { position: absolute; width: 420px; height: 340px; left: 28px; top: 34px; transform: perspective(1000px) rotateY(calc(-15deg + var(--css-y,0deg))) rotateX(calc(5deg + var(--css-x,0deg))); transition: transform 400ms ease; transform-style: preserve-3d; z-index: 2; }
-.css-laptop-lid { width: 420px; height: 270px; padding: 10px 10px 16px; border-radius: 17px 17px 9px 9px; background: linear-gradient(135deg,#d4dfef,#687994 45%,#c3d0e4 60%,#708198); box-shadow: 4px 3px 0 #8394ac,0 24px 36px #292d5520; position: relative; }
-.css-laptop-lid::before { content: ''; position: absolute; top: 5px; left: 50%; width: 4px; height: 4px; border-radius: 50%; background: #121c30; }
-.css-laptop-lid::after { content: 'BJcode'; position: absolute; bottom: 2px; inset-inline: 0; text-align: center; color: #253650; font: 8px sans-serif; }
-.css-screen { height: 100%; overflow: hidden; border-radius: 7px; background: #fff; border: 3px solid #142137; direction: rtl; }
-.css-screen-nav { display: flex; align-items: center; justify-content: space-between; padding: 9px 12px; font-size: 7px; color: #53617a; }
-.css-screen-nav b { color: #315be8; font: 800 15px sans-serif; }
-.css-screen-hero { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px 8px 13px; background: linear-gradient(120deg,#edf2ff,#f1eaff 55%,#e2f6f0); }
-.css-screen-hero small { color: #315be8; font-size: 8px; }
-.css-screen-hero strong { font-size: 18px; color: #17243b; }
-.css-screen-hero em { font-size: 16px; font-style: normal; font-weight: 700; color: #5542b8; }
-.css-screen-cta { background: #315be8; color: #fff; padding: 5px 14px; border-radius: 5px; font-size: 8px; }
-.css-screen-services { display: flex; gap: 7px; padding: 12px; font-size: 9px; color: #354f74; }
-.css-screen-services span { flex: 1; padding: 12px 5px; border-radius: 7px; background: #edf1ff; text-align: center; }
-.css-screen-services span:nth-child(2) { background: #f2edff; }.css-screen-services span:nth-child(3) { background: #e7f8f3; }
-.css-laptop-base { position: absolute; width: 454px; height: 140px; top: 265px; left: -17px; transform: perspective(800px) rotateX(60deg); transform-origin: top; border-radius: 6px 6px 20px 20px; background: linear-gradient(110deg,#c7d2e5,#edf1f8 45%,#a2b1cb); border: 1px solid #8596af; box-shadow: 0 8px 0 #90a0b8,0 12px 0 #bac6d9; padding: 12px 24px; }
-.css-keyboard { height: 60px; border: 4px solid #bdc9db; border-radius: 5px; background: repeating-linear-gradient(0deg,transparent 0 10px,#bdc9db 10px 14px),repeating-linear-gradient(90deg,#27354d 0 22px,#bdc9db 22px 27px); }
-.css-trackpad { width: 120px; height: 42px; margin: 9px auto; background: #bdcbe0; border: 1px solid #9aaec9; border-radius: 5px; }
-.css-phone { position: absolute; left: 404px; top: 134px; width: 110px; height: 227px; padding: 6px; border: 2px solid #9aacc7; background: #17243b; border-radius: 22px; box-shadow: 5px 5px 0 #788ba8,12px 24px 35px #17243b26; transform: perspective(800px) rotateY(-15deg) rotateZ(8deg) translateY(var(--css-float,0px)); transition: transform 500ms ease; z-index: 3; }
-.css-phone-content { height: 100%; border-radius: 15px; background: linear-gradient(145deg,#f1eaff,#ecf6ff 60%,#dcf5ef); display: flex; flex-direction: column; align-items: center; padding: 21px 5px 8px; color: #17243b; gap: 7px; direction: rtl; }
-.css-phone-content b { color: #315be8; font: 800 13px sans-serif; margin-bottom: 10px; }.css-phone-content small { font-size: 10px; }.css-phone-content strong { font-size: 15px; }.css-phone-content span { font-size: 8px; color: #5542b8; }.css-phone-content em { font-size: 7px; background: #315be8; color: white; padding: 4px 10px; border-radius: 4px; font-style: normal; }.css-phone-content div { width: 80%; height: 16px; background: #d4ddff; border-radius: 4px; }.css-phone-content div:nth-last-child(2) { background: #e2d6ff; }.css-phone-content div:last-child { background: #c4e9df; }
-.css-phone-island { position: absolute; top: 11px; left: 38px; width: 32px; height: 6px; background: #17243b; border-radius: 8px; }
-.css-device-shadow { position: absolute; left: 10px; bottom: 20px; width: 490px; height: 60px; background: radial-gradient(ellipse,#6c6b9b40,transparent 70%); filter: blur(10px); z-index: 0; }
+.css-laptop-lid { width: 420px; height: 270px; padding: 10px 10px 16px; border-radius: 17px 17px 9px 9px; background: linear-gradient(135deg,#c1e8ff,#052659 45%,#7da0ca 60%,#052659); box-shadow: 4px 3px 0 #5483b3,0 24px 36px #02102420; position: relative; }
+.css-laptop-lid::before { content: ''; position: absolute; top: 5px; left: 50%; width: 4px; height: 4px; border-radius: 50%; background: #021024; }
+.css-laptop-lid::after { content: 'BJcode'; position: absolute; bottom: 2px; inset-inline: 0; text-align: center; color: #021024; font: 8px sans-serif; }
+.css-screen { height: 100%; overflow: hidden; border-radius: 7px; background: #eff8ff; border: 3px solid #021024; direction: rtl; }
+.css-screen-nav { display: flex; align-items: center; justify-content: space-between; padding: 9px 12px; font-size: 7px; color: #021024; }
+.css-screen-nav b { color: #021024; font: 800 15px sans-serif; }
+.css-screen-hero { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 16px 8px 13px; background: linear-gradient(120deg,#c1e8ff,#c1e8ff 55%,#c1e8ff); }
+.css-screen-hero small { color: #021024; font-size: 8px; }
+.css-screen-hero strong { font-size: 18px; color: #021024; }
+.css-screen-hero em { font-size: 16px; font-style: normal; font-weight: 700; color: #021024; }
+.css-screen-cta { background: #052659; color: #c1e8ff; padding: 5px 14px; border-radius: 5px; font-size: 8px; }
+.css-screen-services { display: flex; gap: 7px; padding: 12px; font-size: 9px; color: #021024; }
+.css-screen-services span { flex: 1; padding: 12px 5px; border-radius: 7px; background: #c1e8ff; text-align: center; }
+.css-screen-services span:nth-child(2) { background: #c1e8ff; }.css-screen-services span:nth-child(3) { background: #eff8ff; }
+.css-laptop-base { position: absolute; width: 454px; height: 140px; top: 265px; left: -17px; transform: perspective(800px) rotateX(60deg); transform-origin: top; border-radius: 6px 6px 20px 20px; background: linear-gradient(110deg,#7da0ca,#c1e8ff 45%,#5483b3); border: 1px solid #5483b3; box-shadow: 0 8px 0 #5483b3,0 12px 0 #7da0ca; padding: 12px 24px; }
+.css-keyboard { height: 60px; border: 4px solid #7da0ca; border-radius: 5px; background: repeating-linear-gradient(0deg,transparent 0 10px,#7da0ca 10px 14px),repeating-linear-gradient(90deg,#052659 0 22px,#7da0ca 22px 27px); }
+.css-trackpad { width: 120px; height: 42px; margin: 9px auto; background: #7da0ca; border: 1px solid #5483b3; border-radius: 5px; }
+.css-phone { position: absolute; left: 404px; top: 134px; width: 110px; height: 227px; padding: 6px; border: 2px solid #5483b3; background: #021024; border-radius: 22px; box-shadow: 5px 5px 0 #5483b3,12px 24px 35px #02102426; transform: perspective(800px) rotateY(-15deg) rotateZ(8deg) translateY(var(--css-float,0px)); transition: transform 500ms ease; z-index: 3; }
+.css-phone-content { height: 100%; border-radius: 15px; background: linear-gradient(145deg,#c1e8ff,#eff8ff 60%,#c1e8ff); display: flex; flex-direction: column; align-items: center; padding: 21px 5px 8px; color: #021024; gap: 7px; direction: rtl; }
+.css-phone-content b { color: #021024; font: 800 13px sans-serif; margin-bottom: 10px; }.css-phone-content small { font-size: 10px; }.css-phone-content strong { font-size: 15px; }.css-phone-content span { font-size: 8px; color: #021024; }.css-phone-content em { font-size: 7px; background: #052659; color: #c1e8ff; padding: 4px 10px; border-radius: 4px; font-style: normal; }.css-phone-content div { width: 80%; height: 16px; background: #c1e8ff; border-radius: 4px; }.css-phone-content div:nth-last-child(2) { background: #c1e8ff; }.css-phone-content div:last-child { background: #c1e8ff; }
+.css-phone-island { position: absolute; top: 11px; left: 38px; width: 32px; height: 6px; background: #021024; border-radius: 8px; }
+.css-device-shadow { position: absolute; left: 10px; bottom: 20px; width: 490px; height: 60px; background: radial-gradient(ellipse,#05265940,transparent 70%); filter: blur(10px); z-index: 0; }
 .devices-stage.is-static .css-laptop { transform: perspective(1000px) rotateY(-15deg) rotateX(5deg); }.devices-stage.is-static .css-phone { transform: perspective(800px) rotateY(-15deg) rotateZ(8deg); }
 @media(prefers-reduced-motion:reduce) { .css-laptop,.css-phone { transition: none; } }
 .css-laptop { transform: perspective(1000px) rotateY(calc(-15deg + var(--css-y,0deg) + var(--css-scroll,0deg))) rotateX(calc(5deg + var(--css-x,0deg))); }
@@ -83,29 +83,29 @@
 }
 
 /* Brighter hardware and a small, deliberately composed screen design. */
-.css-laptop-lid { background: linear-gradient(130deg,#a8c6ff,#456ed1 40%,#8b72dc 75%,#487bdc); box-shadow: 4px 3px 0 #5b57a6,0 24px 36px #373e7829; }
-.css-laptop-base { background: linear-gradient(115deg,#86a9f4,#c7d9ff 45%,#8c9be6); border-color: #6f87c1; box-shadow: 0 8px 0 #6981bb,0 12px 0 #a1b8e6; }
-.css-trackpad { background: #a5bcf0; border-color: #829ed5; }
-.css-phone { background: linear-gradient(145deg,#32d1c3,#148d9d); border-color: #a1f4e2; box-shadow: 5px 5px 0 #157d8c,12px 24px 35px #147d702b; }
+.css-laptop-lid { background: linear-gradient(130deg,#7da0ca,#052659 40%,#5483b3 75%,#052659); box-shadow: 4px 3px 0 #052659,0 24px 36px #05265929; }
+.css-laptop-base { background: linear-gradient(115deg,#5483b3,#7da0ca 45%,#5483b3); border-color: #5483b3; box-shadow: 0 8px 0 #5483b3,0 12px 0 #5483b3; }
+.css-trackpad { background: #7da0ca; border-color: #5483b3; }
+.css-phone { background: linear-gradient(145deg,#7da0ca,#052659); border-color: #c1e8ff; box-shadow: 5px 5px 0 #052659,12px 24px 35px #0526592b; }
 .css-screen-nav { padding: 8px 12px; }.css-screen-nav b { font-weight: 800; }
-.css-screen-hero { background: radial-gradient(circle at 92% 20%,#ffffff18,transparent 55%),linear-gradient(120deg,#173f9c,#4248bb 55%,#6b36b3); gap: 7px; padding: 14px 8px; }
-.css-screen-hero small { color: #b5fff1; font-size: 8px; font-weight: 500; }
-.css-screen-hero strong { color: #fff; font-size: 24px; font-weight: 800; }
-.css-screen-hero em { color: #93f5df; font-size: 21px; font-weight: 800; }
-.css-screen-cta { background: #a2f5dc; color: #103e45; font-weight: 700; border-radius: 7px; }
+.css-screen-hero { background: radial-gradient(circle at 92% 20%,#eff8ff18,transparent 55%),linear-gradient(120deg,#021024,#052659 65%,#052659); gap: 7px; padding: 14px 8px; }
+.css-screen-hero small { color: #c1e8ff; font-size: 8px; font-weight: 500; }
+.css-screen-hero strong { color: #c1e8ff; font-size: 24px; font-weight: 800; }
+.css-screen-hero em { color: #c1e8ff; font-size: 21px; font-weight: 800; }
+.css-screen-cta { background: #c1e8ff; color: #021024; font-weight: 700; border-radius: 7px; }
 .css-screen-services { padding: 11px; gap: 8px; font-weight: 700; }
-.css-screen-services span { background: #dbe7ff; color: #214fba; }
-.css-screen-services span:nth-child(2) { background: #e9dcff; color: #6837aa; }
-.css-screen-services span:nth-child(3) { background: #c8f4e8; color: #126454; }
-.css-phone-content { background: linear-gradient(155deg,#203f9c,#5541ae 65%,#286e9e); padding: 22px 5px 8px; gap: 6px; }
-.css-phone-content b { color: #fff; margin-bottom: 5px; }
-.css-phone-content small { color: #d7e4ff; font-size: 9px; }
-.css-phone-content strong { color: #9cf5df; font-size: 17px; line-height: 1.6; text-align: center; font-weight: 800; }
-.css-phone-content span { color: #e3e8ff; font-size: 6px; }
-.css-phone-content em { background: #a2f5dc; color: #103e45; font-weight: 700; margin-bottom: 3px; }
-.css-phone-content div { height: auto; min-height: 17px; padding: 2px 1px; text-align: center; font-size: 7px; font-weight: 600; color: #214fba; background: #dbe7ff; }
-.css-phone-content div:nth-last-child(2) { background: #e9dcff; color: #6837aa; }
-.css-phone-content div:last-child { background: #c8f4e8; color: #126454; }
+.css-screen-services span { background: #c1e8ff; color: #021024; }
+.css-screen-services span:nth-child(2) { background: #c1e8ff; color: #021024; }
+.css-screen-services span:nth-child(3) { background: #c1e8ff; color: #021024; }
+.css-phone-content { background: linear-gradient(155deg,#021024,#052659 65%,#052659); padding: 22px 5px 8px; gap: 6px; }
+.css-phone-content b { color: #c1e8ff; margin-bottom: 5px; }
+.css-phone-content small { color: #c1e8ff; font-size: 9px; }
+.css-phone-content strong { color: #c1e8ff; font-size: 17px; line-height: 1.6; text-align: center; font-weight: 800; }
+.css-phone-content span { color: #c1e8ff; font-size: 6px; }
+.css-phone-content em { background: #c1e8ff; color: #021024; font-weight: 700; margin-bottom: 3px; }
+.css-phone-content div { height: auto; min-height: 17px; padding: 2px 1px; text-align: center; font-size: 7px; font-weight: 600; color: #021024; background: #c1e8ff; }
+.css-phone-content div:nth-last-child(2) { background: #c1e8ff; color: #021024; }
+.css-phone-content div:last-child { background: #c1e8ff; color: #021024; }
 
 .css-screen-hero strong,.css-screen-hero em { line-height: 1.45; }
 .css-screen-hero small,.css-screen-cta { line-height: 1.5; }

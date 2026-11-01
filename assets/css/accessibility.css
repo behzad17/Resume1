@@ -1,5 +1,5 @@
-a:focus-visible, button:focus-visible { outline: 3px solid #2563eb; outline-offset: 4px; }
-.skip-link { position: absolute; left: 16px; top: -100px; z-index: 1000; padding: 12px 20px; background: white; color: #0f172a; }
+a:focus-visible, button:focus-visible { outline: 3px solid #052659; outline-offset: 4px; }
+.skip-link { position: absolute; left: 16px; top: -100px; z-index: 1000; padding: 12px 20px; background: #eff8ff; color: #021024; }
 .skip-link:focus { top: 16px; }
 button:disabled { opacity: .65; cursor: wait; }
 #form-status { min-height: 24px; }
