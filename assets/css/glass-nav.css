@@ -1,7 +1,7 @@
 /* Frosted navigation, with an opaque fallback when backdrop-filter is absent. */
-.glass-nav { --nav-ink: #24314f; position: fixed; z-index: 100; inset-inline-start: 18px; top: 18px; bottom: 18px; width: 76px; padding: 18px 10px; border: 1px solid #fff; border-radius: 26px; background: linear-gradient(160deg,#f5f3ff,#e1e9f5); box-shadow: 0 14px 48px #26335a26,inset 0 1px 0 #fff; color: var(--nav-ink); display: flex; flex-direction: column; gap: 20px; box-sizing: border-box; }
+.glass-nav { --nav-ink: #24314f; position: fixed; z-index: 100; inset-inline-start: 18px; top: 18px; bottom: 18px; width: 76px; padding: 18px 10px; border: 1px solid #aab8e0; border-radius: 26px; background: linear-gradient(160deg,#ded9fa 0%,#cddbf5 58%,#c1dfeb 100%); box-shadow: 0 14px 48px #26335a30,inset 0 1px 0 #ffffffd9; color: var(--nav-ink); display: flex; flex-direction: column; gap: 20px; box-sizing: border-box; }
 @supports (backdrop-filter: blur(24px)) or (-webkit-backdrop-filter: blur(24px)) {
- .glass-nav { background: linear-gradient(160deg,#f9f8ffda,#dce5f5c9); backdrop-filter: blur(24px) saturate(140%); -webkit-backdrop-filter: blur(24px) saturate(140%); }
+ .glass-nav { background: linear-gradient(160deg,#ded9faed 0%,#cddbf5e8 58%,#c1dfebe6 100%); backdrop-filter: blur(24px) saturate(140%); -webkit-backdrop-filter: blur(24px) saturate(140%); }
 }
 .glass-ready .site-header .site-nav { display: none; }
 .glass-ready .header-inner { justify-content: space-between; }
