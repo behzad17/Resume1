@@ -37,13 +37,13 @@ html[lang="fa"] body.glass-ready { padding-inline-start: 112px; }
  .glass-ready .site-header .brand { display: inline-flex; visibility: visible; }
  .glass-ready .header-cta { display: none; }
  .glass-ready .header-inner > .glass-toggle { margin-inline-start: auto; }
- .glass-nav { top: 88px; bottom: 16px; max-height: calc(100dvh - 104px); inset-inline-start: auto; inset-inline-end: 12px; width: min(224px,calc(100vw - 24px)); overflow-y: auto; transform: translateX(-115%); visibility: hidden; pointer-events: none; }
- .glass-expanded .glass-nav { width: min(224px,calc(100vw - 24px)); transform: none; visibility: visible; pointer-events: auto; }
+ .glass-nav { top: 88px; bottom: 16px; max-height: calc(100dvh - 104px); inset-inline-start: auto; inset-inline-end: 12px; width: min(179.2px,calc(100vw - 24px)); overflow-y: auto; transform: translateX(-115%); visibility: hidden; pointer-events: none; }
+ .glass-expanded .glass-nav { width: min(179.2px,calc(100vw - 24px)); transform: none; visibility: visible; pointer-events: auto; }
  .glass-expanded .site-header { position: relative; z-index: 101; }
  .glass-links { gap: 8px; }
- .glass-links a { min-height: 48px; padding-inline: 10px; }
- .glass-expanded .glass-links a { gap: 10px; }
- .glass-label { font-size: 13px; white-space: normal; line-height: 1.8; }
+ .glass-links a { min-height: 48px; padding-inline: 8px; }
+ .glass-expanded .glass-links a { gap: 8px; }
+ .glass-label { font-size: 13px; white-space: normal; line-height: 1.8; min-width: 0; }
  .glass-nav { border-color: #ffffffaa; box-shadow: 0 14px 48px #26335a24,inset 0 1px 0 #ffffffcc; }
  .glass-tooltip { display: none; }
 }
