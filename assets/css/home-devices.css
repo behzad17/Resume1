@@ -81,3 +81,36 @@
   .css-laptop { transform: perspective(1000px) rotateY(-15deg) rotateX(5deg); }
   .css-phone { transform: perspective(800px) rotateY(-15deg) rotateZ(8deg); }
 }
+
+/* Brighter hardware and a small, deliberately composed screen design. */
+.css-laptop-lid { background: linear-gradient(130deg,#a8c6ff,#456ed1 40%,#8b72dc 75%,#487bdc); box-shadow: 4px 3px 0 #5b57a6,0 24px 36px #373e7829; }
+.css-laptop-base { background: linear-gradient(115deg,#86a9f4,#c7d9ff 45%,#8c9be6); border-color: #6f87c1; box-shadow: 0 8px 0 #6981bb,0 12px 0 #a1b8e6; }
+.css-trackpad { background: #a5bcf0; border-color: #829ed5; }
+.css-phone { background: linear-gradient(145deg,#32d1c3,#148d9d); border-color: #a1f4e2; box-shadow: 5px 5px 0 #157d8c,12px 24px 35px #147d702b; }
+.css-screen-nav { padding: 8px 12px; }.css-screen-nav b { font-weight: 800; }
+.css-screen-hero { background: radial-gradient(circle at 92% 20%,#ffffff18,transparent 55%),linear-gradient(120deg,#173f9c,#4248bb 55%,#6b36b3); gap: 7px; padding: 14px 8px; }
+.css-screen-hero small { color: #b5fff1; font-size: 8px; font-weight: 500; }
+.css-screen-hero strong { color: #fff; font-size: 24px; font-weight: 800; }
+.css-screen-hero em { color: #93f5df; font-size: 21px; font-weight: 800; }
+.css-screen-cta { background: #a2f5dc; color: #103e45; font-weight: 700; border-radius: 7px; }
+.css-screen-services { padding: 11px; gap: 8px; font-weight: 700; }
+.css-screen-services span { background: #dbe7ff; color: #214fba; }
+.css-screen-services span:nth-child(2) { background: #e9dcff; color: #6837aa; }
+.css-screen-services span:nth-child(3) { background: #c8f4e8; color: #126454; }
+.css-phone-content { background: linear-gradient(155deg,#203f9c,#5541ae 65%,#286e9e); padding: 22px 5px 8px; gap: 6px; }
+.css-phone-content b { color: #fff; margin-bottom: 5px; }
+.css-phone-content small { color: #d7e4ff; font-size: 9px; }
+.css-phone-content strong { color: #9cf5df; font-size: 17px; line-height: 1.6; text-align: center; font-weight: 800; }
+.css-phone-content span { color: #e3e8ff; font-size: 6px; }
+.css-phone-content em { background: #a2f5dc; color: #103e45; font-weight: 700; margin-bottom: 3px; }
+.css-phone-content div { height: auto; min-height: 17px; padding: 2px 1px; text-align: center; font-size: 7px; font-weight: 600; color: #214fba; background: #dbe7ff; }
+.css-phone-content div:nth-last-child(2) { background: #e9dcff; color: #6837aa; }
+.css-phone-content div:last-child { background: #c8f4e8; color: #126454; }
+
+.css-screen-hero strong,.css-screen-hero em { line-height: 1.45; }
+.css-screen-hero small,.css-screen-cta { line-height: 1.5; }
+.css-phone-content { padding: 20px 4px 6px; gap: 4px; line-height: 1.4; }
+.css-phone-content b { margin-bottom: 2px; }
+.css-phone-content strong { font-size: 15px; line-height: 1.35; }
+.css-phone-content em { margin-bottom: 2px; }
+.css-phone-content div { min-height: 15px; font-size: 6.5px; }
