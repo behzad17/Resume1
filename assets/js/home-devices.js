@@ -10,7 +10,7 @@ stage.dataset.renderState = !supported ? 'no-webgl2' : saveData ? 'save-data' : 
 let preference = false;
 try { preference = sessionStorage.getItem('bjcode-static-hero') === 'true'; } catch (_) { /* Storage is optional. */ }
 if (!supported || saveData) initCssDevices();
-if (supported && !saveData) init().catch((error) => { console.warn('BJcode 3D is unavailable; using the image fallback.', error); fallback(); });
+if (supported && !saveData) init().catch((error) => { console.warn('BJcode 3D is unavailable; using the CSS device fallback.', error); fallback(); });
 
 function fallback() {
   initCssDevices();
@@ -114,7 +114,7 @@ async function init() {
   let width=0,height=0,visible=true,raf=0,stopped=preference,lost=false,disposed=false;
   let px=0,py=0,progress=0,last=0;
   const bounds=()=>stage.getBoundingClientRect();
-  function resize(){const r=bounds();width=r.width;height=r.height;if(!width||!height)return;renderer.setSize(width,height,false);camera.aspect=width/height;camera.fov=camera.aspect<1.1?43:34;camera.updateProjectionMatrix();render(0);}
+  function resize(){stage.style.setProperty('--device-scale', Math.min(1.02, stage.clientWidth / 620));const r=bounds();width=r.width;height=r.height;if(!width||!height)return;renderer.setSize(width,height,false);camera.aspect=width/height;camera.fov=camera.aspect<1.1?43:34;camera.updateProjectionMatrix();render(0);}
   function render(t){
     if(disposed||lost)return;
     const moving=!reduced.matches&&!stopped;
@@ -149,7 +149,8 @@ async function init() {
 }
 
 function initCssDevices() {
-  if (stage.classList.contains('has-css-devices')) return;
+  if (stage.dataset.cssInitialized) return;
+  stage.dataset.cssInitialized = 'true';
   stage.classList.add('has-css-devices');
   let off = preference;
   const resize = () => stage.style.setProperty('--device-scale', Math.min(1.02, stage.clientWidth / 620));

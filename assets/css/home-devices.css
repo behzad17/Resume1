@@ -114,3 +114,7 @@
 .css-phone-content strong { font-size: 15px; line-height: 1.35; }
 .css-phone-content em { margin-bottom: 2px; }
 .css-phone-content div { min-height: 15px; font-size: 6.5px; }
+
+/* The device composition is present at first paint; no unrelated hero image swap. */
+.devices-stage { --device-scale: .8; }
+@media(max-width:767px) { .devices-stage { --device-scale: .5; } }
