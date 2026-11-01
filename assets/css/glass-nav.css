@@ -36,8 +36,9 @@ html[lang="fa"] body.glass-ready { padding-inline-start: 112px; }
  .glass-ready .header-inner { flex-direction: row; padding-block: 14px; min-height: 0; }
  .glass-ready .site-header .brand { display: inline-flex; visibility: visible; }
  .glass-ready .header-cta { display: none; }
- .glass-ready .header-inner > .glass-toggle { margin-inline-start: auto; }
- .glass-nav { top: 88px; bottom: 16px; max-height: calc(100dvh - 104px); inset-inline-start: auto; inset-inline-end: 12px; width: min(179.2px,calc(100vw - 24px)); overflow-y: auto; transform: translateX(-115%); visibility: hidden; pointer-events: none; }
+ .glass-ready .header-inner > .glass-toggle { margin: 0; }
+ .glass-ready .site-header .brand { margin-inline-start: auto; }
+ .glass-nav { top: 88px; bottom: 16px; max-height: calc(100dvh - 104px); inset-inline-start: 12px; inset-inline-end: auto; width: min(179.2px,calc(100vw - 24px)); overflow-y: auto; transform: translateX(115%); visibility: hidden; pointer-events: none; }
  .glass-expanded .glass-nav { width: min(179.2px,calc(100vw - 24px)); transform: none; visibility: visible; pointer-events: auto; }
  .glass-expanded .site-header { position: relative; z-index: 101; }
  .glass-links { gap: 8px; }
