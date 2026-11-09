@@ -245,3 +245,38 @@ html[lang="fa"] body .interior-main .resume-education-standalone {
   html[lang="fa"] body .interior-main .resume-work-card { padding: 22px; }
   .page-resume .interior-main .resume-timeline-item { padding-bottom: 22px; }
 }
+
+/* Interior pages use navy for hierarchy and petrol blue for smaller accents. */
+html[lang="fa"] .interior-main#main-content {
+  --interior-navy: #052659;
+  --interior-petrol: #103b58;
+  --interior-line: #d3e3eb;
+  background: #f5fafc;
+}
+
+.interior-main .page-intro {
+  border-color: var(--interior-line);
+  border-block-start: 3px solid #2dd4bf;
+}
+.interior-main :is(h1,h2,h3) { color: var(--interior-navy); }
+.interior-main .page-intro :is(.eyebrow,p) { color: var(--interior-petrol); }
+
+html[lang="fa"] body .interior-main :is(
+  .service-card,.info-card,.resume-work-card,.resume-skill-card,
+  .resume-progress-wrap,.resume-education-standalone,.project-card,
+  .contact-info-card,.contact-form-card,.github-search-card,.gh-user-card,.repo-list
+) {
+  --card-fill: #fff;
+  --card-edge: var(--interior-line);
+  --card-accent: var(--interior-petrol);
+}
+
+.interior-main .button.primary {
+  background: var(--interior-navy);
+  border-color: var(--interior-navy);
+  color: #fff;
+}
+.interior-main .button.primary:hover {
+  background: var(--interior-petrol);
+  border-color: var(--interior-petrol);
+}
