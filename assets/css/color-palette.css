@@ -121,3 +121,40 @@ html[lang="fa"] body :is(.home-service,.service-card) .service-number {
   color: var(--blue);
 }
 .site-footer { border-top-color: var(--coral); }
+
+/* Carry the services banner palette into other highlighted sections. */
+:root {
+  --feature-gradient: linear-gradient(135deg, #052659 0%, #052659 55%, #4875a0 100%);
+  --feature-heading: #c1e8ff;
+  --feature-text: #f5fafc;
+}
+
+html[lang="fa"] body :is(.interests-cta-banner,.home-contact,.site-footer),
+html[lang="fa"] body .interior-main .page-intro {
+  background: var(--feature-gradient);
+  color: var(--feature-text);
+}
+
+html[lang="fa"] body .interior-main .page-intro {
+  padding-inline: clamp(18px, 4vw, 32px);
+  border-radius: 16px;
+}
+
+html[lang="fa"] body .interior-main .page-intro h1,
+html[lang="fa"] body .home-contact-layout > div:first-child h2 {
+  color: var(--feature-heading);
+}
+
+html[lang="fa"] body .interior-main .page-intro :is(.eyebrow,p),
+html[lang="fa"] body .home-contact-layout > div:first-child :is(.eyebrow,p,a) {
+  color: var(--feature-text);
+}
+
+html[lang="fa"] body .home-contact .contact-form-card {
+  color: var(--ink);
+}
+
+html[lang="fa"] body .home-contact-layout > div:first-child a:focus-visible,
+html[lang="fa"] body .site-footer a:focus-visible {
+  outline-color: var(--feature-text);
+}
