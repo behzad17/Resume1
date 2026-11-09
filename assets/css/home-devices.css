@@ -1,5 +1,5 @@
 /* Isolated homepage enhancement; index-classic.html retains the previous hero. */
-.page-home .hero.hero-devices { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.15fr); align-items: center; gap: 24px; padding: 68px max(28px,calc((100vw - 1280px)/2)) 52px; text-align: right; background: radial-gradient(ellipse at 18% 52%,#5ed7c830,transparent 46%),linear-gradient(270deg,#052659 35%,#103b58); }
+.page-home .hero.hero-devices { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.15fr); align-items: center; gap: 24px; padding: 68px max(28px,calc((100vw - 1280px)/2)) 52px; text-align: right; background: var(--feature-gradient); }
 .hero-devices .hero-copy { max-width: 600px; margin: 0; position: relative; z-index: 2; }
 .page-home .hero-devices h1.hero-title-two-lines { font-size: clamp(24px,2.9vw,42px); letter-spacing: -.6px; }
 .page-home .hero-devices .hero-description { margin-inline: 0; max-width: 520px; }
