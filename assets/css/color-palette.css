@@ -1,29 +1,29 @@
-/* Approved BJcode palette: blue, violet, turquoise and coral. */
+/* BJcode shared colors. */
 :root {
   --ink: #021024;
   --muted: #052659;
   --blue: #052659;
   --violet: #052659;
-  --teal: #5483b3;
-  --coral: #5483b3;
+  --teal: #2dd4bf;
+  --coral: #ffb454;
   --line: #c1e8ff;
-  --surface: #eff8ff;
-  --card-fill: #c1e8ff;
+  --surface: #f5fafc;
+  --card-fill: #fff;
   --card-edge: #7da0ca;
   --card-accent: #052659;
 }
-.site-header { background: #eff8ff; border-bottom: 3px solid; border-image: linear-gradient(90deg,var(--teal),var(--blue),var(--violet),var(--coral)) 1; }
+.site-header { background: var(--surface); border-bottom: 3px solid; border-image: linear-gradient(90deg,var(--teal),var(--blue),var(--violet),var(--coral)) 1; }
 .site-nav a[aria-current="page"] { background: #c1e8ff; color: #021024; }
-.services-section { background: #eff8ff; border-color: #c1e8ff; }
-.process-section { background: #eff8ff; border-color: #c1e8ff; }
+.services-section { background: var(--surface); border-color: #c1e8ff; }
+.process-section { background: var(--surface); border-color: #c1e8ff; }
 .process-list li { border-color: #c1e8ff; }
 .process-list li > span { background: #c1e8ff; color: #021024; border-radius: 10px; min-width: 37px; height: 37px; display: flex; align-items: center; justify-content: center; padding: 0; flex-shrink: 0; }
 .closing-banner { background: linear-gradient(120deg,#c1e8ff,#eff8ff 60%,#c1e8ff); border-color: var(--line); }
 html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card,.project-card,.featured-project,.info-card,.resume-card,.contact-card,.github-search-card,.gh-user-card,.repo-list) {
  background: var(--card-fill); border-color: var(--card-edge); border-top: 3px solid var(--card-accent); box-shadow: 0 8px 24px #02102408;
 }
-html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card,.project-card,.featured-project,.info-card):nth-child(3n + 2) { --card-fill: #c1e8ff; --card-edge: #7da0ca; --card-accent: #052659; }
-html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card,.project-card,.featured-project,.info-card):nth-child(3n) { --card-fill: #eff8ff; --card-edge: #7da0ca; --card-accent: #052659; }
+html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card,.project-card,.featured-project,.info-card):nth-child(3n + 2) { --card-fill: #fff; --card-edge: #7da0ca; --card-accent: #052659; }
+html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card,.project-card,.featured-project,.info-card):nth-child(3n) { --card-fill: #fff; --card-edge: #7da0ca; --card-accent: #052659; }
 html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card,.project-card,.featured-project,.info-card):hover { border-color: var(--card-accent); box-shadow: 0 12px 28px #02102412; }
 html[lang="fa"] body :is(.icon-box,.service-icon,.resume-skill-icon) { background: var(--card-accent); border-color: transparent; color: #c1e8ff; }
 html[lang="fa"] body .service-icon i { color: #c1e8ff; }
@@ -31,30 +31,30 @@ html[lang="fa"] body .service-icon i { color: #c1e8ff; }
 html[lang="fa"] body :is(.home-service p,.service-description,.service-features li,.resume-skill-card p,.project-description,.info-text) { color: #021024; }
 .featured-image { background: var(--card-fill); }
 .round-arrow { background: var(--card-accent); border-color: var(--card-accent); color: #c1e8ff; }
-.page-resume .tag { background: #eff8ff; color: #021024; border-color: #7da0ca; }
-html[lang="fa"] body :is(.resume-work-card,.contact-info-card,.gh-user-card) { --card-fill: #eff8ff; --card-edge: #7da0ca; --card-accent: #052659; }
-html[lang="fa"] body :is(.resume-progress-wrap,.contact-form-card) { --card-fill: #eff8ff; --card-edge: #7da0ca; --card-accent: #052659; }
+.page-resume .tag { background: var(--surface); color: #021024; border-color: #7da0ca; }
+html[lang="fa"] body :is(.resume-work-card,.contact-info-card,.gh-user-card) { --card-fill: #fff; --card-edge: #7da0ca; --card-accent: #052659; }
+html[lang="fa"] body :is(.resume-progress-wrap,.contact-form-card) { --card-fill: #fff; --card-edge: #7da0ca; --card-accent: #052659; }
 html[lang="fa"] body .contact-detail-icon { background: #c1e8ff; border-color: #7da0ca; color: #021024; }
 .page-contact .contact-detail-item,.page-contact .contact-detail-item a { color: #021024; }
-.page-contact .contact-form-card .form-control { background: #eff8ff; border-color: #5483b3; }
+.page-contact .contact-form-card .form-control { background: var(--surface); border-color: #5483b3; }
 .page-contact .contact-form-card .form-control::placeholder { color: #021024; }
-.page-github .github-search-row { background: #eff8ff; border-color: #7da0ca; }
+.page-github .github-search-row { background: var(--surface); border-color: #7da0ca; }
 .page-github .github-search-hint { color: #021024; }
-.page-github .gh-stat { background: #eff8ff; border-color: #7da0ca; color: #021024; }
-.page-github .gh-repo-link { background: #eff8ff; border-color: #7da0ca; }
-html[lang="fa"] .interior-main#main-content { background: #eff8ff; }
+.page-github .gh-stat { background: var(--surface); border-color: #7da0ca; color: #021024; }
+.page-github .gh-repo-link { background: var(--surface); border-color: #7da0ca; }
+html[lang="fa"] .interior-main#main-content { background: var(--surface); }
 .page-intro { border-bottom: 1px solid #c1e8ff; margin-bottom: 28px; }
 .page-intro p { color: var(--muted); }
 .site-footer { background: #021024; border-top: 4px solid var(--teal); }
 
 /* Keep the contact page in one calm blue family. */
 html[lang="fa"] body.page-contact .contact-info-card {
-  --card-fill: #c1e8ff;
+  --card-fill: #fff;
   --card-edge: #7da0ca;
   --card-accent: #052659;
 }
 html[lang="fa"] body.page-contact .contact-form-card {
-  --card-fill: #eff8ff;
+  --card-fill: #fff;
   --card-edge: #c1e8ff;
   --card-accent: #052659;
 }
@@ -70,13 +70,13 @@ html[lang="fa"] body.page-contact .contact-detail-icon {
    Pale surfaces are tints of C1E8FF; type remains dark for contrast. */
 :root {
  --ink: #021024; --muted: #052659; --blue: #052659;
- --violet: #5483b3; --teal: #5483b3; --coral: #052659;
- --line: #7da0ca; --surface: #eff8ff;
- --card-fill: #c1e8ff; --card-edge: #7da0ca; --card-accent: #052659;
+ --violet: #5483b3; --teal: #2dd4bf; --coral: #ffb454;
+ --line: #7da0ca; --surface: #f5fafc;
+ --card-fill: #fff; --card-edge: #7da0ca; --card-accent: #052659;
 }
-html[lang="fa"] body { background: #eff8ff; color: #021024; }
-html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card,.project-card,.featured-project,.info-card):nth-child(3n + 2) { --card-fill: #e0f2ff; --card-edge: #7da0ca; --card-accent: #052659; }
-html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card,.project-card,.featured-project,.info-card):nth-child(3n) { --card-fill: #c1e8ff; --card-edge: #5483b3; --card-accent: #052659; }
+html[lang="fa"] body { background: var(--surface); color: #021024; }
+html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card,.project-card,.featured-project,.info-card):nth-child(3n + 2) { --card-fill: #fff; --card-edge: #7da0ca; --card-accent: #052659; }
+html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card,.project-card,.featured-project,.info-card):nth-child(3n) { --card-fill: #fff; --card-edge: #5483b3; --card-accent: #052659; }
 html[lang="fa"] body :is(.icon-box,.service-icon,.resume-skill-icon,.round-arrow) { background: #052659; color: #c1e8ff; }
 html[lang="fa"] body .service-icon i { color: #c1e8ff; }
 .site-footer { background: #021024; border-top-color: #5483b3; }
@@ -86,3 +86,8 @@ html[lang="fa"] body .service-icon i { color: #c1e8ff; }
 .button.primary:hover { background: #021024; color: #c1e8ff; }
 .button.secondary { background: #c1e8ff; color: #052659; border-color: #5483b3; }
 ::selection { background: #052659; color: #c1e8ff; }
+
+.site-footer { background: var(--blue); border-top-color: var(--teal); }
+.site-footer :is(p,a,h2,.footer-location,.footer-end) { color: var(--surface); }
+.site-footer .brand-symbol { background: var(--teal); color: var(--blue); }
+.button.primary { color: var(--surface); }
