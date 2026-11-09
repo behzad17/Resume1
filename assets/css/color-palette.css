@@ -17,7 +17,7 @@
 .services-section { background: var(--surface); border-color: #c1e8ff; }
 .process-section { background: var(--surface); border-color: #c1e8ff; }
 .process-list li { border-color: #c1e8ff; }
-.process-list li > span { background: #c1e8ff; color: #021024; border-radius: 10px; min-width: 37px; height: 37px; display: flex; align-items: center; justify-content: center; padding: 0; flex-shrink: 0; }
+.process-list li > span { background: var(--coral); color: var(--blue); border-radius: 10px; min-width: 37px; height: 37px; display: flex; align-items: center; justify-content: center; padding: 0; flex-shrink: 0; }
 .closing-banner { background: linear-gradient(120deg,#c1e8ff,#eff8ff 60%,#c1e8ff); border-color: var(--line); }
 html[lang="fa"] body :is(.home-service,.service-card,.resume-skill-card,.project-card,.featured-project,.info-card,.resume-card,.contact-card,.github-search-card,.gh-user-card,.repo-list) {
  background: var(--card-fill); border-color: var(--card-edge); border-top: 3px solid var(--card-accent); box-shadow: 0 8px 24px #02102408;
@@ -91,3 +91,33 @@ html[lang="fa"] body .service-icon i { color: #c1e8ff; }
 .site-footer :is(p,a,h2,.footer-location,.footer-end) { color: var(--surface); }
 .site-footer .brand-symbol { background: var(--teal); color: var(--blue); }
 .button.primary { color: var(--surface); }
+
+/* Amber marks key actions and small details across the site. */
+html[lang="fa"] body .site-header .header-cta {
+  background: var(--coral);
+  color: var(--blue);
+  padding: 8px 14px;
+  border-radius: 9px;
+}
+
+html[lang="fa"] body :is(.hero-devices,.home-contact,.page-contact .interior-main) .button.primary {
+  background: var(--coral);
+  border-color: var(--coral);
+  color: var(--blue);
+}
+html[lang="fa"] body :is(.hero-devices,.home-contact,.page-contact .interior-main) .button.primary:hover,
+html[lang="fa"] body .site-header .header-cta:hover {
+  background: #ffc57a;
+}
+
+html[lang="fa"] body .interior-main .page-intro {
+  border-block-start-color: var(--coral);
+}
+html[lang="fa"] body :is(.home-service,.service-card) .service-number {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: var(--coral);
+  color: var(--blue);
+}
+.site-footer { border-top-color: var(--coral); }
