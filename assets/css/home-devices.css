@@ -1,5 +1,5 @@
 /* Isolated homepage enhancement; index-classic.html retains the previous hero. */
-.page-home .hero.hero-devices { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.15fr); align-items: center; gap: 24px; padding: 68px max(28px,calc((100vw - 1280px)/2)) 52px; text-align: right; background: radial-gradient(ellipse at 12% 55%,#c1e8ff8c,transparent 46%),radial-gradient(ellipse at 45% 75%,#c1e8ff80,transparent 38%),#eff8ff; }
+.page-home .hero.hero-devices { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.15fr); align-items: center; gap: 24px; padding: 68px max(28px,calc((100vw - 1280px)/2)) 52px; text-align: right; background: radial-gradient(ellipse at 18% 52%,#2dd4bf40,transparent 46%),linear-gradient(270deg,#052659 35%,#103b58); }
 .hero-devices .hero-copy { max-width: 600px; margin: 0; position: relative; z-index: 2; }
 .page-home .hero-devices h1.hero-title-two-lines { font-size: clamp(24px,2.9vw,42px); letter-spacing: -.6px; }
 .page-home .hero-devices .hero-description { margin-inline: 0; max-width: 520px; }
@@ -88,7 +88,7 @@
 .css-trackpad { background: #7da0ca; border-color: #5483b3; }
 .css-phone { background: linear-gradient(145deg,#7da0ca,#052659); border-color: #c1e8ff; box-shadow: 5px 5px 0 #052659,12px 24px 35px #0526592b; }
 .css-screen-nav { padding: 8px 12px; }.css-screen-nav b { font-weight: 800; }
-.css-screen-hero { background: radial-gradient(circle at 92% 20%,#eff8ff18,transparent 55%),linear-gradient(120deg,#021024,#052659 65%,#052659); gap: 7px; padding: 14px 8px; }
+.css-screen-hero { background: radial-gradient(circle at 92% 20%,#eff8ff18,transparent 55%),linear-gradient(120deg,#052659,#103b58); gap: 7px; padding: 14px 8px; }
 .css-screen-hero small { color: #c1e8ff; font-size: 8px; font-weight: 500; }
 .css-screen-hero strong { color: #c1e8ff; font-size: 24px; font-weight: 800; }
 .css-screen-hero em { color: #c1e8ff; font-size: 21px; font-weight: 800; }
@@ -97,7 +97,7 @@
 .css-screen-services span { background: #c1e8ff; color: #021024; }
 .css-screen-services span:nth-child(2) { background: #c1e8ff; color: #021024; }
 .css-screen-services span:nth-child(3) { background: #c1e8ff; color: #021024; }
-.css-phone-content { background: linear-gradient(155deg,#021024,#052659 65%,#052659); padding: 22px 5px 8px; gap: 6px; }
+.css-phone-content { background: linear-gradient(155deg,#052659,#103b58); padding: 22px 5px 8px; gap: 6px; }
 .css-phone-content b { color: #c1e8ff; margin-bottom: 5px; }
 .css-phone-content small { color: #c1e8ff; font-size: 9px; }
 .css-phone-content strong { color: #c1e8ff; font-size: 17px; line-height: 1.6; text-align: center; font-weight: 800; }
@@ -118,3 +118,16 @@
 /* The device composition is present at first paint; no unrelated hero image swap. */
 .devices-stage { --device-scale: .8; }
 @media(max-width:767px) { .devices-stage { --device-scale: .5; } }
+
+.page-home .hero-devices :is(h1,.hero-description,.hero-note,.eyebrow,.devices-caption) {
+  color: var(--surface);
+}
+.page-home .hero.hero-devices h1.hero-title-two-lines > span:last-child { color: var(--teal); }
+.hero-devices .status-dot { background: var(--teal); }
+.hero-devices .button.primary { background: var(--coral); border-color: var(--coral); color: var(--blue); }
+.hero-devices .button.primary:hover { background: #ffc57a; }
+.hero-devices .button.secondary { background: transparent; border-color: var(--surface); color: var(--surface); }
+.hero-devices .button.secondary:hover { background: #ffffff1a; }
+.hero-devices :is(a,button):focus-visible { outline-color: var(--surface); }
+.css-screen-hero em,.css-phone-content strong { color: var(--teal); }
+.css-screen-cta,.css-phone-content em { background: var(--coral); color: var(--blue); }
