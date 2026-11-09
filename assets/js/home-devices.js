@@ -43,7 +43,7 @@ async function init() {
   const key=light(0xeff8ff,4,3,8,5);
   key.castShadow=!compact;key.shadow.mapSize.set(1024,1024);
   Object.assign(key.shadow.camera,{left:-7,right:7,top:7,bottom:-7});key.shadow.bias=-.001;
-  light(0x5483b3,2,-5,3,-2);light(0xc1e8ff,1.8,4,1,-4);
+  light(0x2dd4bf,2,-5,3,-2);light(0xc1e8ff,1.8,4,1,-4);
   const assembly=new THREE.Group();scene.add(assembly);
   const metal=new THREE.MeshStandardMaterial({color:0x5483b3,metalness:.62,roughness:.3});
   const edge=new THREE.MeshStandardMaterial({color:0x052659,metalness:.65,roughness:.3});
@@ -80,16 +80,16 @@ async function init() {
     ctx.fillStyle='#fff';ctx.fillRect(0,0,w,80);
     ctx.textAlign='left';ctx.direction='ltr';ctx.fillStyle='#052659';ctx.font='800 32px Vazirmatn';ctx.fillText('</> BJcode',mobile?26:44,51);
     if(!mobile){ctx.direction='rtl';ctx.textAlign='right';ctx.fillStyle='#052659';ctx.font='22px Vazirmatn';ctx.fillText('خدمات     نمونه‌کارها     تماس',w-44,51);}
-    const g=ctx.createLinearGradient(0,80,w,550);g.addColorStop(0,'#021024');g.addColorStop(.55,'#052659');g.addColorStop(1,'#052659');
+    const g=ctx.createLinearGradient(0,80,w,550);g.addColorStop(0,'#021024');g.addColorStop(.55,'#052659');g.addColorStop(1,'#103b58');
     ctx.fillStyle=g;ctx.fillRect(0,80,w,mobile?535:455);
     ctx.fillStyle='#eff8ff12';ctx.beginPath();ctx.arc(w*.92,210,mobile?160:280,0,Math.PI*2);ctx.fill();
     ctx.fillStyle='#7da0ca22';ctx.beginPath();ctx.arc(w*.08,480,mobile?100:190,0,Math.PI*2);ctx.fill();
     ctx.direction='rtl';ctx.textAlign='center';
     ctx.fillStyle='#c1e8ff';ctx.font=`500 ${mobile?23:25}px Vazirmatn`;ctx.fillText('طراحی روشن. توسعهٔ خلاقانه.',w/2,mobile?151:150);
     ctx.fillStyle='#fff';ctx.font=`800 ${mobile?47:68}px Vazirmatn`;ctx.fillText('از ایدهٔ شما',w/2,mobile?246:252);
-    ctx.fillStyle='#c1e8ff';ctx.font=`800 ${mobile?44:65}px Vazirmatn`;ctx.fillText('تا یک وب‌سایت ماندگار',w/2,mobile?322:340);
+    ctx.fillStyle='#2dd4bf';ctx.font=`800 ${mobile?44:65}px Vazirmatn`;ctx.fillText('تا یک وب‌سایت ماندگار',w/2,mobile?322:340);
     ctx.fillStyle='#c1e8ff';ctx.font=`400 ${mobile?23:27}px Vazirmatn`;ctx.fillText('طراحی، توسعه و همراهی',w/2,mobile?385:395);
-    ctx.fillStyle='#c1e8ff';ctx.beginPath();ctx.roundRect(w/2-127,mobile?435:437,254,60,16);ctx.fill();
+    ctx.fillStyle='#ffb454';ctx.beginPath();ctx.roundRect(w/2-127,mobile?435:437,254,60,16);ctx.fill();
     ctx.fillStyle='#052659';ctx.font='700 25px Vazirmatn';ctx.fillText('شروع همکاری  ←',w/2,mobile?474:477);
     ctx.fillStyle='#021024';ctx.font=`700 ${mobile?29:33}px Vazirmatn`;ctx.fillText('برای قدم بعدی شما',w/2,mobile?665:595);
     const colors=['#c1e8ff','#c1e8ff','#c1e8ff'],inks=['#052659','#052659','#052659'],labels=['طراحی وب‌سایت','توسعهٔ اختصاصی','پشتیبانی'];
